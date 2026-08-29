@@ -1,0 +1,60 @@
+# Experiment 5 -- YOLO26n, cls loss weight 3.0. BOOK.md Ch.3 SS3.10 (D12).
+#
+# WHY: Exp4 raised cls 0.5 -> 1.5 and moved val mAP50 from 0.8796 to 0.88917
+# (+0.96pt) while val mAP50-95 fell 0.5288 -> 0.52501 (-0.38pt). That is a real,
+# directional trade: more classification emphasis lets more objects clear the
+# IoU-0.5 bar, at a small cost to localisation tightness. mAP50 is the metric of
+# record for the 93% target, so the lever points the right way and is worth
+# pushing once more to see whether the gain continues or turns over.
+#
+# THE ONE VARIABLE: cls 0.5 -> 3.0, measured against the SAME control (Exp2's
+# checkpoint), not against Exp4. Chaining off Exp4 would confound "more cls"
+# with "more total training".
+#
+# HONEST STATUS: n=1 per configuration, no repeated seeds, so there is no
+# variance estimate in this project. A +0.96pt val difference is suggestive, not
+# established. If cls=3.0 lands at or below cls=1.5, the lever has turned over
+# and loss balance is finished as an avenue.
+#
+# Run: python src/train.py --config configs/yolo26n_cls3.yaml
+
+weights: checkpoints/yolo26n/2-finetune-yolo26n-960-moderate-aug/best.pt
+data: data/Dataset-Main/data.yaml     # FROZEN, unchanged
+name: cls3-yolo26n-960-moderate-aug
+
+cls: 3.0            # <-- THE EXPERIMENTAL VARIABLE (Exp2 = 0.5, Exp4 = 1.5)
+box: 7.5            # unchanged
+dfl: 1.5            # unchanged
+
+imgsz: 960
+epochs: 34          # sized to the overnight window: ~14.2 min/epoch, launching
+                     # ~23:40 finishes ~07:45, inside the 09:00 limit
+patience: 12
+batch: 32
+
+optimizer: AdamW
+lr0: 0.001
+lrf: 0.01
+momentum: 0.9
+warmup_epochs: 3.0
+cos_lr: true
+amp: true
+
+# Augmentation identical to Exp2 and Exp4 -- anything else would confound the test.
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+flipud: 0.0
+fliplr: 0.5
+degrees: 15.0
+shear: 4.0
+perspective: 0.0005
+translate: 0.15
+scale: 0.6
+hsv_h: 0.02
+hsv_s: 0.7
+hsv_v: 0.5
+erasing: 0.30
+auto_augment: randaugment

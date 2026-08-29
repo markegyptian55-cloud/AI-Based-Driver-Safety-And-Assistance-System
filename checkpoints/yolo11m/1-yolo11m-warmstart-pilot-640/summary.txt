@@ -1,0 +1,39 @@
+yolo11m -- 1-yolo11m-warmstart-pilot-640
+============================================================
+
+Weights (start)     : D:\project\Driver project\BaSuny\c\AI-Based Driver Safety And Assistance System\checkpoints\Fullstack Web App Models\YOLOv11m 640 Worst-Case\2-yolo11m_640_worstcase_run\weights\best.pt
+Data                : C:\ssd projects\nano big\data\Dataset-Main\data.yaml
+Epochs completed    : 15 (planned: 15)   Patience: 15
+Image size          : 640
+Batch               : 16
+Total train time    : 26135.1s (7.26h)
+Avg time / epoch    : 1742.3s (29.04min)
+
+-- Optimizer / LR --
+Optimizer           : AdamW
+lr0 / lrf           : 0.001 / 0.01
+momentum            : 0.9
+warmup_epochs       : 1.0
+cos_lr              : True
+
+-- Loss weights --
+box / cls / dfl     : 7.5 / 1.5 / 1.5
+
+-- Augmentation --
+hsv_h / hsv_s / hsv_v : 0.02 / 0.7 / 0.5
+degrees             : 15.0
+translate           : 0.15
+scale               : 0.6
+shear               : 4.0
+perspective         : 0.0005
+fliplr / flipud     : 0.5 / 0.0
+erasing             : 0.3
+auto_augment        : randaugment
+mosaic / mixup      : 0.0 / 0.0
+cutmix / copy_paste : 0.0 / 0.0
+
+-- Final metrics --
+mAP50               : 0.9130
+mAP50-95            : 0.5932
+Precision           : 0.8213
+Recall              : 0.8235

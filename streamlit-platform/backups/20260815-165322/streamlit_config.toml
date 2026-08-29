@@ -1,0 +1,24 @@
+# base="dark" prevents a white flash on first paint before ui/theme.py's CSS
+# injection lands -- runtime theme switching (dark/neon/light) happens via
+# CSS custom properties, not this file, since Streamlit has no runtime theme API.
+[theme]
+base = "dark"
+primaryColor = "#3cc9f0"
+backgroundColor = "#0b0f14"
+secondaryBackgroundColor = "#151d27"
+textColor = "#e6edf5"
+font = "sans serif"
+
+[server]
+enableStaticServing = true
+maxUploadSize = 512
+headless = true
+fileWatcherType = "none"
+folderWatchBlacklist = ["env", "runtime", "static", "wheelhouse", ".git"]
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+

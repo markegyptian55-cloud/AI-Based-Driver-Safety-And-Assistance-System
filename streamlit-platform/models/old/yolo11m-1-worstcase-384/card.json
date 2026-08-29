@@ -1,0 +1,41 @@
+{
+  "key": "old-yolo11m-1-worstcase-384",
+  "display_name": "[Old] YOLO11m Worst-Case 384",
+  "family": "yolo",
+  "resolution": 384,
+  "size_mb": 38.61,
+  "metrics": {
+    "map50": 0.7229836554411199,
+    "map50_corrected": 0.7289394352075647,
+    "precision": 0.7235176901318102,
+    "recall": 0.7118939136696049,
+    "f1": 0.7166980079158144,
+    "ap_per_class": {
+      "closed_eye": 0.9263614132138793,
+      "open_eye": 0.7416368599309434,
+      "yawning": 0.5009526931785373
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.9336514707006489,
+      "open_eye": 0.7522135246135105,
+      "yawning": 0.5009533103085344
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": null,
+    "imgsz": 384,
+    "batch": null,
+    "optimizer": null,
+    "lr0": null,
+    "cls": null,
+    "box": null,
+    "dfl": null,
+    "hours": null
+  },
+  "notes": {
+    "en": "[Old project] YOLO11m worst-case-augmentation fine-tune, old project's dataset. Real accuracy measured on THIS project's test split.",
+    "ar": "[مشروع قديم] YOLO11m بأقصى تعزيز، بيانات المشروع القديم. الدقة قُيست على مجموعة اختبار هذا المشروع."
+  }
+}

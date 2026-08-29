@@ -1,0 +1,42 @@
+{
+  "key": "old-rfdetr-nano-1-baseline-384",
+  "display_name": "[Old] RF-DETR Nano Baseline 384",
+  "family": "rfdetr",
+  "resolution": 384,
+  "size_mb": 115.22,
+  "metrics": {
+    "map50": 0.7818061233339373,
+    "map50_corrected": 0.7898328522879542,
+    "precision": 0.6136816730281809,
+    "recall": 0.8646790104525831,
+    "f1": 0.7161946034380536,
+    "ap_per_class": {
+      "closed_eye": 0.9680866695479204,
+      "open_eye": 0.8034196241867226,
+      "yawning": 0.5739120762671688
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.9769070507497457,
+      "open_eye": 0.8180919302455539,
+      "yawning": 0.5744995758685629
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": null,
+    "imgsz": 384,
+    "batch": null,
+    "optimizer": null,
+    "lr0": null,
+    "cls": null,
+    "box": null,
+    "dfl": null,
+    "hours": null
+  },
+  "notes": {
+    "en": "[Old project] RF-DETR Nano baseline (transformer detector, not YOLO). Real accuracy measured on THIS project's test split.",
+    "ar": "[مشروع قديم] RF-DETR Nano أساسي (كاشف محول، ليس YOLO). الدقة قُيست على مجموعة اختبار هذا المشروع."
+  },
+  "rfdetr_class": "nano"
+}

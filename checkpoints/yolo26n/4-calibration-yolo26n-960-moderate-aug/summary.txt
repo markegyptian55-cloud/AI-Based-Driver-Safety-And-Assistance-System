@@ -1,0 +1,69 @@
+yolo26n -- 4-calibration-yolo26n-960-moderate-aug
+============================================================
+
+Weights (start)     : checkpoints/yolo26n/2-finetune-yolo26n-960-moderate-aug/best.pt
+Data                : data/Dataset-Main/data.yaml  (FROZEN, unchanged)
+Epochs completed    : 40 (planned: 40)   Patience: 12 (never triggered)
+Image size          : 960
+Batch               : 32
+Total train time    : 34207.2s (9.50h)
+Avg time / epoch     : 855.2s (14.25min)
+
+-- THE EXPERIMENTAL VARIABLE --
+cls loss weight     : 3.0x Exp2's value (0.5 -> 1.5)
+Everything else identical to Exp2, so any movement is attributable to cls alone.
+
+-- Optimizer / LR --
+Optimizer           : AdamW
+lr0 / lrf           : 0.001 / 0.01
+momentum            : 0.9
+warmup_epochs       : 3.0
+cos_lr              : True
+
+-- Loss weights --
+box / cls / dfl     : 7.5 / 1.5 / 1.5     (cls was 0.5 in Exp2)
+
+-- Augmentation (identical to Exp2) --
+hsv_h / hsv_s / hsv_v : 0.02 / 0.7 / 0.5
+degrees             : 15.0
+translate           : 0.15
+scale               : 0.6
+shear               : 4.0
+perspective         : 0.0005
+fliplr / flipud     : 0.5 / 0.0
+erasing             : 0.30
+auto_augment        : randaugment
+mosaic / mixup      : 0.0 / 0.0
+cutmix / copy_paste : 0.0 / 0.0
+
+-- BEST val metrics across all 40 epochs --
+mAP50               : 0.88917  (epoch 29)
+mAP50-95            : 0.52501  (epoch 28)
+
+-- Final epoch (40) --
+mAP50               : 0.88632
+mAP50-95            : 0.52490
+Precision           : 0.78682
+Recall              : 0.82863
+
+-- Comparison vs Exp2 (same in-training Ultralytics validator, fair) --
+val mAP50    0.8796  -> 0.88917   +0.96 pt
+val mAP50-95 0.5288  -> 0.52501   -0.38 pt
+
+A directional trade, not a free win: heavier classification weighting lets more
+objects clear the IoU-0.5 bar while box regression gets relatively less
+emphasis, so localisation tightness slips. mAP50 is the metric of record for the
+93% target, so the lever points the right way.
+
+CAVEAT: n=1 per configuration, no repeated seeds anywhere in this project, so
+there is no variance estimate. A sub-1pt difference is suggestive, NOT
+established beyond run-to-run noise.
+
+NOTE ON THIS RUN'S END: the process was killed by harness cleanup at 23:34,
+immediately after epoch 40 completed. All 40 epochs and both checkpoints are
+intact; only train.py's end-of-run flatten/run_config/summary steps were
+skipped. best.pt and last.pt were moved up from weights/ by hand and this
+summary written manually, matching what train.py would have produced. There is
+no run_config.json for this run.
+
+Full writeup: BOOK.md Chapter 3 SS3.10 (D11).

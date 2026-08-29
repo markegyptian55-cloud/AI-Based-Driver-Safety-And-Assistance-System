@@ -1,0 +1,21 @@
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\video-detection-box-alignment-report-smarter-conversion-rest-2026-08-06.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\yawning-pipeline-measure-first-then-fix-the-smallest-broken-2026-08-07.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\إصلاح-تجربة-live-detection-على-الموبايل-2026-08-10.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\AGENTS.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\backend\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\backend\requirements.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\docs\AI-HANDOFF-REPORT.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\docs\SYSTEM-REPORT.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\src\routes\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\rfdetr-nano\old-1-baseline-384\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\rfdetr-nano\old-2-finetune-384\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\rfdetr-small\old-1-baseline-640\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\rfdetr-small\old-2-standard-640\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\rfdetr-small\old-3-worstcase-384\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11m\1-yolo11m-warmstart-pilot-640\args.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11m\1-yolo11m-warmstart-pilot-640\summary.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11m\old-1-worstcase-384\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11m\old-2-trial2winner-640\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11m\old-3-worstcase-d18source-640\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11n\1-capacity-yolo11n-960-moderate-aug\args.yaml

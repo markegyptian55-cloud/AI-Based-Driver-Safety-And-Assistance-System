@@ -1,0 +1,28 @@
+{
+  "model_key": "old-yolo26n-2-nanoworstcase-384",
+  "display_name": "[OLD] YOLO26n Nano Worst-Case 384",
+  "map50": 0.6920916137013647,
+  "precision": 0.7059165820888308,
+  "recall": 0.6719169099244019,
+  "f1": 0.6876819435565015,
+  "ap_per_class": {
+    "closed_eye": 0.8805884900743742,
+    "open_eye": 0.6979946530456308,
+    "yawning": 0.4976916979840892
+  },
+  "map50_corrected": 0.6997130221579905,
+  "ap_per_class_corrected": {
+    "closed_eye": 0.8898320250738616,
+    "open_eye": 0.7116142532957096,
+    "yawning": 0.4976927881044001
+  },
+  "label_gap_stats": {
+    "eye_ignored_images": 1039,
+    "yawn_ignored_images": 699,
+    "yawn_blind_families": [
+      "closed_eye_corpus",
+      "images-"
+    ],
+    "total_images": 5589
+  }
+}

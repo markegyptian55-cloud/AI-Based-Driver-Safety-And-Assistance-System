@@ -1,0 +1,21 @@
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\old-2-nanoworstcase-384-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\old-2-nanoworstcase-384-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26s\1-capacity-yolo26s-960-moderate-aug-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26s\1-capacity-yolo26s-960-moderate-aug-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\add-the-two-quantized-models-and-show-size-accuracy-in-the-p-2026-08-08.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\android-safe-inference-session-exports-and-a-faster-live-boo-2026-08-19.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\faster-960-model-and-a-480-model-that-actually-runs-on-weak-2026-08-17.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\faster-inference-live-manager-dashboard-hard-manager-lock-au-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\faster-model-downloads-storage-you-control-lower-latency-plu-2026-08-17.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-android-start-live-detection-hanging-pick-the-right-mode-2026-08-19.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-bad-detection-quality-on-mobile-2026-08-06.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-slow-new-models-model-persistence-compatibility-check-lo-2026-08-08.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-step-5-running-ai-inference-failures-especially-on-weak-2026-08-21.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-the-inference-engine-real-webgpu-acceleration-for-the-96-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-video-analysis-add-microsleep-alarm-2026-08-06.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-yawn-detection-the-cramped-text-block-after-analysis-2026-08-07.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fleet-driver-safety-mode-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\full-screen-video-sign-in-page-security-cleanup-2026-08-23.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\keep-only-the-two-best-models-2026-08-10.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\labels-per-eye-smile-vs-yawn-real-microsleep-events-and-a-fu-2026-08-06.md

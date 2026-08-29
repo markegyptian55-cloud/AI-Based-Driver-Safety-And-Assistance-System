@@ -1,0 +1,28 @@
+{
+  "model_key": "yolo11n-1-capacity",
+  "display_name": "YOLO11n D16 Capacity Test",
+  "map50": 0.8273063591602557,
+  "precision": 0.822251328718424,
+  "recall": 0.719307684185747,
+  "f1": 0.7661085237552294,
+  "ap_per_class": {
+    "closed_eye": 0.8813034258834502,
+    "open_eye": 0.8379957926275517,
+    "yawning": 0.7626198589697653
+  },
+  "map50_corrected": 0.8311105224278609,
+  "ap_per_class_corrected": {
+    "closed_eye": 0.8840212593819605,
+    "open_eye": 0.8460441660451723,
+    "yawning": 0.76326614185645
+  },
+  "label_gap_stats": {
+    "eye_ignored_images": 1039,
+    "yawn_ignored_images": 699,
+    "yawn_blind_families": [
+      "closed_eye_corpus",
+      "images-"
+    ],
+    "total_images": 5589
+  }
+}

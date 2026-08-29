@@ -1,0 +1,153 @@
+YOLO26n Fine-Tuning — Experiment 1
+===================================
+
+Status:
+MANUALLY STOPPED (after epoch 77/150; no crash, no process running, clean stop)
+
+Purpose:
+Production Driver Monitoring System (DMS) — real-time, browser-deployable
+driver drowsiness detector.
+
+Model:
+YOLO26n (yolo26n.pt, official Ultralytics COCO-pretrained weights)
+Params: 2,504,970 (verified by loading best.pt and summing model.parameters())
+GFLOPs: NOT VERIFIED / NOT RECOVERABLE (not captured this run, no log had it)
+Ultralytics version: 8.4.64 (from checkpoint metadata)
+
+Dataset:
+data/Dataset-Main/data.yaml
+Classes (3): 0 closed_eye, 1 open_eye, 2 yawning
+
+Training configuration (verified from args.yaml, the actual resolved
+Ultralytics trainer args — not from memory or the config file alone):
+Epochs planned:      150
+Epochs completed:    77 (run stopped manually — did NOT reach 150, did NOT
+                     hit patience=30 auto-stop either; last new-best was
+                     epoch 52, so patience counter was at 25/30 when stopped)
+Image size (imgsz):  960 x 960
+Batch:                32
+Optimizer:            auto -> resolved to MuSGD (verified 2026-08-12 by reading
+                     Ultralytics' BaseTrainer.build_optimizer source: auto picks
+                     MuSGD whenever iterations=ceil(train_imgs/batch)*epochs >
+                     10000; here ~185,700. Cross-confirmed against results.csv's
+                     lr/pg0..pg7 columns, which show a constant 3.000 ratio
+                     between alternating param groups at every epoch -- the
+                     exact signature of MuSGD's lr*3 boost for detection/
+                     semantic-head "muon" params.)
+Learning rate:        lr0=0.01 (config) but auto IGNORES configured lr0/momentum
+                     entirely (Ultralytics logs this explicitly) -- actual
+                     resolved values: lr=0.01 base / 0.03 for muon-pattern
+                     params, momentum=0.9 (NOT the configured 0.937)
+Scheduler:            cos_lr=True, warmup_epochs=3.0
+Patience:             30
+Device:               CUDA 0 (NVIDIA RTX 2000 Ada Generation, 16380 MiB)
+AMP:                  True
+Seed:                 0 (deterministic=True)
+Workers:              2
+
+Augmentation (verified from args.yaml — realism-gated policy, BOOK.md Ch.2
+SS2.4):
+  mosaic=0.0  mixup=0.0  cutmix=0.0  copy_paste=0.0  erasing=0.0
+  degrees=10.0  shear=2.0  perspective=0.0  translate=0.1  scale=0.4
+  hsv_h=0.015  hsv_s=0.5  hsv_v=0.4  fliplr=0.5  flipud=0.0
+
+Start:
+2026-08-11, ~1:00 PM EDT (user-confirmed launch time; args.yaml file
+timestamp reads 12:44:54, a small clock-offset already noted in BOOK.md
+Chapter 3 and not re-litigated here).
+
+End:
+2026-08-12, ~09:09 EDT (last.pt / results.csv file timestamp — the run's
+last completed epoch, epoch 77, and its own internal "time" column both
+agree with this to within under a minute).
+
+Duration:
+~20h 24m elapsed, 77 epochs completed → ~15.9 min/epoch average
+(73,394.7s / 77, from results.csv's own cumulative "time" column — this is
+a real measured average, not an estimate).
+
+Best checkpoint:
+checkpoints/yolo26n/1-baseline/weights/best.pt (still under weights/ — this
+run was manually stopped, so train.py's end-of-run flatten step, which moves
+best.pt/last.pt up to the experiment root, never executed; verified by
+listing the actual directory on disk on 2026-08-12)
+
+IMPORTANT CORRECTION: earlier in-conversation tracking (live, epoch-by-epoch)
+assumed epoch 58 was the best checkpoint, because epoch 58 has the single
+highest mAP50 in the whole run (0.87252). That assumption was WRONG — verified
+directly from best.pt's own embedded checkpoint metadata (`epoch` and
+`best_fitness` fields) plus a cross-check against best.pt's file-save
+timestamp against results.csv's per-epoch "time" column. Both independently
+point to the same epoch.
+
+Best epoch:       52 (1-indexed, matches results.csv "epoch" column;
+                   stored as epoch=51 0-indexed inside the checkpoint itself)
+Best mAP50:       0.87083
+Best mAP50-95:    0.53175   <- highest mAP50-95 of the entire run
+Best Precision:   0.77641
+Best Recall:      0.79117
+best_fitness (from checkpoint): 0.53175
+
+Note: best_fitness stored in the checkpoint is numerically IDENTICAL to this
+epoch's mAP50-95 (0.53175), not a 0.1*mAP50 + 0.9*mAP50-95 weighted blend as
+commonly assumed for Ultralytics' default detection fitness. That weighted
+formula would have picked epoch 58 instead (fitness ≈0.565665 vs epoch 52's
+≈0.565658 — a ~7e-6 difference, i.e. a virtual tie at that precision, which
+is why the two epochs are this close together in every metric). Treat "the
+exact fitness formula used" as verified-by-observation (fitness == mAP50-95
+here), not verified-by-reading-source — the practical result (best.pt =
+epoch 52) is solid either way, confirmed three independent ways (checkpoint
+epoch field, checkpoint best_fitness field, and file-save timestamp).
+
+Last checkpoint:
+checkpoints/yolo26n/1-baseline/last.pt
+
+Last epoch:       77 (1-indexed; epoch=76 0-indexed inside the checkpoint)
+Last mAP50:       0.86164
+Last mAP50-95:    0.52321
+Last Precision:   0.74161
+Last Recall:      0.79866
+
+Observed issue — verified timeline from results.csv (all 77 rows read, not
+sampled from chat-pasted excerpts):
+  Epoch 1:        mAP50=0.489  mAP50-95=0.216  (cold start)
+  Epoch 1-52:     steady, mostly monotonic climb
+  Epoch 52:       mAP50-95 peak (0.53175) -> this is best.pt
+  Epoch 52-58:    plateau, mAP50 still inching up to its own peak at epoch 58
+                  (0.87252) while mAP50-95 is flat-to-slightly-down
+  Epoch 58-73:    decline. mAP50 0.87252 -> 0.78067 (trough at epoch 73).
+                  mAP50-95 0.53157 -> 0.4683. Precision 0.762 -> 0.681.
+                  Recall HELD/rose slightly (0.808 -> 0.818) throughout.
+  Epoch 73-77:    recovery, without any config change. mAP50 0.78067 ->
+                  0.86164, mAP50-95 0.4683 -> 0.52321 by epoch 77.
+  Run stopped manually after epoch 77 (no epoch 78 row in results.csv, no
+  training process running, results.csv/last.pt both timestamp the same
+  moment as the stop).
+
+Root cause (evidence-based, not fabricated — see BOOK.md Chapter 3 SS3.1.1
+for the full column-by-column reasoning):
+During the epoch 58-73 decline: train/cls_loss kept falling smoothly the
+entire time (0.72266 -> 0.67955, monotonic) while val/cls_loss ROSE sharply
+(0.70926 -> 0.84676, +19%) and val precision/mAP fell. Train/box_loss and
+val/box_loss both stayed flat-to-improving throughout — box regression was
+never the problem, classification confidence/calibration was. Train-loss-down
++ val-loss-up simultaneously is the textbook definition of overfitting, and
+that signature IS present here for the classification head specifically.
+HOWEVER: it self-reversed by epoch 77 with no config change, which classic/
+permanent overfitting does not typically do on its own. Best-supported
+conclusion: a temporary widening of the train/val generalization gap on the
+classification head, self-corrected before the run was stopped — evidence
+fits an overfitting-like signature better than pure optimizer/LR instability
+(LR itself was smoothly decreasing per the cos_lr schedule the whole time,
+no spike), but the spontaneous recovery means it should not be called
+settled, permanent overfitting either. Root cause is not fully conclusive
+beyond this.
+
+Important note:
+Experiment 1 was manually stopped. It did NOT complete the planned 150
+epochs, and did NOT reach the patience=30 auto-stop (last new best was
+epoch 52; at epoch 77 the no-improvement counter was at 25/30).
+
+Experiment 2:
+Prepared but NOT started. Config: configs/yolo26n_worst_case_aug.yaml.
+The user will launch Experiment 2 manually.

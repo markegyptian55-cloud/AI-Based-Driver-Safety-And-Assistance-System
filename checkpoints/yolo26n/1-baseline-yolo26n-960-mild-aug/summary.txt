@@ -1,0 +1,62 @@
+yolo26n -- 1-baseline-yolo26n-960-mild-aug
+============================================================
+
+Weights (start)     : yolo26n.pt (fresh COCO-pretrained)
+Data                : data/Dataset-Main/data.yaml
+Epochs completed    : 77 (planned: 150)   Patience: 30 (never triggered --
+                      run manually stopped; last new best was epoch 52, so
+                      the no-improvement counter was at 25/30 when stopped)
+Image size          : 960
+Batch               : 32
+Total train time    : 73394.7s (20.39h)
+Avg time / epoch     : 953.2s (15.89min)
+
+-- Optimizer / LR --
+Optimizer           : auto -> resolved to MuSGD (verified from Ultralytics
+                      source + results.csv lr columns, not assumed -- see
+                      BOOK.md Ch.3 SS3.1)
+lr0 / lrf           : 0.01 (actual, base) / 0.01  (0.03 for muon-pattern
+                      detection/semantic-head params)
+momentum            : 0.9 (actual -- configured 0.937 in args.yaml was
+                      never honored; auto ignores configured lr0/momentum)
+warmup_epochs       : 3.0
+cos_lr              : True
+
+-- Loss weights --
+box / cls / dfl     : 7.5 / 0.5 / 1.5
+
+-- Augmentation --
+hsv_h / hsv_s / hsv_v : 0.015 / 0.5 / 0.4
+degrees             : 10.0
+translate           : 0.1
+scale               : 0.4
+shear               : 2.0
+perspective         : 0.0
+fliplr / flipud     : 0.5 / 0.0
+erasing             : 0.0
+auto_augment        : randaugment
+mosaic / mixup      : 0.0 / 0.0
+cutmix / copy_paste : 0.0 / 0.0
+
+-- Best checkpoint (epoch 52, not epoch 77 -- see BOOK.md Ch.3 SS3.1) --
+mAP50               : 0.8708
+mAP50-95            : 0.5318
+Precision           : 0.7764
+Recall              : 0.7912
+
+-- Last epoch (77) --
+mAP50               : 0.8616
+mAP50-95            : 0.5232
+Precision           : 0.7416
+Recall              : 0.7987
+
+-- Real held-out test-split evaluation (evaluate.py, 5,589 images) --
+mAP50               : 0.7955
+Precision           : 0.7533
+Recall              : 0.7234
+F1                  : 0.7379
+(~7.7 points below this checkpoint's own val mAP50 -- the val number
+overstates true generalization; see BOOK.md Ch.3 SS3.5.)
+
+Full post-mortem: BOOK.md Chapter 3 SS3.1. Original hand-written narrative
+summary: experiment_1_summary.txt in this same folder.

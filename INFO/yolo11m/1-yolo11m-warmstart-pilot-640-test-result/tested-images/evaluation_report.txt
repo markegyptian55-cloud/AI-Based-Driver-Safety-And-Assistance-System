@@ -1,0 +1,45 @@
+========================================================================================
+ MODEL EVALUATION REPORT — YOLO11m D18 Cross-Dataset Warm Start (YOLO)
+========================================================================================
+
+Test set images evaluated : 5589
+Total GT instances        : 7427
+IoU threshold             : 0.5
+Operating confidence      : 0.35 (confusion matrix / P-R-F1 below use this)
+
+mAP@50 (all classes)      : 86.42%
+Overall Precision         : 82.69%
+Overall Recall            : 73.82%
+Overall F1                : 77.97%
+
+--- Per-Class Metrics ---
+Class              AP@50   Precision    Recall        F1     TP     FP     FN
+closed_eye        92.38%      89.65%    84.59%    87.05%   2026    234    369
+open_eye          86.28%      83.99%    71.68%    77.35%   1668    318    659
+yawning           80.61%      74.45%    65.18%    69.51%   1763    605    942
+
+========================================================================================
+ LABEL-GAP-CORRECTED METRICS (same detections, partial-annotation aware)
+========================================================================================
+
+This dataset merges a separate eye-state corpus and a separate yawning corpus
+into one label space without re-annotation (BOOK.md Ch. V), so many images carry
+objects that are present but were never annotated. Scoring a correct detection of
+such an object as a false positive understates real accuracy. Below, predictions of
+a class that was never annotated on an image are IGNORED (neither TP nor FP), the
+standard partially-annotated-dataset convention (COCO iscrowd). Ground truth is
+untouched, so recall and FN are identical to the raw numbers by construction.
+
+Eye predictions ignored on   : 1039 images (full-frame tier-A views carrying zero eye labels)
+Yawn predictions ignored on  : 699 images (corpora with zero yawning annotations anywhere: closed_eye_corpus, images-)
+
+mAP@50 RAW                : 86.42%
+mAP@50 CORRECTED          : 86.75%   (delta +0.33 pts)
+
+Class             AP raw   AP corr    delta    P corr   FP raw  FP corr
+closed_eye        92.38%    92.62%   +0.24     89.96%      234      226
+open_eye          86.28%    87.01%   +0.73     84.20%      318      313
+yawning           80.61%    80.61%   +0.00     74.45%      605      605
+
+Charts saved in: 10-visualizations/
+========================================================================================

@@ -1,0 +1,41 @@
+{
+  "key": "old-yolo11m-3-worstcase-d18source-640",
+  "display_name": "[Old] YOLO11m Worst-Case (D18 source) 640",
+  "family": "yolo",
+  "resolution": 640,
+  "size_mb": 38.64,
+  "metrics": {
+    "map50": 0.7563391496163393,
+    "map50_corrected": 0.7634846293738641,
+    "precision": 0.758572588521273,
+    "recall": 0.705376567008308,
+    "f1": 0.7294753807372637,
+    "ap_per_class": {
+      "closed_eye": 0.9356369035314908,
+      "open_eye": 0.824804884533767,
+      "yawning": 0.5085756607837602
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.9446123585883773,
+      "open_eye": 0.8372485862933807,
+      "yawning": 0.5085929432398341
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": null,
+    "imgsz": 640,
+    "batch": null,
+    "optimizer": null,
+    "lr0": null,
+    "cls": null,
+    "box": null,
+    "dfl": null,
+    "hours": null
+  },
+  "notes": {
+    "en": "[Old project] The exact checkpoint this project's D18 was fine-tuned from, evaluated here BEFORE that fine-tuning -- shows the +10pt gain fine-tuning on this project's own dataset provided.",
+    "ar": "[مشروع قديم] نقطة التفتيش التي أُخذت منها D18 قبل الضبط الدقيق -- تُظهر مقدار التحسن من الضبط على بيانات هذا المشروع."
+  }
+}

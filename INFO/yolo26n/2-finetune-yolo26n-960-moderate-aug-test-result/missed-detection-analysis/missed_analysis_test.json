@@ -1,0 +1,79 @@
+{
+  "model": "yolo26n-2-finetune",
+  "split": "test",
+  "num_images": 5589,
+  "counts": {
+    "open_eye": {
+      "BELOW_CONF": 641,
+      "BLIND": 7,
+      "POOR_BOX": 34,
+      "WRONG_CLASS": 1
+    },
+    "yawning": {
+      "BELOW_CONF": 638,
+      "POOR_BOX": 226,
+      "BLIND": 2,
+      "WRONG_CLASS": 1
+    },
+    "closed_eye": {
+      "BELOW_CONF": 372,
+      "WRONG_CLASS": 6,
+      "BLIND": 14,
+      "POOR_BOX": 43
+    }
+  },
+  "total_gt": {
+    "open_eye": 2327,
+    "yawning": 2705,
+    "closed_eye": 2395
+  },
+  "poor_box_area_ratio_median": {
+    "open_eye": 2.209280836413946,
+    "yawning": 0.44096013200207784,
+    "closed_eye": 2.0680457975539945
+  },
+  "below_conf_median": {
+    "open_eye": 0.13712528347969055,
+    "yawning": 0.2850166857242584,
+    "closed_eye": 0.11016900092363358
+  },
+  "confusions": {
+    "closed_eye->open_eye": 6,
+    "open_eye->yawning": 1,
+    "yawning->closed_eye": 1
+  },
+  "examples": {
+    "BELOW_CONF": [
+      "open_eye  000127_jpg.rf.c53a382f58e8fc9f2ea084615402df7a.jpg",
+      "open_eye  000127_jpg.rf.c53a382f58e8fc9f2ea084615402df7a.jpg",
+      "open_eye  000148_jpg.rf.aa15aef44ed244c0b26e8d81add6acaa.jpg",
+      "open_eye  000149_jpg.rf.838ee0bef43584de7eb57ae36a478e27.jpg",
+      "open_eye  000160_jpg.rf.4676aaada956f9896bdb51549997fe13.jpg",
+      "open_eye  000215_jpg.rf.20338a0c83d76eb627b07b017daf1708.jpg"
+    ],
+    "BLIND": [
+      "open_eye  000145_jpg.rf.d16c1e33d653f05ce7973be40704108b.jpg",
+      "open_eye  1131_jpg.rf.0c50cbef962d75c9d2d43d24020a5813.jpg",
+      "closed_eye  215_jpg.rf.38b7c8b942d3ccdbfa53e577de2f2af0.jpg",
+      "open_eye  2409_jpg.rf.0d02ac929a233eb9be6039505963f213.jpg",
+      "open_eye  628_jpg.rf.5e48e7eca994fc6d4f3aa44a1c1ca1d0.jpg",
+      "open_eye  628_jpg.rf.f8d782faedb79585b501460304aa146c.jpg"
+    ],
+    "POOR_BOX": [
+      "open_eye  000197_jpg.rf.6f4bb698f6d5747fa2ff315a74cb3843.jpg",
+      "open_eye  000228_jpg.rf.14d9c670d04e13dec72d6767a1a328cb.jpg",
+      "open_eye  000228_jpg.rf.14d9c670d04e13dec72d6767a1a328cb.jpg",
+      "open_eye  000413_jpg.rf.38492ccec4ea2a9959c9a2eee9f97e41.jpg",
+      "open_eye  111287440_1_jpg.rf.d6ac5dd3728bec872983f4e5f26e3c52.jpg",
+      "open_eye  1537_jpg.rf.5c5c8955d0b305dd6e41882d8a8191dc.jpg"
+    ],
+    "WRONG_CLASS": [
+      "closed_eye  128_jpg.rf.d4c4144f769beb55a68bcebaab1d1387.jpg",
+      "closed_eye  143196796_1_jpg.rf.8fbaabb7d7c3a7b375fb64b7346a1dba.jpg",
+      "closed_eye  611_jpg.rf.54635f240c3a42069a5e8593242e1379.jpg",
+      "closed_eye  611_jpg.rf.6b667ec2c672b47b071ee74b4af5e1ce.jpg",
+      "closed_eye  667_jpg.rf.26953404fe5d824d9ea685b139801a91.jpg",
+      "closed_eye  667_jpg.rf.26953404fe5d824d9ea685b139801a91.jpg"
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+yolo11n -- 1-capacity-yolo11n-960-moderate-aug (D16, BOOK.md)
+============================================================
+
+Weights (start)     : yolo11n.pt (COCO-pretrained)
+Data                : data/Dataset-Main/data.yaml
+Epochs completed    : 112 (planned: 120, manually stopped by user after plateau)   Patience: 30
+Image size          : 960
+Batch               : 32
+Total train time    : 147718.2s (41.03h) -- across 2 sessions (interrupted once, resumed with --workers 0)
+Avg time / epoch    : ~1319s (~22.0min)
+
+-- Optimizer / LR --
+Optimizer           : AdamW
+lr0 / lrf           : 0.001 / 0.01
+momentum            : 0.9
+warmup_epochs       : 3.0
+cos_lr              : True
+
+-- Loss weights --
+box / cls / dfl     : 7.5 / 1.5 / 1.5
+
+-- Augmentation --
+hsv_h / hsv_s / hsv_v : 0.02 / 0.7 / 0.5
+degrees             : 15.0
+translate           : 0.15
+scale               : 0.6
+shear               : 4.0
+perspective         : 0.0005
+fliplr / flipud     : 0.5 / 0.0
+erasing             : 0.3
+auto_augment        : randaugment
+mosaic / mixup      : 0.0 / 0.0
+cutmix / copy_paste : 0.0 / 0.0
+
+-- Final val metrics (epoch 112, last) --
+mAP50               : 0.8857
+mAP50-95            : 0.5241
+Precision           : 0.7896
+Recall              : 0.8301
+
+-- Best checkpoint (epoch 109, best.pt) --
+mAP50               : 0.8864
+mAP50-95            : 0.5243
+Precision           : 0.7862
+Recall              : 0.8332
+Fitness             : 0.5242 (plateaued 16+ epochs before stop, D16-style diminishing returns)
+
+-- Real held-out TEST split (src/evaluate.py --split test, 2026-08-16) --
+mAP50               : 0.8273
+Precision / Recall  : 0.8223 / 0.7193
+F1                  : 0.7661
+closed_eye AP50     : 0.8813
+open_eye AP50       : 0.8380
+yawning AP50        : 0.7626
+
+Note: this is D16 (YOLO11n architecture-swap capacity test) from INFO/BOOK.md.
+Test result (82.73%) lands in the same 79.5-83% band as every yolo26n
+experiment (Exp1-5) -- capacity did not break the calibration ceiling
+identified in D8/D10. Consistent with the val-optimism pattern (D6/D7):
+val 88.6% -> test 82.7%, a ~5.9pt gap matching prior experiments.

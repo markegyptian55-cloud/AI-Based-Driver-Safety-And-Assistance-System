@@ -1,0 +1,92 @@
+# Experiment 2 -- YOLO26n, evidence-tuned augmentation.
+# BOOK.md Chapter 3, SS3.2 (revised 2026-08-12). Re-derived from Experiment 1's
+# verified results.csv/best.pt/last.pt evidence, not carried over blindly from
+# an earlier "worst-case" draft. Goal: maximum real validation/test
+# performance and robustness, not an artificial A/B score.
+#
+# Key evidence from Experiment 1:
+#   - Best epoch 52/150, mAP50-95=0.53175 -- best.pt reached only 1/3 of budget.
+#   - Manually stopped at epoch 77 (NOT 63 -- verified against results.csv/
+#     last.pt). Patience=30 counter was at 25/30 when stopped -- not exhausted.
+#   - Epoch 58->73 decline was isolated to the classification head
+#     (train/cls_loss down, val/cls_loss up +19%; box loss unaffected
+#     throughout) and self-reversed by epoch 77 with no config change.
+# Design response: push augmentation dimensions that stress classification
+# robustness (photometric, occlusion) moderately; leave imgsz/batch/optimizer/
+# LR/loss-weights alone (no evidence implicates them); keep geometric distortion
+# moderate, not extreme (localization was never the problem, and 40.5% of this
+# dataset already has real baked-in rotation -- Ch. V).
+#
+# Run with: python src/train.py --config configs/yolo26n_worst_case_aug.yaml
+# Output: checkpoints/yolo26n/2-evidence-tuned-aug/ (N auto-increments per
+# family -- see AGENTS.md / BOOK.md Ch.2 SS2.10).
+#
+# NOT launched by this file alone -- per this project's standing rule, the
+# user runs training manually. This config is prepared, not executed.
+
+weights: yolo26n.pt   # fresh COCO-pretrained, deliberately NOT Experiment 1's
+                       # best.pt -- see BOOK.md Ch.3 SS3.2 "Starting weights"
+                       # for why resuming from a converged-under-different-aug
+                       # checkpoint was considered and rejected.
+data: data/Dataset-Main/data.yaml
+name: fresh-yolo26n-960-moderate-aug
+imgsz: 960          # unchanged -- box/localization was never the problem in
+                     # Exp1 (box loss flat-to-improving throughout the whole
+                     # run, including during the cls-only decline). An imgsz
+                     # study is a separate experiment (Ch.2 SS2.9), not bundled here.
+epochs: 150          # full budget -- Exp1's stop was manual, not patience-
+                     # exhausted (counter was 25/30). No evidence the model
+                     # was done improving; capping this run short would be
+                     # arbitrary, not evidence-based.
+batch: 32            # unchanged -- no instability observed at this batch size.
+lr0: 0.01
+lrf: 0.01
+patience: 35         # up from Exp1's 30 -- stronger augmentation is expected
+                     # to produce a noisier val curve; Exp1's own worst dip
+                     # (epoch 58->73, 15 epochs) fully self-reversed within a
+                     # patience=30 budget, so 35 keeps a comparable safety
+                     # margin against a premature stop on a similar or
+                     # somewhat larger transient dip under harder augmentation.
+amp: true
+optimizer: auto      # unchanged -- Exp1's LR/loss curves were smooth with no
+                     # spikes or divergence, nothing implicates the optimizer.
+                     # train.py now logs the RESOLVED optimizer class (not just
+                     # the string "auto") via a new on_train_start callback,
+                     # closing the NOT VERIFIED gap from Exp1's post-mortem.
+cos_lr: true
+
+# Image-combining augmentation stays OFF: conflicts with the dataset's own
+# source-aware negative-label handling (README.md Phase 12B/12C finding) --
+# user-confirmed decision, not silently assumed. Separate experiment if ever
+# tested (AGENTS.md).
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+
+# flipud stays 0 -- a driver-facing camera is never upside-down in
+# production; training on it teaches a physically impossible case, not a
+# realistic worst case.
+flipud: 0.0
+fliplr: 0.5          # unchanged -- already sensible, no evidence against it.
+
+# Moderated from the earlier "worst-case" draft -- see BOOK.md Ch.3 SS3.2
+# table for the full per-parameter reasoning. Geometric distortion pushed only
+# mildly (localization wasn't the problem, and this dataset already has real
+# baked-in rotation); photometric + occlusion pushed harder (directly targets
+# the classification-head weakness Exp1's evidence isolated).
+degrees: 15.0
+shear: 4.0
+perspective: 0.0005
+translate: 0.15
+scale: 0.6           # capped below the old 0.7 draft to avoid shrinking the
+                     # already-small open_eye boxes (the dataset's binding
+                     # small-object class, Ch.2 SS2.3) past recoverable size.
+hsv_h: 0.02
+hsv_s: 0.7
+hsv_v: 0.5
+erasing: 0.30        # occlusion robustness (hands/hair/glasses over eyes) --
+                     # realistic for DMS and targets the cls-confidence
+                     # weakness directly; moderated below the old 0.4 draft
+                     # for the same open_eye small-object reason as `scale`.

@@ -1,0 +1,1 @@
+REVOKE ALL ON FUNCTION public.tg_clamp_fleet_role() FROM PUBLIC, anon, authenticated;

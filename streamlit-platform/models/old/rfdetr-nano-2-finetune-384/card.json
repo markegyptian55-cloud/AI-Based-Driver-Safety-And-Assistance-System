@@ -1,0 +1,42 @@
+{
+  "key": "old-rfdetr-nano-2-finetune-384",
+  "display_name": "[Old] RF-DETR Nano Fine-Tuned 384",
+  "family": "rfdetr",
+  "resolution": 384,
+  "size_mb": 115.23,
+  "metrics": {
+    "map50": 0.7829255198339548,
+    "map50_corrected": 0.7899405587992109,
+    "precision": 0.6234252517984368,
+    "recall": 0.8589764030866336,
+    "f1": 0.7209972607834715,
+    "ap_per_class": {
+      "closed_eye": 0.9705469329583021,
+      "open_eye": 0.8058694456665458,
+      "yawning": 0.5723601808770165
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.9769364437611328,
+      "open_eye": 0.8202168719870851,
+      "yawning": 0.5726683606494145
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": null,
+    "imgsz": 384,
+    "batch": null,
+    "optimizer": null,
+    "lr0": null,
+    "cls": null,
+    "box": null,
+    "dfl": null,
+    "hours": null
+  },
+  "notes": {
+    "en": "[Old project] RF-DETR Nano fine-tuned -- highest self-reported accuracy of any model in the old project (92.36% on ITS OWN dataset). Real accuracy shown here is measured on THIS project's test split instead -- do not confuse the two.",
+    "ar": "[مشروع قديم] RF-DETR Nano المضبوط -- أعلى دقة ذاتية في المشروع القديم. الدقة المعروضة هنا قُيست على بيانات هذا المشروع -- لا تخلط بين الرقمين."
+  },
+  "rfdetr_class": "nano"
+}

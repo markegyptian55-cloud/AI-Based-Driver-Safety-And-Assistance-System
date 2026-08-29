@@ -1,0 +1,28 @@
+{
+  "model_key": "yolo26n-2-finetune",
+  "display_name": "YOLO26n Exp2 AdamW Fine-tune",
+  "map50": 0.8232868469760555,
+  "precision": 0.7963904801296459,
+  "recall": 0.7347810297087642,
+  "f1": 0.7641195705848919,
+  "ap_per_class": {
+    "closed_eye": 0.8913907577226661,
+    "open_eye": 0.8270491526812644,
+    "yawning": 0.7514206305242358
+  },
+  "map50_corrected": 0.8272675246620574,
+  "ap_per_class_corrected": {
+    "closed_eye": 0.8932952231746153,
+    "open_eye": 0.8370865134028243,
+    "yawning": 0.7514208374087328
+  },
+  "label_gap_stats": {
+    "eye_ignored_images": 1039,
+    "yawn_ignored_images": 699,
+    "yawn_blind_families": [
+      "closed_eye_corpus",
+      "images-"
+    ],
+    "total_images": 5589
+  }
+}

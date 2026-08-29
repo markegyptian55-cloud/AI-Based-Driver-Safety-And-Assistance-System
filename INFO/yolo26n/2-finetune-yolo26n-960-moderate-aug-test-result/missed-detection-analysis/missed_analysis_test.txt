@@ -1,0 +1,44 @@
+============================================================================================
+ MISSED-DETECTION DIAGNOSIS -- YOLO26n Exp2 AdamW Fine-tune
+============================================================================================
+
+Images evaluated : 5589
+Operating point  : conf >= 0.35, IoU >= 0.5
+
+Class             GT  MISSED      BELOW_CONF     POOR_BOX  WRONG_CLASS        BLIND
+--------------------------------------------------------------------------------------------
+closed_eye      2395     435       372   86%     43   10%      6    1%     14    3%
+open_eye        2327     683       641   94%     34    5%      1    0%      7    1%
+yawning         2705     867       638   74%    226   26%      1    0%      2    0%
+--------------------------------------------------------------------------------------------
+TOTAL           7427    1985      1651   83%    303   15%      8    0%     23    1%
+
+INTERPRETATION
+--------------------------------------------------------------------------------------------
+  Model saw it, scored it too low   :  1651  (83.2%)  -> operating-point decision
+  Found it, drew the box differently:   303  (15.3%)  -> annotation geometry / IoU threshold
+  Detected as the wrong class       :     8  (0.4%)  -> class confusion
+  Genuinely did not see it          :    23  (1.2%)  -> only this needs more/better data
+
+BOX-GEOMETRY CHECK (POOR_BOX cases: predicted area / ground-truth area)
+--------------------------------------------------------------------------------------------
+  A ratio far from 1.0 means the model and the annotator disagree on how big
+  the object is -- the signature of BOOK.md D4, not of a model that cannot see.
+
+  closed_eye   n=   43   median ratio=  2.07   p25= 0.89 p75= 2.29   median IoU=0.434
+  open_eye     n=   34   median ratio=  2.21   p25= 1.75 p75= 2.37   median IoU=0.434
+  yawning      n=  226   median ratio=  0.44   p25= 0.42 p75= 0.47   median IoU=0.441
+
+BELOW-THRESHOLD CONFIDENCES (how close were they?)
+--------------------------------------------------------------------------------------------
+  closed_eye   n=  372   median conf=0.110   share above 0.20: 34%
+  open_eye     n=  641   median conf=0.137   share above 0.20: 27%
+  yawning      n=  638   median conf=0.285   share above 0.20: 82%
+
+CLASS CONFUSION (ground truth -> what was predicted there)
+--------------------------------------------------------------------------------------------
+  closed_eye   -> open_eye         6
+  open_eye     -> yawning          1
+  yawning      -> closed_eye       1
+
+============================================================================================

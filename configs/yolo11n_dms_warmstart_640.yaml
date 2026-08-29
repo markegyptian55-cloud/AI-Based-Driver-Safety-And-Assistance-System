@@ -1,0 +1,110 @@
+# PREPARED, NOT RUN -- controlled experiment to isolate D18's confounded variables.
+# BOOK.md D18 (yolo11m cross-dataset warm-start, 86.42% test) confounds THREE
+# variables at once vs the nano baseline (Exp4): architecture/capacity (20.1M vs
+# 2.4M), init-source-dataset (old project vs this project), AND native-vs-
+# upsampled resolution (this project's own dataset was found this session to be
+# 100% native 640x640 -- imgsz=960 upsamples, it never was higher real detail).
+#
+# This config holds capacity constant (nano, matching Exp4) and resolution
+# constant (640, the dataset's OWN native size -- no upsampling, no downsampling)
+# while changing only the init-source-dataset. If this reaches near D18's
+# 86.42% test, initialization is the real lever, isolated from the other two.
+# If it lands back near ~82.7% (the standing nano ceiling), D18's gain does not
+# reproduce at deployable size and was capacity/resolution-dependent after all.
+#
+# CHECKPOINT SELECTION -- verified from args.yaml, not folder name (two yolo11n
+# checkpoints exist in the old project; the OTHER one, "1-yolo11n_640_baseline_run",
+# is misleadingly named -- its own args.yaml shows imgsz: 384, not 640).
+#
+#   D:\project\Driver project\BaSuny\c\AI-Based Driver Safety And Assistance System\
+#     checkpoints\Frontend Browser Models (WebGPU Prototype)\
+#     YOLO11n Nano Worst-Case (WebGPU Prototype)\
+#     2-yolo11n_640_worstcase_finetune_run\weights\best.pt
+#
+#   - Architecture: YOLO11n, verified by loading the checkpoint this session --
+#     182 layers, 2,590,425 parameters, 6.4 GFLOPs, task=detect.
+#   - Real trained imgsz: 640 (args.yaml, confirmed -- this run's folder name is
+#     accurate; its own PARENT baseline's folder name is not).
+#   - Real init: warm-started from that same family's 384-trained baseline
+#     (itself fresh-COCO), i.e. same-lineage staged training, not single-stage.
+#   - Original dataset: old project's own Dataset-Main via dataset.yaml, SAME
+#     3 classes in the SAME index order (0 closed_eye, 1 open_eye, 2 yawning) --
+#     verified this session, no label remapping needed.
+#   - Original box/cls/dfl: 7.5/2.0/1.5 (verified from args.yaml -- this run's
+#     OWN model_summary.txt wrongly states cls=1.5; do not trust that file).
+#   - Original optimizer: AdamW, lr0=0.001, momentum=0.937, weight_decay=0.0005,
+#     warmup_epochs=3.0 (fine-tune stage, but used full warmup -- differs from
+#     this project's usual "short warmup for fine-tune" convention, noted not
+#     copied below).
+#   - Original augmentation was this project's REJECTED "worst-case" style
+#     (mosaic=1.0, mixup=0.1, erasing=0.4, amp=false) -- irrelevant to this
+#     config, which uses THIS project's own moderate-aug recipe going forward,
+#     not the checkpoint's original training augmentation.
+#   - Original val (results.csv, real, converged): mAP50 0.90003 (epoch 58/60,
+#     plateaued 58-60).
+#   - Original TEST (info/YOLO11n Nano Worst-Case (WebGPU)/test_summary.md, a
+#     REAL non-templated report -- 5,627 test images, distinct per-class
+#     numbers, not the fabricated info_legacy_archive duplicate): mAP50
+#     86.72%, P 81.85%, R 72.79%, F1 76.99%. Per-class AP50: closed_eye
+#     90.48%, open_eye 81.40%, yawning 88.29%.
+#   - This is on the OLD project's own test split (different corpus), NOT
+#     directly comparable to this project's 82.7-86.4% figures -- real number,
+#     wrong benchmark to compare against without re-evaluation here.
+#
+# RISK NOTES before running:
+#   - cls-weight shift: checkpoint's own training used cls=2.0; this config
+#     fine-tunes at cls=1.5 (this project's standard). Same KIND of shift
+#     already used successfully in this project's own lineage (Exp2 cls=0.5 ->
+#     Exp4 fine-tuned at cls=1.5), not a novel risk.
+#   - No resolution shift: checkpoint's native 640 == this dataset's native
+#     640 == this config's imgsz. This is the cleanest possible warm-start,
+#     no interpolation confound in either direction.
+#   - workers=2, not 0 or 4+ -- this machine's verified-safe setting
+#     (windows-dataloader-workers-crash memory).
+#   - warmup_epochs=1.0, not the checkpoint's original 3.0 -- matches D18's own
+#     choice and train.py's own guidance: a short fine-tune from an already-
+#     converged checkpoint doesn't need a full from-scratch warmup ramp.
+#
+# NOT LAUNCHED. Run manually when authorized:
+#   python src/train.py --config configs/yolo11n_dms_warmstart_640.yaml
+
+weights: "D:\\project\\Driver project\\BaSuny\\c\\AI-Based Driver Safety And Assistance System\\checkpoints\\Frontend Browser Models (WebGPU Prototype)\\YOLO11n Nano Worst-Case (WebGPU Prototype)\\2-yolo11n_640_worstcase_finetune_run\\weights\\best.pt"
+data: data/Dataset-Main/data.yaml     # FROZEN, unchanged
+name: dms-warmstart-yolo11n-640-moderate-aug
+
+imgsz: 640
+epochs: 25
+patience: 15
+batch: 32
+workers: 2
+
+optimizer: AdamW
+lr0: 0.001
+lrf: 0.01
+momentum: 0.9
+warmup_epochs: 1.0   # fine-tune from an already-converged checkpoint, not from-scratch
+cos_lr: true
+amp: true
+
+box: 7.5
+cls: 1.5             # this project's measured-best value, not the checkpoint's original 2.0
+dfl: 1.5
+
+# Identical moderate-aug block used by every nano comparison point (Exp2/4/5, D16).
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+flipud: 0.0
+fliplr: 0.5
+degrees: 15.0
+shear: 4.0
+perspective: 0.0005
+translate: 0.15
+scale: 0.6
+hsv_h: 0.02
+hsv_s: 0.7
+hsv_v: 0.5
+erasing: 0.30
+auto_augment: randaugment

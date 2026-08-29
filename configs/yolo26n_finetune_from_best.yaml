@@ -1,0 +1,132 @@
+# Experiment 2 (fine-tune variant) -- YOLO26n, continued training from Exp1's
+# best.pt. BOOK.md Chapter 3, SS3.3 (revised 2026-08-12: switched MuSGD ->
+# AdamW after researching Ultralytics' own YOLO26 training-recipe guidance).
+# This is a genuinely different strategy from configs/yolo26n_worst_case_aug.yaml
+# (which starts fresh from yolo26n.pt) -- whichever config is actually
+# launched FIRST claims the checkpoints/yolo26n/2-*/ slot; next_experiment_dir()
+# auto-numbers by scanning existing dirs, so there's no real conflict.
+#
+# Goal: maximize real accuracy of the EXISTING best.pt via a short, low-LR
+# fine-tune -- not a from-scratch A/B against Experiment 1.
+#
+# Verified from Experiment 1 before changing anything (BOOK.md Ch.3 SS3.1,
+# read directly from Ultralytics' BaseTrainer.build_optimizer source +
+# results.csv's lr/pg0..pg7 columns, not inferred from args.yaml):
+#   - optimizer="auto" resolved to MuSGD (iterations=ceil(train_imgs/batch)*
+#     epochs > 10000 triggers this branch at this dataset's scale), lr=0.01
+#     (0.03 for muon-pattern head params), momentum=0.9 -- the configured
+#     lr0=0.01/momentum=0.937 in args.yaml were coincidentally close on lr0
+#     but never actually honored (auto ignores configured lr0/momentum).
+#   - Best epoch 52/150 (mAP50-95=0.53175), manually stopped at epoch 77
+#     (not 63). Decline from epoch 58-73 was isolated to the classification
+#     head (val/cls_loss +19% while train/cls_loss kept falling; box loss
+#     unaffected throughout) and self-reversed by epoch 77 with no config
+#     change -- an overfitting-like signature, not conclusively settled.
+#
+# Optimizer choice -- AdamW, not MuSGD (BOOK.md Ch.3 SS3.3 research note):
+# Ultralytics' own official YOLO26 training-recipe doc gives an explicit
+# troubleshooting rule: "When training is unstable (loss spikes or diverges),
+# try optimizer=AdamW with lr0=0.001 for more stable convergence." Exp1's
+# epoch 58-73 decline is exactly that symptom. This is the strongest single
+# piece of evidence found (official, directly matches the observed problem),
+# outweighing the generic dataset-size heuristic (which would default to
+# MuSGD at this scale) and the optimizer-consistency argument (fine-tuning
+# with the same optimizer the checkpoint was trained under retains features
+# better, per adjacent LLM/ViT research -- our best.pt was trained under
+# MuSGD). Flagged as a reasoned choice under genuine evidence conflict, not
+# a settled fact -- if this run underperforms, MuSGD is the documented
+# fallback to test next (BOOK.md Ch.3 SS3.3).
+#
+# Run with: python src/train.py --config configs/yolo26n_finetune_from_best.yaml
+# Output: checkpoints/yolo26n/<N>-finetune-from-best/
+#
+# NOT launched by this file alone -- the user runs training manually.
+
+weights: checkpoints/yolo26n/1-baseline-yolo26n-960-mild-aug/best.pt
+                     # Exp1's actual best checkpoint (epoch 52, mAP50-95=
+                     # 0.53175) -- was originally under weights/ (never
+                     # auto-flattened, Exp1 was manually stopped) but was
+                     # manually flattened + renamed 2026-08-13 to match the
+                     # project-wide N-<slug> folder convention (AGENTS.md).
+data: data/Dataset-Main/data.yaml
+name: finetune-yolo26n-960-moderate-aug
+imgsz: 960           # unchanged -- goal is maximizing the existing model,
+                     # not testing resolution; box/localization was never
+                     # the problem in Exp1.
+epochs: 50           # per your instruction -- short fine-tune budget.
+patience: 10         # per your instruction -- aggressive early stop,
+                     # appropriate for refining an already-converged model.
+batch: 32            # unchanged -- no instability observed in Exp1.
+
+optimizer: AdamW     # switched from MuSGD -- see header note above.
+lr0: 0.001           # per your instruction -- also matches Ultralytics' own
+                     # documented AdamW fine-tune recommendation exactly.
+lrf: 0.01            # unchanged relative fraction -- final lr = lr0*lrf =
+                     # 0.00001, smooth decay to near-zero for a short run.
+momentum: 0.9        # unspecified by you -- left at train.py's flag default
+                     # (0.9), used as AdamW's beta1 (Ultralytics passes
+                     # betas=(momentum, 0.999) for Adam-family optimizers).
+                     # 0.9 is the standard AdamW beta1 in general ML practice
+                     # (Ultralytics' own project-wide default of 0.937 was
+                     # tuned for SGD-style momentum, not carried over here
+                     # without evidence it's better for AdamW specifically).
+cos_lr: true         # unchanged -- Exp1's LR/loss curves were smooth with no
+                     # spikes or divergence; nothing implicates the schedule shape.
+warmup_epochs: 3.0   # per your instruction.
+amp: true
+
+# Loss weights -- unchanged, no evidence to justify moving them (same
+# reasoning as before: the decline looked like a generalization-gap problem,
+# not a loss-balance problem).
+box: 7.5
+cls: 0.5
+dfl: 1.5
+
+# Image-combining augmentation stays OFF, per your explicit instruction --
+# conflicts with the dataset's own source-aware negative-label handling
+# (README.md Phase 12B/12C finding).
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+
+# flipud stays 0, per your explicit instruction -- a driver-facing camera is
+# never upside-down in production.
+flipud: 0.0
+fliplr: 0.5           # per your instruction.
+
+# Single-image augmentation -- "stronger but realistic," targeted at real DMS
+# conditions. Same evidence-targeted logic as before: Exp1's decline was
+# isolated to the CLASSIFICATION head (val/cls_loss +19% while box loss
+# stayed flat-to-improving), so photometric + occlusion augmentation is
+# pushed harder than geometric distortion (localization was never the weak
+# point, and this dataset already has ~40.5% real baked-in rotation, Ch. V).
+#
+# Note on "blur" / "contrast": Ultralytics' train() has no standalone --blur
+# or --contrast argument (checked against the full DEFAULT_CFG key list --
+# not fabricating a flag that doesn't exist). The closest real mechanism is
+# `auto_augment: randaugment` (Ultralytics' own default, left ON/unchanged
+# below), whose policy pool includes contrast- and sharpness/blur-adjacent
+# ops (AutoContrast, Solarize, Posterize, Sharpness, etc.) automatically.
+# hsv_v covers brightness directly.
+auto_augment: randaugment   # explicit, matches the Ultralytics default Exp1
+                             # also ran under -- closest real lever for
+                             # "contrast/blur"-style variation; no dedicated
+                             # blur/contrast flag exists to set otherwise.
+degrees: 15.0
+shear: 4.0
+perspective: 0.0005
+translate: 0.15
+scale: 0.6            # capped below a more aggressive value to avoid
+                     # shrinking the already-small open_eye boxes (the
+                     # dataset's binding small-object class, Ch.2 SS2.3)
+                     # past recoverable size.
+hsv_h: 0.02
+hsv_s: 0.7
+hsv_v: 0.5            # real day/night/IR exposure variance a DMS camera sees
+                     # -- also the main available lever for "brightness".
+erasing: 0.30         # occlusion (hands/hair/glasses over eyes) -- realistic
+                     # for DMS and targets the cls-confidence weakness
+                     # directly; capped below a more aggressive value for the
+                     # same open_eye small-object reason as `scale`.

@@ -1,0 +1,30 @@
+# virtual environments
+venv/
+.venv/
+
+# python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# dataset — DO NOT publish (large; tens of thousands of files)
+data/images/
+data/labels/
+data/splits/
+
+# checkpoints: ignore everything EXCEPT the tuned model the app deploys
+checkpoints/*
+!checkpoints/tuned/
+checkpoints/tuned/*
+!checkpoints/tuned/best.pth
+
+# bulky/generated result artifacts (keep the .json / .csv / .png / .docx)
+results/examples/
+results/examples_*/
+*.mp4
+*.avi
+*.mov
+
+# OS / editor
+.DS_Store
+Thumbs.db

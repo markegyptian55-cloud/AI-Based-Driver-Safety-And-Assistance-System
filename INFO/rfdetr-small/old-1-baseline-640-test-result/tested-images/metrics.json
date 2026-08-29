@@ -1,0 +1,28 @@
+{
+  "model_key": "old-rfdetr-small-1-baseline-640",
+  "display_name": "[OLD] RF-DETR Small Baseline 640",
+  "map50": 0.6528546114164103,
+  "precision": 0.6021333733377036,
+  "recall": 0.7349487960543812,
+  "f1": 0.6602101257501277,
+  "ap_per_class": {
+    "closed_eye": 0.8355749095551814,
+    "open_eye": 0.6629223847927908,
+    "yawning": 0.46006653990125856
+  },
+  "map50_corrected": 0.6620951679258763,
+  "ap_per_class_corrected": {
+    "closed_eye": 0.8502356899171637,
+    "open_eye": 0.6754238927256588,
+    "yawning": 0.4606259211348063
+  },
+  "label_gap_stats": {
+    "eye_ignored_images": 1039,
+    "yawn_ignored_images": 699,
+    "yawn_blind_families": [
+      "closed_eye_corpus",
+      "images-"
+    ],
+    "total_images": 5589
+  }
+}

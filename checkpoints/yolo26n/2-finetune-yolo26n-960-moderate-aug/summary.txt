@@ -1,0 +1,54 @@
+yolo26n -- 2-finetune-yolo26n-960-moderate-aug
+============================================================
+
+Weights (start)     : checkpoints/yolo26n/1-baseline-yolo26n-960-mild-aug/best.pt
+                      (Exp1's best checkpoint, epoch 52 -- a true fine-tune,
+                      not a fresh-weights run)
+Data                : data/Dataset-Main/data.yaml
+Epochs completed    : 50 (planned: 50)   Patience: 10 (never triggered)
+Image size          : 960
+Batch               : 32
+Total train time    : 42196.3s (11.72h)
+Avg time / epoch     : 843.9s (14.07min)
+
+-- Optimizer / LR --
+Optimizer           : AdamW (explicit -- switched from MuSGD after
+                      researching Ultralytics' own troubleshooting guidance
+                      for unstable training, which matched Exp1's epoch
+                      58-73 symptom; see BOOK.md Ch.3 SS3.3)
+lr0 / lrf           : 0.001 / 0.01
+momentum            : 0.9 (AdamW beta1)
+warmup_epochs       : 3.0
+cos_lr              : True
+
+-- Loss weights --
+box / cls / dfl     : 7.5 / 0.5 / 1.5
+
+-- Augmentation --
+hsv_h / hsv_s / hsv_v : 0.02 / 0.7 / 0.5
+degrees             : 15.0
+translate           : 0.15
+scale               : 0.6
+shear               : 4.0
+perspective         : 0.0005
+fliplr / flipud     : 0.5 / 0.0
+erasing             : 0.3
+auto_augment        : randaugment
+mosaic / mixup      : 0.0 / 0.0
+cutmix / copy_paste : 0.0 / 0.0
+
+-- Final metrics (val) --
+mAP50               : 0.8796
+mAP50-95            : 0.5288
+Precision           : 0.7862
+Recall              : 0.8183
+
+-- Real held-out test-split evaluation (evaluate.py, 5,589 images) --
+mAP50               : 0.8233
+Precision           : 0.7964
+Recall              : 0.7348
+F1                  : 0.7641
+(Best real test-set accuracy of all three experiments -- despite NOT having
+the best val mAP50-95, which Exp1 held. See BOOK.md Ch.3 SS3.5.)
+
+Full writeup: BOOK.md Chapter 3 SS3.3.

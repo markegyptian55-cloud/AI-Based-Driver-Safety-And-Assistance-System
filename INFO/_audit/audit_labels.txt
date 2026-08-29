@@ -1,0 +1,95 @@
+================================================================================================
+ RAPID DATASET AUDIT -- label-only, all splits
+================================================================================================
+
+  train  images= 39627   closed_eye=19366  open_eye=17657  yawning=16597
+  val    images=  5438   closed_eye=2910  open_eye=2002  yawning=2333
+  test   images=  5589   closed_eye=2395  open_eye=2327  yawning=2705
+
+------------------------------------------------------------------------------------------------
+ 1. YAWNING BOX CONVENTION BY SOURCE CORPUS   <-- decisive check
+------------------------------------------------------------------------------------------------
+  If two separated area_frac regimes exist, the corpora disagree on what a
+  'yawning' box IS, and no single set of predictions can match both.
+
+  [train]
+    family                boxes  median af     p10     p90    regime
+    bare_numeric           5828      0.155   0.047   0.483       mid
+    dd_v1                  5595      0.024   0.011   0.146     tight
+    yawn_new               2796      0.801   0.613   1.000     LOOSE
+    Yimg                    780      0.084   0.054   0.161     tight
+    istockphoto             710      0.029   0.013   0.087     tight
+    other_small             501      0.123   0.058   0.271       mid
+    img                     387      0.115   0.056   0.165       mid
+
+  [val]
+    family                boxes  median af     p10     p90    regime
+    bare_numeric            955      0.188   0.059   0.453       mid
+    dd_v1                   536      0.022   0.009   0.116     tight
+    yawn_new                392      0.789   0.579   1.000     LOOSE
+    Yimg                    183      0.114   0.068   0.157       mid
+    istockphoto             103      0.030   0.019   0.085     tight
+    other_small              88      0.055   0.037   0.217     tight
+    img                      76      0.103   0.050   0.148       mid
+
+  [test]
+    family                boxes  median af     p10     p90    regime
+    dd_v1                  1065      0.042   0.010   0.115     tight
+    bare_numeric           1025      0.100   0.041   0.386     tight
+    yawn_new                384      0.817   0.613   1.000     LOOSE
+    istockphoto             100      0.033   0.017   0.099     tight
+    Yimg                     66      0.065   0.058   0.096     tight
+    img                      46      0.111   0.058   0.152       mid
+    other_small              19      0.185   0.085   0.346       mid
+
+  TRAIN pooled yawning boxes: n=16597
+    tight (af<0.10) :  44.4%
+    mid            :  30.3%
+    LOOSE (af>=0.30):  25.3%
+
+------------------------------------------------------------------------------------------------
+ 2. SUSPICIOUS BOXES (tier-aware)
+------------------------------------------------------------------------------------------------
+  [train] total boxes=53620
+    eye_box_too_large            4981  (9.29% of boxes)
+    eye_box_tiny                  121  (0.23% of boxes)
+    extreme_aspect                 51  (0.10% of boxes)
+  [val] total boxes=7245
+    eye_box_too_large             840  (11.59% of boxes)
+    eye_box_tiny                    8  (0.11% of boxes)
+    extreme_aspect                  2  (0.03% of boxes)
+  [test] total boxes=7427
+    eye_box_too_large             583  (7.85% of boxes)
+    eye_box_tiny                    9  (0.12% of boxes)
+    yawn_box_tiny                   3  (0.04% of boxes)
+    extreme_aspect                  3  (0.04% of boxes)
+
+------------------------------------------------------------------------------------------------
+ 3. CROSS-CLASS CONFLICTS AND DUPLICATE BOXES (IoU >= 0.5, same image)
+------------------------------------------------------------------------------------------------
+  [train] cross-class conflicts=0   same-class duplicates=0
+  [val] cross-class conflicts=0   same-class duplicates=0
+  [test] cross-class conflicts=0   same-class duplicates=0
+
+------------------------------------------------------------------------------------------------
+ 4. GEOMETRY OUTLIERS
+------------------------------------------------------------------------------------------------
+  [train] border_touching=14110 (26.31%)  huge=1663 (3.10%)  tiny=648 (1.21%)
+  [val] border_touching=2126 (29.34%)  huge=183 (2.53%)  tiny=86 (1.19%)
+  [test] border_touching=1655 (22.28%)  huge=179 (2.41%)  tiny=79 (1.06%)
+
+------------------------------------------------------------------------------------------------
+ 5. SOURCE DISTRIBUTION (images per split)
+------------------------------------------------------------------------------------------------
+  family                     train         val        test
+  bare_numeric               48.3%       53.5%       50.8%
+  dd_v1                      17.8%       13.1%       22.7%
+  closed_eye_corpus          12.2%       12.7%       12.2%
+  other_small                 9.2%        6.3%        3.0%
+  yawn_new                    7.1%        7.2%        6.9%
+  Yimg                        2.0%        3.4%        1.2%
+  istockphoto                 1.8%        1.8%        1.7%
+  img                         1.3%        1.6%        1.2%
+  images-                     0.2%        0.3%        0.3%
+
+================================================================================================

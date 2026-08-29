@@ -1,0 +1,63 @@
+# PREPARED, NOT RUN -- second-stage comparison, later. Do NOT run before
+# yolo11n_dms_warmstart_640.yaml has been run and evaluated on test.
+#
+# Identical to yolo11n_dms_warmstart_640.yaml in every field except imgsz.
+# Purpose: compare task-specific warm-start AT the dataset's native resolution
+# (640) against the SAME warm-start forced down to 320, for the weak-device
+# deployment slot (BOOK.md pending-yolo26n-low-res memory: the earlier BLIND
+# 480 re-export, no retraining, already failed on a real weak device).
+#
+# REAL RISK, stated plainly: unlike the 640 config, this one is NOT clean.
+# The checkpoint was trained at 640 (verified, its own args.yaml) and this
+# project's dataset is native 640 (verified this session, full scan). 320 is
+# native to NEITHER. This is a genuine downsampling shift on both sides of
+# the fine-tune -- the checkpoint has to adapt its features to a resolution
+# it never saw, on images resampled down from their own native size. Expect
+# a real accuracy cost vs the 640 config; do not assume it will be close.
+# This is why it is sequenced AFTER 640, not run in parallel: the 640 run
+# converged first tells you whether task-specific warm-start works AT ALL
+# before spending GPU time on a resolution question layered on top of it.
+#
+# NOT LAUNCHED. Run manually when authorized, and only after reviewing the
+# 640 config's real test-split result:
+#   python src/train.py --config configs/yolo11n_dms_warmstart_320.yaml
+
+weights: "D:\\project\\Driver project\\BaSuny\\c\\AI-Based Driver Safety And Assistance System\\checkpoints\\Frontend Browser Models (WebGPU Prototype)\\YOLO11n Nano Worst-Case (WebGPU Prototype)\\2-yolo11n_640_worstcase_finetune_run\\weights\\best.pt"
+data: data/Dataset-Main/data.yaml     # FROZEN, unchanged
+name: dms-warmstart-yolo11n-320-moderate-aug
+
+imgsz: 320
+epochs: 25
+patience: 15
+batch: 32
+workers: 2
+
+optimizer: AdamW
+lr0: 0.001
+lrf: 0.01
+momentum: 0.9
+warmup_epochs: 1.0
+cos_lr: true
+amp: true
+
+box: 7.5
+cls: 1.5
+dfl: 1.5
+
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+flipud: 0.0
+fliplr: 0.5
+degrees: 15.0
+shear: 4.0
+perspective: 0.0005
+translate: 0.15
+scale: 0.6
+hsv_h: 0.02
+hsv_s: 0.7
+hsv_v: 0.5
+erasing: 0.30
+auto_augment: randaugment

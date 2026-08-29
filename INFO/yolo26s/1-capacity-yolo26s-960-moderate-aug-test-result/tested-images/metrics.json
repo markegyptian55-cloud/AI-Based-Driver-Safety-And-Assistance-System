@@ -1,0 +1,28 @@
+{
+  "model_key": "yolo26s-1-capacity",
+  "display_name": "YOLO26s Capacity 960",
+  "map50": 0.8116591251720559,
+  "precision": 0.8185177346912648,
+  "recall": 0.6407456064331742,
+  "f1": 0.7112012693590097,
+  "ap_per_class": {
+    "closed_eye": 0.8239473561180751,
+    "open_eye": 0.7376142354170947,
+    "yawning": 0.8734157839809976
+  },
+  "map50_corrected": 0.8160219507051462,
+  "ap_per_class_corrected": {
+    "closed_eye": 0.8284687282395905,
+    "open_eye": 0.7461807394198179,
+    "yawning": 0.8734163844560301
+  },
+  "label_gap_stats": {
+    "eye_ignored_images": 1039,
+    "yawn_ignored_images": 699,
+    "yawn_blind_families": [
+      "closed_eye_corpus",
+      "images-"
+    ],
+    "total_images": 5589
+  }
+}

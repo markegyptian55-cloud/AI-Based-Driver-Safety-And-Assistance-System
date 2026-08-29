@@ -1,0 +1,39 @@
+yolo26n -- 5-cls3-yolo26n-960-moderate-aug
+============================================================
+
+Weights (start)     : checkpoints/yolo26n/2-finetune-yolo26n-960-moderate-aug/best.pt
+Data                : data/Dataset-Main/data.yaml
+Epochs completed    : 34 (planned: 34)   Patience: 12
+Image size          : 960
+Batch               : 32
+Total train time    : 29178.9s (8.11h)
+Avg time / epoch    : 858.2s (14.30min)
+
+-- Optimizer / LR --
+Optimizer           : AdamW
+lr0 / lrf           : 0.001 / 0.01
+momentum            : 0.9
+warmup_epochs       : 3.0
+cos_lr              : True
+
+-- Loss weights --
+box / cls / dfl     : 7.5 / 3.0 / 1.5
+
+-- Augmentation --
+hsv_h / hsv_s / hsv_v : 0.02 / 0.7 / 0.5
+degrees             : 15.0
+translate           : 0.15
+scale               : 0.6
+shear               : 4.0
+perspective         : 0.0005
+fliplr / flipud     : 0.5 / 0.0
+erasing             : 0.3
+auto_augment        : randaugment
+mosaic / mixup      : 0.0 / 0.0
+cutmix / copy_paste : 0.0 / 0.0
+
+-- Final metrics --
+mAP50               : 0.8885
+mAP50-95            : 0.5217
+Precision           : 0.7972
+Recall              : 0.8248

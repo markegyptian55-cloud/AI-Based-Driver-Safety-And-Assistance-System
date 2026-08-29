@@ -1,0 +1,12 @@
+# Streamlit Community Cloud is CPU-only: pull CPU-only torch wheels so the
+# install stays small and does not fail on the GPU (CUDA) build.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+torchvision
+numpy>=1.24
+opencv-python-headless>=4.7
+Pillow>=9.0
+matplotlib>=3.7
+streamlit>=1.30
+streamlit-webrtc>=0.47
+av>=10.0

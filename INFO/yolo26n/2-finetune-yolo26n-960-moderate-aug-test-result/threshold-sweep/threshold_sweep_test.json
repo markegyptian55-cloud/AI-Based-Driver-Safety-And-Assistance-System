@@ -1,0 +1,164 @@
+{
+  "model": "yolo26n-2-finetune",
+  "split": "test",
+  "images": 5589,
+  "thresholds": {
+    "0.35": {
+      "closed_eye": {
+        "tp": 1960,
+        "fp": 317,
+        "fp_corrected": 314,
+        "fn": 435,
+        "precision": 0.8607817303469477,
+        "recall": 0.8183716075156576,
+        "f1": 0.839041095890411,
+        "precision_corrected": 0.8619173262972736,
+        "f1_corrected": 0.8395802098950526
+      },
+      "open_eye": {
+        "tp": 1644,
+        "fp": 401,
+        "fp_corrected": 391,
+        "fn": 683,
+        "precision": 0.8039119804400978,
+        "recall": 0.7064890416845724,
+        "f1": 0.7520585544373284,
+        "precision_corrected": 0.8078624078624078,
+        "f1_corrected": 0.7537826685006879
+      },
+      "yawning": {
+        "tp": 1838,
+        "fp": 699,
+        "fp_corrected": 699,
+        "fn": 867,
+        "precision": 0.724477729601892,
+        "recall": 0.6794824399260628,
+        "f1": 0.7012590614269363,
+        "precision_corrected": 0.724477729601892,
+        "f1_corrected": 0.7012590614269363
+      }
+    },
+    "0.3": {
+      "closed_eye": {
+        "tp": 2026,
+        "fp": 429,
+        "fp_corrected": 423,
+        "fn": 369,
+        "precision": 0.825254582484725,
+        "recall": 0.8459290187891441,
+        "f1": 0.8354639175257733,
+        "precision_corrected": 0.8272764393630053,
+        "f1_corrected": 0.8364987613542526
+      },
+      "open_eye": {
+        "tp": 1724,
+        "fp": 539,
+        "fp_corrected": 508,
+        "fn": 603,
+        "precision": 0.761820592134335,
+        "recall": 0.740868070477009,
+        "f1": 0.7511982570806099,
+        "precision_corrected": 0.7724014336917563,
+        "f1_corrected": 0.7563062075016451
+      },
+      "yawning": {
+        "tp": 2097,
+        "fp": 1083,
+        "fp_corrected": 1083,
+        "fn": 608,
+        "precision": 0.659433962264151,
+        "recall": 0.7752310536044362,
+        "f1": 0.7126593033135089,
+        "precision_corrected": 0.659433962264151,
+        "f1_corrected": 0.7126593033135089
+      }
+    },
+    "0.25": {
+      "closed_eye": {
+        "tp": 2084,
+        "fp": 568,
+        "fp_corrected": 561,
+        "fn": 311,
+        "precision": 0.7858220211161387,
+        "recall": 0.8701461377870564,
+        "f1": 0.8258371309688923,
+        "precision_corrected": 0.7879017013232514,
+        "f1_corrected": 0.8269841269841272
+      },
+      "open_eye": {
+        "tp": 1790,
+        "fp": 683,
+        "fp_corrected": 624,
+        "fn": 537,
+        "precision": 0.7238172260412454,
+        "recall": 0.7692307692307693,
+        "f1": 0.7458333333333333,
+        "precision_corrected": 0.7415078707539354,
+        "f1_corrected": 0.7551149546509176
+      },
+      "yawning": {
+        "tp": 2380,
+        "fp": 1501,
+        "fp_corrected": 1501,
+        "fn": 325,
+        "precision": 0.6132440092759598,
+        "recall": 0.8798521256931608,
+        "f1": 0.7227452171272395,
+        "precision_corrected": 0.6132440092759598,
+        "f1_corrected": 0.7227452171272395
+      }
+    },
+    "0.2": {
+      "closed_eye": {
+        "tp": 2133,
+        "fp": 756,
+        "fp_corrected": 739,
+        "fn": 262,
+        "precision": 0.7383177570093458,
+        "recall": 0.8906054279749478,
+        "f1": 0.807342922028766,
+        "precision_corrected": 0.7426880222841226,
+        "f1_corrected": 0.8099487374216822
+      },
+      "open_eye": {
+        "tp": 1853,
+        "fp": 927,
+        "fp_corrected": 809,
+        "fn": 474,
+        "precision": 0.6665467625899281,
+        "recall": 0.7963042544048131,
+        "f1": 0.7256706481300176,
+        "precision_corrected": 0.6960931630353118,
+        "f1_corrected": 0.742834235317699
+      },
+      "yawning": {
+        "tp": 2443,
+        "fp": 1637,
+        "fp_corrected": 1637,
+        "fn": 262,
+        "precision": 0.5987745098039216,
+        "recall": 0.9031423290203328,
+        "f1": 0.7201179071481209,
+        "precision_corrected": 0.5987745098039216,
+        "f1_corrected": 0.7201179071481209
+      }
+    }
+  },
+  "f1_optimal_per_class": {
+    "closed_eye": {
+      "threshold": 0.33,
+      "f1": 0.8400000000000001,
+      "recall": 0.8329853862212944
+    },
+    "open_eye": {
+      "threshold": 0.33,
+      "f1": 0.7529675251959685,
+      "recall": 0.7223893425010743
+    },
+    "yawning": {
+      "threshold": 0.25,
+      "f1": 0.7227452171272395,
+      "recall": 0.8798521256931608
+    }
+  }
+}

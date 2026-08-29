@@ -1,0 +1,41 @@
+{
+  "key": "yolo11m-1-warmstart",
+  "display_name": "YOLO11m - D18 Cross-Dataset Warm Start",
+  "family": "yolo",
+  "resolution": 640,
+  "size_mb": 38.64,
+  "metrics": {
+    "map50": 0.8642304046418084,
+    "map50_corrected": 0.8674812399698296,
+    "precision": 0.8269498220682784,
+    "recall": 0.7381625921683876,
+    "f1": 0.7796632151203181,
+    "ap_per_class": {
+      "closed_eye": 0.9237798712042946,
+      "open_eye": 0.8627857893012381,
+      "yawning": 0.8061255534198923
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.9262053817941032,
+      "open_eye": 0.8701075939267636,
+      "yawning": 0.8061307441886222
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": 15,
+    "imgsz": 640,
+    "batch": 16,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "cls": 1.5,
+    "box": 7.5,
+    "dfl": 1.5,
+    "hours": 7.26
+  },
+  "notes": {
+    "en": "Cross-dataset warm start: fine-tuned from the OLD project's own best YOLO11m checkpoint onto THIS project's dataset. Best real test result in this project.",
+    "ar": "بدء دافئ عبر مجموعات بيانات مختلفة: ضبط دقيق من أفضل نقطة تفتيش YOLO11m للمشروع القديم على بيانات هذا المشروع. أفضل نتيجة اختبار حقيقية."
+  }
+}

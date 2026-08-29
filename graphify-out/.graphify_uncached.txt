@@ -1,0 +1,188 @@
+C:\AI-Based Driver Safety and Assistance System(ADAS)\AGENTS.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\DEPLOYMENT.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\Project plan website.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\architecture\01_Project_Overview.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\architecture\02_System_Architecture.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\architecture\03_Backend_Architecture.md.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\requirements.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\results\ab_compare.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\results\auto_label\candidate_labels.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\results\comparison_metrics.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\results\test_output.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\BOOK.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\_audit\audit_labels.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\_benchmark\latency_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\_comparison\comparison_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-nano\old-1-baseline-384-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-nano\old-1-baseline-384-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-nano\old-1-baseline-384-test-result\training-curves\NO_TRAINING_HISTORY.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-nano\old-2-finetune-384-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-nano\old-2-finetune-384-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-nano\old-2-finetune-384-test-result\training-curves\NO_TRAINING_HISTORY.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-small\old-1-baseline-640-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-small\old-1-baseline-640-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-small\old-1-baseline-640-test-result\training-curves\NO_TRAINING_HISTORY.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-small\old-2-standard-640-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-small\old-2-standard-640-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-small\old-2-standard-640-test-result\training-curves\NO_TRAINING_HISTORY.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-small\old-3-worstcase-384-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-small\old-3-worstcase-384-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-small\old-3-worstcase-384-test-result\training-curves\NO_TRAINING_HISTORY.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11m\1-yolo11m-warmstart-pilot-640-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11m\1-yolo11m-warmstart-pilot-640-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11m\old-1-worstcase-384-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11m\old-1-worstcase-384-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11m\old-2-trial2winner-640-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11m\old-2-trial2winner-640-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11m\old-2-trial2winner-640-test-result\training-curves\NO_TRAINING_HISTORY.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11m\old-3-worstcase-d18source-640-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11m\old-3-worstcase-d18source-640-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11n\1-capacity-yolo11n-960-moderate-aug-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11n\1-capacity-yolo11n-960-moderate-aug-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11n\old-1-baseline-384-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11n\old-1-baseline-384-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11n\old-2-worstcase-dms-640-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo11n\old-2-worstcase-dms-640-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\1-baseline-yolo26n-960-mild-aug-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\1-baseline-yolo26n-960-mild-aug-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\2-finetune-yolo26n-960-moderate-aug-test-result\missed-detection-analysis\missed_analysis_test.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\2-finetune-yolo26n-960-moderate-aug-test-result\missed-detection-analysis\missed_analysis_val.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\2-finetune-yolo26n-960-moderate-aug-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\2-finetune-yolo26n-960-moderate-aug-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\2-finetune-yolo26n-960-moderate-aug-test-result\threshold-sweep\threshold_sweep_test.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\3-fresh-yolo26n-640-worst-aug-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\3-fresh-yolo26n-640-worst-aug-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\4-calibration-yolo26n-960-moderate-aug-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\4-calibration-yolo26n-960-moderate-aug-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\5-cls3-yolo26n-960-moderate-aug-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\5-cls3-yolo26n-960-moderate-aug-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\6-weakdevice-480-worstcase-yolo26n-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\6-weakdevice-480-worstcase-yolo26n-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\old-1-nanobaseline-384-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\old-1-nanobaseline-384-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\old-2-nanoworstcase-384-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26n\old-2-nanoworstcase-384-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26s\1-capacity-yolo26s-960-moderate-aug-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\yolo26s\1-capacity-yolo26s-960-moderate-aug-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\add-the-two-quantized-models-and-show-size-accuracy-in-the-p-2026-08-08.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\android-safe-inference-session-exports-and-a-faster-live-boo-2026-08-19.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\faster-960-model-and-a-480-model-that-actually-runs-on-weak-2026-08-17.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\faster-inference-live-manager-dashboard-hard-manager-lock-au-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\faster-model-downloads-storage-you-control-lower-latency-plu-2026-08-17.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-android-start-live-detection-hanging-pick-the-right-mode-2026-08-19.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-bad-detection-quality-on-mobile-2026-08-06.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-slow-new-models-model-persistence-compatibility-check-lo-2026-08-08.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-step-5-running-ai-inference-failures-especially-on-weak-2026-08-21.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-the-inference-engine-real-webgpu-acceleration-for-the-96-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-video-analysis-add-microsleep-alarm-2026-08-06.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fix-yawn-detection-the-cramped-text-block-after-analysis-2026-08-07.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\fleet-driver-safety-mode-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\full-screen-video-sign-in-page-security-cleanup-2026-08-23.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\keep-only-the-two-best-models-2026-08-10.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\labels-per-eye-smile-vs-yawn-real-microsleep-events-and-a-fu-2026-08-06.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\live-detect-video-upload-performance-refactor-and-mobile-pol-2026-08-19.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\make-live-start-reliably-on-weak-android-devices-2026-08-19.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\manager-cleanup-automatic-shifts-and-a-straight-answer-on-40-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\manager-reports-feed-a-second-pass-on-inference-speed-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\manager-sign-in-goes-straight-to-the-fleet-dashboard-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\mobile-first-live-detection-closing-menu-simple-start-screen-2026-08-10.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\mobile-grade-live-detection-presets-smoothing-debug-overlay-2026-08-06.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\mobile-live-camera-drop-the-guide-circle-mirror-the-selfie-p-2026-08-07.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\new-model-neon-green-theme-visitor-mode-mp4-download-2026-08-06.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\offline-mode-for-drivers-and-guests-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\overlay-labels-live-report-on-the-video-page-driver-identity-2026-08-06.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\phase-1-audit-completion-stabilization-2026-08-03.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\plan-remove-live-and-video-detection-lag-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\post-phase-7-production-bug-fixes-2026-08-03.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\production-android-live-detection-recovery-plan-2026-08-06.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\replace-all-detection-models-with-the-two-new-yolo26n-export-2026-08-17.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\replace-the-detection-models-with-the-new-yolo26n-package-2026-08-21.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\sentryeye-next-future-plan-2026-08-23.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\shift-auto-end-manager-analytics-yawn-accuracy-login-video-n-2026-08-23.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\two-apps-one-link-driver-view-vs-manager-view-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\use-only-the-two-10-mb-fp32-models-2026-08-22.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\video-detection-box-alignment-report-smarter-conversion-rest-2026-08-06.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\yawning-pipeline-measure-first-then-fix-the-smallest-broken-2026-08-07.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\.lovable\plan\إصلاح-تجربة-live-detection-على-الموبايل-2026-08-10.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\AGENTS.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\backend\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\backend\requirements.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\docs\AI-HANDOFF-REPORT.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\docs\SYSTEM-REPORT.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\SentryEye platform official\src\routes\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\rfdetr-nano\old-1-baseline-384\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\rfdetr-nano\old-2-finetune-384\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\rfdetr-small\old-1-baseline-640\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\rfdetr-small\old-2-standard-640\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\rfdetr-small\old-3-worstcase-384\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11m\1-yolo11m-warmstart-pilot-640\args.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11m\1-yolo11m-warmstart-pilot-640\summary.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11m\old-1-worstcase-384\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11m\old-2-trial2winner-640\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11m\old-3-worstcase-d18source-640\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11n\1-capacity-yolo11n-960-moderate-aug\args.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11n\1-capacity-yolo11n-960-moderate-aug\summary.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11n\old-1-baseline-384\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo11n\old-2-worstcase-dms-640\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\1-baseline-yolo26n-960-mild-aug\args.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\1-baseline-yolo26n-960-mild-aug\experiment_1_summary.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\1-baseline-yolo26n-960-mild-aug\summary.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\2-finetune-yolo26n-960-moderate-aug\args.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\2-finetune-yolo26n-960-moderate-aug\summary.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\3-fresh-yolo26n-640-worst-aug\args.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\3-fresh-yolo26n-640-worst-aug\summary.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\4-calibration-yolo26n-960-moderate-aug\args.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\4-calibration-yolo26n-960-moderate-aug\summary.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\5-cls3-yolo26n-960-moderate-aug\args.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\5-cls3-yolo26n-960-moderate-aug\summary.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\6-weakdevice-480-worstcase-yolo26n\args.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\6-weakdevice-480-worstcase-yolo26n\summary.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\old-1-nanobaseline-384\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26n\old-2-nanoworstcase-384\info.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\checkpoints\yolo26s\1-capacity-yolo26s-960-moderate-aug\args.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\checkpoints.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo11n_baseline.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo11n_capacity.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo11n_dms_warmstart_320.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo11n_dms_warmstart_640.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_baseline.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_cls3.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_corrected_finetune.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_exp3_fresh_worst_case.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_exp4_fresh_worst_case_480.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_finetune_from_best.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_weakdevice_480_worstcase.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_worst_case_aug.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26s_capacity.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE TEAM\BASUNY\basuny NAME AND LINKED .txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE TEAM\ali\ali NAME AND LINKED .txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE TEAM\bahncy\bahncy NAME AND LINKED .txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE TEAM\kreem\kreem NAME AND LINKED .txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE TEAM\michel\michel NAME AND LINKED .txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\AGENTS.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\BUILD_PROMPT.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\HANDOFF.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\PRODUCT.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\assets\scratch\ab_compare.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\index.html
+C:\AI-Based Driver Safety and Assistance System(ADAS)\graphify-out\converted\Book-AI-Based_Driver_Safety_and_Assistance_System_23bf8e33.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\graphify-out\converted\Project_Modification_Report_3c04bd46.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\src\SCRIPTS_OVERVIEW.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\streamlit-platform\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\streamlit-platform\backups\20260815-160816\SETTINGS_SNAPSHOT.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\streamlit-platform\backups\20260815-165322\registry.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\streamlit-platform\backups\LATEST.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\streamlit-platform\models\registry.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\BOOK\Book-AI-Based_Driver_Safety_and_Assistance_System.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE BANAR\Banar 2026.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Advancing Driver Assistance Systems and Drowsiness Detection.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Arava, M., & Sundaram, D. M. (2024). Integrating lightweight YOLOv5s and facial 3D keypoints for enhanced fatigued‑driving detection. PeerJ Computer Science, 10, e2447..pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Bayesian-Optimized CLAHE for Enhanced Drowsiness Detection inLow-Light Conditions Using Time-Distributed MobileNetV2-GRUArchitecture 20251220 (1).pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Chen, C., Liu, X., Zhou, M., Li, Z., Du, Z., & Lin, Y. (2025). Lightweight and Real‑Time Driver Fatigue Detection Based on MG‑YOLOv8 with Facial Multi‑Feature Fusion. Journal of Imaging, 11(11), 385..pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Go et al. (2025) Comprehensive Benchmark of YOLOv11n etc for Face Detection in Video-Based Driver Drowsiness.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Herath et al. (2025) Vision-Based Driver Drowsiness Monitoring - Comparative Analysis of YOLOv5-v11 Models.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Mujtaba et al. (2025) YawDD+ Frame-level Annotations for Accurate Yawn Prediction.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Yusuf, L., Hamada, M., Hassan, M., & Kakudi, H. (2024). Enhanced Driver Drowsiness Detection Model Using Multi‑Level Features Fusion and a Long‑Short‑Term Recurrent Neural Network. Engineering Proceedings, 56(1), 338.pdf

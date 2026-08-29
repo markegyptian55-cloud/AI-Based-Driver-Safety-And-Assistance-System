@@ -1,0 +1,28 @@
+{
+  "model_key": "old-yolo11n-2-worstcase-dms-640",
+  "display_name": "[OLD] YOLO11n Worst-Case DMS 640",
+  "map50": 0.7198026582201575,
+  "precision": 0.7451220878483142,
+  "recall": 0.6709661297859589,
+  "f1": 0.7055672287958705,
+  "ap_per_class": {
+    "closed_eye": 0.8692262370334649,
+    "open_eye": 0.798751321135575,
+    "yawning": 0.4914304164914327
+  },
+  "map50_corrected": 0.7277299290393008,
+  "ap_per_class_corrected": {
+    "closed_eye": 0.8801186290112452,
+    "open_eye": 0.8116365288139076,
+    "yawning": 0.4914346292927498
+  },
+  "label_gap_stats": {
+    "eye_ignored_images": 1039,
+    "yawn_ignored_images": 699,
+    "yawn_blind_families": [
+      "closed_eye_corpus",
+      "images-"
+    ],
+    "total_images": 5589
+  }
+}

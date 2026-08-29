@@ -1,0 +1,41 @@
+{
+  "key": "old-yolo26n-2-nanoworstcase-384",
+  "display_name": "[Old] YOLO26n Nano Worst-Case 384",
+  "family": "yolo",
+  "resolution": 384,
+  "size_mb": 5.1,
+  "metrics": {
+    "map50": 0.6920916137013647,
+    "map50_corrected": 0.6997130221579905,
+    "precision": 0.7059165820888308,
+    "recall": 0.6719169099244019,
+    "f1": 0.6876819435565015,
+    "ap_per_class": {
+      "closed_eye": 0.8805884900743742,
+      "open_eye": 0.6979946530456308,
+      "yawning": 0.4976916979840892
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.8898320250738616,
+      "open_eye": 0.7116142532957096,
+      "yawning": 0.4976927881044001
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": null,
+    "imgsz": 384,
+    "batch": null,
+    "optimizer": null,
+    "lr0": null,
+    "cls": null,
+    "box": null,
+    "dfl": null,
+    "hours": null
+  },
+  "notes": {
+    "en": "[Old project] YOLO26n nano worst-case fine-tune, old project's dataset. Real accuracy measured on THIS project's test split.",
+    "ar": "[مشروع قديم] YOLO26n بأقصى تعزيز، بيانات المشروع القديم. الدقة قُيست على مجموعة اختبار هذا المشروع."
+  }
+}

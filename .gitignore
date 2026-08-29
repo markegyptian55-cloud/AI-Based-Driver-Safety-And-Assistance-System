@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment & local settings
+.env
+.venv
+env/
+venv/
+ENV/
+*.tmp
+
+# IDE & Editor caches
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+.claude/
+.gemini/
+
+# Large Model Weights (YOLO & TensorRT)
+*.pt
+*.onnx
+*.engine
+*.bin
+*.pth
+checkpoints/**/weights/
+checkpoints/**/*.pt
+checkpoints/**/*.engine
+checkpoints/**/*.onnx
+
+# Datasets (Do not push 50,000+ images to GitHub)
+data/
+final_dataset/
+*.zip
+*.tar
+*.tar.gz
+*.avi
+*.mp4
+*.mkv
+*.mov
+
+# Streamlit platform runtime & temporary outputs
+streamlit-platform/runtime/
+streamlit-platform/static/out/
+runtime/
+wheelhouse/

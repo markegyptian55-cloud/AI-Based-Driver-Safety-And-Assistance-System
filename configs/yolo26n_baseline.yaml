@@ -1,0 +1,33 @@
+# Experiment 1 -- YOLO26n corrected baseline.
+# BOOK.md Chapter 2, SS2.9 (Experiment Plan).
+# Run with: python src/train.py --config configs/yolo26n_baseline.yaml
+# Output: checkpoints/yolo26n/1-baseline/best.pt (N auto-increments per
+# family -- see BOOK.md Ch.2 SS2.10 / AGENTS.md for the folder convention).
+weights: yolo26n.pt
+data: data/Dataset-Main/data.yaml
+name: baseline-yolo26n-960-mild-aug
+imgsz: 960
+epochs: 150
+batch: 32
+lr0: 0.01
+lrf: 0.01
+patience: 30
+amp: true
+optimizer: auto
+cos_lr: true
+
+# realism-gated augmentation policy (BOOK.md Ch.2 SS2.4)
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+copy_paste: 0.0
+degrees: 10.0
+shear: 2.0
+perspective: 0.0
+hsv_h: 0.015
+hsv_s: 0.5
+hsv_v: 0.4
+translate: 0.1
+scale: 0.4
+fliplr: 0.5
+erasing: 0.0

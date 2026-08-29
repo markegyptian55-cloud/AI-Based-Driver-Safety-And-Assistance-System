@@ -1,0 +1,73 @@
+# Experiment 3 -- YOLO26n, fresh weights, smaller imgsz, aggressive
+# worst-case augmentation, AdamW, 100 epochs. Prepared while Experiment 2
+# (AdamW fine-tune from Exp1's best.pt) is still running -- meant to be
+# auto-launched by the watch mechanism the moment Exp2 stops (see this
+# session's plan, C:\Users\student\.claude\plans\robust-drifting-tome.md).
+#
+# Deliberately different from both prior experiments:
+#   - Exp1: yolo26n.pt fresh, imgsz=960, optimizer=auto->MuSGD, mild aug.
+#   - Exp2: Exp1's best.pt, imgsz=960, optimizer=AdamW lr0=0.001, moderate aug.
+#   - Exp3 (this): yolo26n.pt fresh, imgsz=640, optimizer=AdamW lr0=0.001,
+#     aggressive worst-case single-image aug, epochs=100.
+#
+# Run with: python src/train.py --config configs/yolo26n_exp3_fresh_worst_case.yaml
+# Output: checkpoints/yolo26n/<N>-fresh-worst-case-640/ -- name includes the
+# imgsz on purpose (user request) since runs at different resolutions now
+# coexist under the same family folder; see AGENTS.md for the convention.
+
+weights: yolo26n.pt   # fresh COCO-pretrained -- "fresh one," not a continuation.
+data: data/Dataset-Main/data.yaml
+name: fresh-yolo26n-640-worst-aug   # matches the project-wide N-<model>-<imgsz>-<aug-level> convention (AGENTS.md).
+imgsz: 640            # down from 960 -- user-selected. This is also
+                       # deliberately a separate resolution experiment
+                       # (BOOK.md Ch.2 SS2.9 note: imgsz changes aren't
+                       # bundled with an augmentation A/B), now run on
+                       # purpose rather than deferred.
+epochs: 100            # per user instruction.
+patience: 20           # reasoned default for a 100-epoch run -- not asked
+                       # (lower-stakes than imgsz/augmentation/lr0), flagged
+                       # here for visibility.
+batch: 32              # unchanged -- "keep all things like what is now."
+
+optimizer: AdamW       # per user instruction.
+lr0: 0.001             # user-selected -- matches Ultralytics' own
+                       # auto-calculated AdamW estimate for a 3-class
+                       # dataset, and the value already proven stable in
+                       # the currently-running Experiment 2.
+lrf: 0.01              # unchanged relative fraction.
+momentum: 0.9          # unchanged -- AdamW beta1, same as Experiment 2.
+warmup_epochs: 3.0      # unchanged.
+cos_lr: true            # unchanged.
+amp: true
+
+box: 7.5                # unchanged -- no evidence to move loss weights.
+cls: 0.5
+dfl: 1.5
+
+# Image-combining augmentation stays OFF -- non-negotiable dataset
+# constraint (README.md Phase 12B/12C, user-confirmed earlier this
+# session). "Worst case" does not reopen this.
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+
+# flipud stays 0 -- a driver-facing camera is never upside-down in
+# production, physically impossible case, not a realistic worst case.
+flipud: 0.0
+fliplr: 0.5             # unchanged.
+
+# Aggressive worst-case single-image augmentation -- the original
+# pre-moderation draft from earlier this session, restored per explicit
+# user request (as opposed to the moderate values Experiment 2 is using).
+degrees: 25.0
+shear: 8.0
+perspective: 0.0008
+translate: 0.25
+scale: 0.7
+hsv_h: 0.03
+hsv_s: 0.8
+hsv_v: 0.6
+erasing: 0.4
+auto_augment: randaugment   # unchanged.

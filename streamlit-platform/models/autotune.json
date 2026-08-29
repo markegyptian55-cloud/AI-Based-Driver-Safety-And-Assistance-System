@@ -1,0 +1,224 @@
+{
+  "yolo26n-1-baseline": {
+    "batch": 4,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 10.114,
+      "2": 8.59,
+      "4": 8.349,
+      "8": 8.846
+    },
+    "gain_vs_batch1": 1.211
+  },
+  "yolo26n-2-finetune": {
+    "batch": 2,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 9.139,
+      "2": 8.299,
+      "4": 8.369,
+      "8": 8.913
+    },
+    "gain_vs_batch1": 1.101
+  },
+  "yolo26n-3-fresh-640": {
+    "batch": 8,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 9.952,
+      "2": 4.862,
+      "4": 3.808,
+      "8": 3.626
+    },
+    "gain_vs_batch1": 2.745
+  },
+  "yolo26n-4-calibration": {
+    "batch": 4,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 11.225,
+      "2": 8.366,
+      "4": 8.286,
+      "8": 8.777
+    },
+    "gain_vs_batch1": 1.355
+  },
+  "yolo26n-5-cls3": {
+    "batch": 2,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 9.249,
+      "2": 8.087,
+      "4": 8.285,
+      "8": 8.906
+    },
+    "gain_vs_batch1": 1.144
+  },
+  "yolo26s-1-capacity": {
+    "batch": 1,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 14.338,
+      "2": 14.086,
+      "4": 15.296,
+      "8": 16.061
+    },
+    "gain_vs_batch1": 1.0
+  },
+  "yolo11n-1-capacity": {
+    "batch": 2,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 9.204,
+      "2": 8.279,
+      "4": 8.874,
+      "8": 9.535
+    },
+    "gain_vs_batch1": 1.112
+  },
+  "yolo11m-1-warmstart": {
+    "batch": 1,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 12.281,
+      "2": 12.247,
+      "4": 12.474,
+      "8": 13.271
+    },
+    "gain_vs_batch1": 1.0
+  },
+  "yolo26n-6-weakdevice-480": {
+    "batch": 8,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 7.256,
+      "2": 4.349,
+      "4": 3.152,
+      "8": 2.015
+    },
+    "gain_vs_batch1": 3.601
+  },
+  "old-yolo11n-1-baseline-384": {
+    "batch": 8,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 7.555,
+      "2": 3.082,
+      "4": 2.074,
+      "8": 1.193
+    },
+    "gain_vs_batch1": 6.333
+  },
+  "old-yolo11n-2-worstcase-dms-640": {
+    "batch": 4,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 7.413,
+      "2": 4.479,
+      "4": 3.516,
+      "8": 3.676
+    },
+    "gain_vs_batch1": 2.108
+  },
+  "old-yolo11m-1-worstcase-384": {
+    "batch": 4,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 8.05,
+      "2": 4.607,
+      "4": 4.303,
+      "8": 4.344
+    },
+    "gain_vs_batch1": 1.871
+  },
+  "old-yolo11m-2-trial2winner-640": {
+    "batch": 1,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 11.85,
+      "2": 12.062,
+      "4": 12.512,
+      "8": 13.313
+    },
+    "gain_vs_batch1": 1.0
+  },
+  "old-yolo11m-3-worstcase-d18source-640": {
+    "batch": 1,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 12.15,
+      "2": 12.208,
+      "4": 12.707,
+      "8": 13.273
+    },
+    "gain_vs_batch1": 1.0
+  },
+  "old-yolo26n-1-nanobaseline-384": {
+    "batch": 8,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 6.858,
+      "2": 3.721,
+      "4": 2.282,
+      "8": 1.338
+    },
+    "gain_vs_batch1": 5.126
+  },
+  "old-yolo26n-2-nanoworstcase-384": {
+    "batch": 8,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "measured",
+    "timings": {
+      "1": 6.695,
+      "2": 3.733,
+      "4": 2.09,
+      "8": 1.251
+    },
+    "gain_vs_batch1": 5.352
+  },
+  "old-rfdetr-nano-1-baseline-384": {
+    "batch": 1,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "rfdetr (no batched API)",
+    "timings": {}
+  },
+  "old-rfdetr-nano-2-finetune-384": {
+    "batch": 1,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "rfdetr (no batched API)",
+    "timings": {}
+  },
+  "old-rfdetr-small-1-baseline-640": {
+    "batch": 1,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "rfdetr (no batched API)",
+    "timings": {}
+  },
+  "old-rfdetr-small-2-standard-640": {
+    "batch": 1,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "rfdetr (no batched API)",
+    "timings": {}
+  },
+  "old-rfdetr-small-3-worstcase-384": {
+    "batch": 1,
+    "device": "NVIDIA RTX 2000 Ada Generation",
+    "reason": "rfdetr (no batched API)",
+    "timings": {}
+  }
+}

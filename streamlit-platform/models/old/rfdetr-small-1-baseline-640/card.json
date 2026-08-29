@@ -1,0 +1,42 @@
+{
+  "key": "old-rfdetr-small-1-baseline-640",
+  "display_name": "[Old] RF-DETR Small Baseline 640",
+  "family": "rfdetr",
+  "resolution": 640,
+  "size_mb": 122.35,
+  "metrics": {
+    "map50": 0.6528546114164103,
+    "map50_corrected": 0.6620951679258763,
+    "precision": 0.6021333733377036,
+    "recall": 0.7349487960543812,
+    "f1": 0.6602101257501277,
+    "ap_per_class": {
+      "closed_eye": 0.8355749095551814,
+      "open_eye": 0.6629223847927908,
+      "yawning": 0.46006653990125856
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.8502356899171637,
+      "open_eye": 0.6754238927256588,
+      "yawning": 0.4606259211348063
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": null,
+    "imgsz": 640,
+    "batch": null,
+    "optimizer": null,
+    "lr0": null,
+    "cls": null,
+    "box": null,
+    "dfl": null,
+    "hours": null
+  },
+  "notes": {
+    "en": "[Old project] RF-DETR Small baseline. Real accuracy measured on THIS project's test split.",
+    "ar": "[مشروع قديم] RF-DETR Small أساسي. الدقة قُيست على مجموعة اختبار هذا المشروع."
+  },
+  "rfdetr_class": "small"
+}

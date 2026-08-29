@@ -1,0 +1,85 @@
+# Experiment -- YOLO11n architecture-swap test. BOOK.md Ch.3 D16.
+#
+# WHY: five yolo26n checkpoints span only 79.55-82.75% real test mAP50 (D14);
+# three loss-balance points tried and closed (D11/D12); three dataset-defect
+# hypotheses tested and rejected (D10). yolo26s (capacity lever, D15) is
+# paused mid-run. yolo11n tests a DIFFERENT lever: architecture family at the
+# SAME nano parameter budget (2.62M params, comparable to yolo26n's own nano
+# scale) -- weaker-evidenced than the capacity test since nothing in this
+# project's diagnostics points at yolo26's architecture specifically, but
+# cheap to run at nano scale and worth knowing.
+#
+# THE RECIPE -- this project's best *measured* combination to date, carried
+# over unchanged (same reasoning as yolo26s_capacity.yaml):
+#   - AdamW, not auto/MuSGD: Exp1's from-scratch MuSGD run was unstable at
+#     epoch 58-73 (BOOK.md SS3.1); AdamW never regressed from Exp2 onward.
+#   - cls 1.5, not 0.5: D11/D12's measured peak (0.5->1.5 gained, 1.5->3.0
+#     turned over).
+#   - box 7.5 / dfl 1.5: untouched -- D8 showed box geometry isn't the
+#     bottleneck (15.3% of misses).
+#   - moderate augmentation: best-on-test level across every prior experiment
+#     (BOOK.md SS3.5 comparison table).
+#   - imgsz 960: has never lost a head-to-head vs 640 in this project.
+#   - weight_decay 0.0005: Ultralytics default, hardcoded in train.py (not a
+#     CLI flag), never tuned in this project -- the regularization term.
+#
+# batch=32, workers=0: yolo11n is nano-scale (2.62M params, verified this
+# session), so none of yolo26s's AutoBatch/VRAM problems apply -- yolo26n ran
+# batch=32 cleanly in every prior experiment. workers=0 (not 4, not 8) is
+# deliberate: TODAY's yolo26s run crash-looped Windows' multiprocessing
+# DataLoader workers (error 1455, shared-memory/pagefile exhaustion) at BOTH
+# workers=8 (within ~2min) and workers=4 (after ~9 stable epochs / ~4 hours --
+# the leak is cumulative, not avoided by a lower worker count, just delayed).
+# System RAM was found at 1GB free out of 31.7GB when caught. workers=0 runs
+# data loading in the main process -- slower per epoch, but structurally
+# immune to this failure mode since there is no worker process to crash-loop.
+#
+# epochs 120 / patience 20: single-stage (no prior yolo11n checkpoint to
+# fine-tune from), sized to roughly cover what yolo26n's two-stage Exp1+Exp2
+# needed (77+50=127 epochs) to reach its converged state.
+#
+# JUDGED ON VAL. Test stays reserved (D14: touched twice / five models deep).
+#
+# Run: python src/train.py --config configs/yolo11n_capacity.yaml
+
+weights: yolo11n.pt          # fresh COCO-pretrained, auto-downloaded
+data: data/Dataset-Main/data.yaml     # FROZEN, unchanged
+name: capacity-yolo11n-960-moderate-aug
+
+box: 7.5
+cls: 1.5             # this project's measured peak, not Ultralytics' 0.5 default
+dfl: 1.5
+
+imgsz: 960
+epochs: 120
+patience: 20
+batch: 32
+workers: 0            # single-process dataloading -- immune to the Windows
+                      # multiprocessing crash-loop that hit yolo26s today
+
+optimizer: AdamW
+lr0: 0.001
+lrf: 0.01
+momentum: 0.9
+warmup_epochs: 3.0    # fresh weights, full from-scratch warmup
+cos_lr: true
+amp: true
+
+# Augmentation identical to Exp2/4/5/yolo26s's moderate-aug level.
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+flipud: 0.0
+fliplr: 0.5
+degrees: 15.0
+shear: 4.0
+perspective: 0.0005
+translate: 0.15
+scale: 0.6
+hsv_h: 0.02
+hsv_s: 0.7
+hsv_v: 0.5
+erasing: 0.30
+auto_augment: randaugment

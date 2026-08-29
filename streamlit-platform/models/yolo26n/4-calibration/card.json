@@ -1,0 +1,41 @@
+{
+  "key": "yolo26n-4-calibration",
+  "display_name": "YOLO26n - Exp4 Calibration cls1.5",
+  "family": "yolo",
+  "resolution": 960,
+  "size_mb": 5.2,
+  "metrics": {
+    "map50": 0.8233825967181142,
+    "map50_corrected": 0.8274775123483397,
+    "precision": 0.789855339424305,
+    "recall": 0.7337310936246269,
+    "f1": 0.7606299129407654,
+    "ap_per_class": {
+      "closed_eye": 0.8848119025179425,
+      "open_eye": 0.8225250897921034,
+      "yawning": 0.7628107978442971
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.8869103650694792,
+      "open_eye": 0.8327106375147812,
+      "yawning": 0.7628115344607583
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": 40,
+    "imgsz": 960,
+    "batch": 32,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "cls": 1.5,
+    "box": 7.5,
+    "dfl": 1.5,
+    "hours": null
+  },
+  "notes": {
+    "en": "Classification loss weight raised 0.5 -> 1.5, targeting the finding that 89% of missed detections were correct boxes scored below threshold. Best model on the real test split.",
+    "ar": "رفع وزن خسارة التصنيف من 0.5 إلى 1.5، لمعالجة أن 89٪ من الإخفاقات كانت صناديق صحيحة تحت العتبة. أفضل نموذج على الاختبار الحقيقي."
+  }
+}

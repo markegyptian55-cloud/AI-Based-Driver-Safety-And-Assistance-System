@@ -1,0 +1,84 @@
+2026-08-16 16:37:56 [INFO] ================================================================================
+2026-08-16 16:37:56 [INFO]  YOLO TRAINING RUNNER -- DRIVER DROWSINESS DETECTOR
+2026-08-16 16:37:56 [INFO] ================================================================================
+2026-08-16 16:37:56 [INFO]   Weights            : D:\project\Driver project\BaSuny\c\AI-Based Driver Safety And Assistance System\checkpoints\Fullstack Web App Models\YOLOv11m 640 Worst-Case\2-yolo11m_640_worstcase_run\weights\best.pt
+2026-08-16 16:37:56 [INFO]   Dataset            : C:\ssd projects\nano big\data\Dataset-Main\data.yaml
+2026-08-16 16:37:56 [INFO]   Output             : C:\ssd projects\nano big\checkpoints\yolo11m/1-yolo11m-warmstart-pilot-640
+2026-08-16 16:37:56 [INFO]   Resolution / Epochs: 640x640 | 15 epochs | batch 16 | patience 15
+2026-08-16 16:37:56 [INFO]   Optimizer / LR     : AdamW | lr0=0.0010 lrf=0.0100 cos_lr=True | AMP=True
+2026-08-16 16:37:56 [INFO]   Augmentation       : mosaic=0.00 mixup=0.00 copy_paste=0.00 erasing=0.30 degrees=15.0
+2026-08-16 16:37:56 [INFO] ================================================================================
+2026-08-16 16:38:01 [INFO] Resolved optimizer: AdamW | lr=0.001000 momentum/beta1=(0.9, 0.999) weight_decay=0.0005
+2026-08-16 17:05:34 [INFO] Epoch 1/15 done
+  Train: Box=1.2679 Cls=2.7493 Dfl=1.6341
+  Val:   P=0.8085 R=0.8185 mAP50=0.8975 mAP50-95=0.5390
+  Best fitness so far: 0.5390
+2026-08-16 17:34:25 [INFO] Epoch 2/15 done
+  Train: Box=1.2266 Cls=2.5639 Dfl=1.5915
+  Val:   P=0.7969 R=0.8432 mAP50=0.8928 mAP50-95=0.5182
+  Best fitness so far: 0.5390
+2026-08-16 18:02:38 [INFO] Epoch 3/15 done
+  Train: Box=1.2094 Cls=2.4991 Dfl=1.5751
+  Val:   P=0.7980 R=0.8338 mAP50=0.9039 mAP50-95=0.5382
+  Best fitness so far: 0.5390
+2026-08-16 18:29:52 [INFO] Epoch 4/15 done
+  Train: Box=1.1899 Cls=2.4373 Dfl=1.5561
+  Val:   P=0.7939 R=0.8342 mAP50=0.8855 mAP50-95=0.5236
+  Best fitness so far: 0.5390
+2026-08-16 18:54:23 [INFO] Epoch 5/15 done
+  Train: Box=1.1712 Cls=2.3861 Dfl=1.5423
+  Val:   P=0.8056 R=0.8242 mAP50=0.8996 mAP50-95=0.5462
+  Best fitness so far: 0.5462
+2026-08-16 19:20:12 [INFO] Epoch 6/15 done
+  Train: Box=1.1537 Cls=2.3325 Dfl=1.5281
+  Val:   P=0.8035 R=0.8270 mAP50=0.8981 mAP50-95=0.5457
+  Best fitness so far: 0.5462
+2026-08-16 19:51:10 [INFO] Epoch 7/15 done
+  Train: Box=1.1355 Cls=2.2844 Dfl=1.5116
+  Val:   P=0.8085 R=0.8288 mAP50=0.9041 mAP50-95=0.5569
+  Best fitness so far: 0.5569
+2026-08-16 20:27:05 [INFO] Epoch 8/15 done
+  Train: Box=1.1143 Cls=2.2244 Dfl=1.4894
+  Val:   P=0.8060 R=0.8277 mAP50=0.8979 mAP50-95=0.5675
+  Best fitness so far: 0.5675
+2026-08-16 20:58:32 [INFO] Epoch 9/15 done
+  Train: Box=1.0972 Cls=2.1715 Dfl=1.4768
+  Val:   P=0.8085 R=0.8251 mAP50=0.9062 mAP50-95=0.5670
+  Best fitness so far: 0.5675
+2026-08-16 21:27:23 [INFO] Epoch 10/15 done
+  Train: Box=1.0744 Cls=2.1232 Dfl=1.4540
+  Val:   P=0.7941 R=0.8301 mAP50=0.9068 mAP50-95=0.5813
+  Best fitness so far: 0.5813
+2026-08-16 21:56:18 [INFO] Epoch 11/15 done
+  Train: Box=1.0516 Cls=2.0708 Dfl=1.4394
+  Val:   P=0.8402 R=0.8172 mAP50=0.9118 mAP50-95=0.5837
+  Best fitness so far: 0.5837
+2026-08-16 22:25:09 [INFO] Epoch 12/15 done
+  Train: Box=1.0360 Cls=2.0411 Dfl=1.4230
+  Val:   P=0.8269 R=0.8254 mAP50=0.9127 mAP50-95=0.5866
+  Best fitness so far: 0.5866
+2026-08-16 22:54:04 [INFO] Epoch 13/15 done
+  Train: Box=1.0231 Cls=2.0131 Dfl=1.4124
+  Val:   P=0.8153 R=0.8271 mAP50=0.9115 mAP50-95=0.5905
+  Best fitness so far: 0.5905
+2026-08-16 23:22:59 [INFO] Epoch 14/15 done
+  Train: Box=1.0112 Cls=1.9867 Dfl=1.3997
+  Val:   P=0.8161 R=0.8219 mAP50=0.9110 mAP50-95=0.5913
+  Best fitness so far: 0.5913
+2026-08-16 23:51:53 [INFO] Epoch 15/15 done
+  Train: Box=1.0053 Cls=1.9746 Dfl=1.3930
+  Val:   P=0.8201 R=0.8244 mAP50=0.9130 mAP50-95=0.5931
+  Best fitness so far: 0.5931
+2026-08-16 23:53:31 [INFO] Epoch 16/15 done
+  Train: Box=1.0053 Cls=1.9746 Dfl=1.3930
+  Val:   P=0.8213 R=0.8235 mAP50=0.9130 mAP50-95=0.5932
+  Best fitness so far: 0.5931
+2026-08-16 23:53:32 [INFO] Saved run_config.json -> C:\ssd projects\nano big\checkpoints\yolo11m\1-yolo11m-warmstart-pilot-640\run_config.json
+2026-08-16 23:53:32 [INFO] Saved summary.txt -> C:\ssd projects\nano big\checkpoints\yolo11m\1-yolo11m-warmstart-pilot-640\summary.txt
+2026-08-16 23:53:32 [INFO] 
+================================================================================
+2026-08-16 23:53:32 [INFO] TRAINING COMPLETE
+2026-08-16 23:53:32 [INFO]    Results: C:\ssd projects\nano big\checkpoints\yolo11m\1-yolo11m-warmstart-pilot-640
+2026-08-16 23:53:32 [INFO]    mAP50=0.9130  mAP50-95=0.5932  P=0.8213  R=0.8235
+2026-08-16 23:53:32 [INFO] ================================================================================
+

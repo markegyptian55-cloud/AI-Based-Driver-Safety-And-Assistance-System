@@ -1,0 +1,159 @@
+# Checkpoint registry -- single source of truth for trained-model paths,
+# replacing the hardcoded, duplicated, and inconsistently-named checkpoint
+# lists that used to live separately in test_video.py and export.py
+# (BOOK.md Chapter 2, SS2.10).
+#
+# Populated by hand (or by a future helper script) as training runs
+# complete.
+#
+# Format:
+#   <key>:
+#     family: yolo            # or rfdetr (RF-DETR is out of this
+#                              # project's two-model scope but the
+#                              # existing demo_video.py/inference.py
+#                              # code paths for it are left intact)
+#     display_name: "..."
+#     checkpoint: checkpoints/<family>/<N>-<model>-<imgsz>-<aug-level>/best.pt
+#     resolution: 960
+#
+# Order Rule (BOOK.md Ch.3 SS3.6, AGENTS.md): checkpoint paths follow
+# <N>-<model>-<imgsz>-<aug-level>, e.g.:
+#   yolo26n-1-baseline:
+#     family: yolo
+#     display_name: "YOLO26n Experiment 1 Baseline"
+#     checkpoint: checkpoints/yolo26n/1-baseline-yolo26n-960-mild-aug/best.pt
+#     resolution: 960
+
+models:
+  yolo26n-1-baseline:
+    family: yolo
+    display_name: "YOLO26n Exp1 Baseline"
+    checkpoint: checkpoints/yolo26n/1-baseline-yolo26n-960-mild-aug/best.pt
+    resolution: 960
+  yolo26n-2-finetune:
+    family: yolo
+    display_name: "YOLO26n Exp2 AdamW Fine-tune"
+    checkpoint: checkpoints/yolo26n/2-finetune-yolo26n-960-moderate-aug/best.pt
+    resolution: 960
+  yolo26n-3-fresh-640:
+    family: yolo
+    display_name: "YOLO26n Exp3 Fresh Worst-Case 640"
+    checkpoint: checkpoints/yolo26n/3-fresh-yolo26n-640-worst-aug/best.pt
+    resolution: 640
+  yolo26n-4-calibration:
+    family: yolo
+    display_name: "YOLO26n Exp4 Calibration cls1.5"
+    checkpoint: checkpoints/yolo26n/4-calibration-yolo26n-960-moderate-aug/best.pt
+    resolution: 960
+  yolo26n-5-cls3:
+    family: yolo
+    display_name: "YOLO26n Exp5 cls3.0"
+    checkpoint: checkpoints/yolo26n/5-cls3-yolo26n-960-moderate-aug/best.pt
+    resolution: 960
+  yolo11n-1-capacity:
+    family: yolo
+    display_name: "YOLO11n D16 Capacity Test"
+    checkpoint: checkpoints/yolo11n/1-capacity-yolo11n-960-moderate-aug/best.pt
+    resolution: 960
+  yolo11m-1-warmstart:
+    family: yolo
+    display_name: "YOLO11m D18 Cross-Dataset Warm Start"
+    checkpoint: checkpoints/yolo11m/1-yolo11m-warmstart-pilot-640/best.pt
+    resolution: 640
+  # Halted at epoch 47 of a planned 50 (plateau), so best.pt is a real
+  # converged-enough checkpoint but the run never reached its schedule.
+  # Registered here because it was the only trained model in the project
+  # with no test evaluation at all -- 20.42 GPU-hours whose accuracy was
+  # unknown. Evaluating it closes that gap.
+  #
+  # Path note: train.py promotes best.pt/last.pt from Ultralytics'
+  # weights/ subfolder up to the run root when a run completes; this run
+  # was interrupted before that step, so best.pt was copied up by hand to
+  # match the convention. That is not cosmetic -- derive_test_result_dir()
+  # (demo_video.py) infers INFO/<family>/<run>-test-result/ from the
+  # checkpoint's grandparent, so a checkpoint left inside weights/ lands
+  # in the INFO/_ad_hoc/ fallback under the useless name "best" instead of
+  # its own experiment folder. weights/ is deliberately left in place:
+  # weights/last.pt is what resuming this run to its planned 50 epochs
+  # would need.
+  yolo26s-1-capacity:
+    family: yolo
+    display_name: "YOLO26s Capacity 960"
+    checkpoint: checkpoints/yolo26s/1-capacity-yolo26s-960-moderate-aug/best.pt
+    resolution: 960
+  yolo26n-6-weakdevice-480:
+    family: yolo
+    display_name: "YOLO26n Weak-Device 480 Worst-Case"
+    checkpoint: checkpoints/yolo26n/6-weakdevice-480-worstcase-yolo26n/best.pt
+    resolution: 480
+
+  # --- Old-project models, merged in (BOOK.md "old-experiments-models" work).
+  # Never evaluated against THIS project's own test split before -- that is
+  # exactly what these entries exist to enable. resolution/rfdetr_class
+  # verified from each model's own args.yaml or (where none survived) its
+  # own exported ONNX input shape -- not assumed from folder names.
+  old-yolo11n-1-baseline-384:
+    family: yolo
+    display_name: "[OLD] YOLO11n Baseline 384"
+    checkpoint: checkpoints/yolo11n/old-1-baseline-384/best.pt
+    resolution: 384
+  old-yolo11n-2-worstcase-dms-640:
+    family: yolo
+    display_name: "[OLD] YOLO11n Worst-Case DMS 640"
+    checkpoint: checkpoints/yolo11n/old-2-worstcase-dms-640/best.pt
+    resolution: 640
+  old-yolo11m-1-worstcase-384:
+    family: yolo
+    display_name: "[OLD] YOLO11m Worst-Case 384"
+    checkpoint: checkpoints/yolo11m/old-1-worstcase-384/best.pt
+    resolution: 384
+  old-yolo11m-2-trial2winner-640:
+    family: yolo
+    display_name: "[OLD] YOLO11m Trial2 Winner 640"
+    checkpoint: checkpoints/yolo11m/old-2-trial2winner-640/best.pt
+    resolution: 640
+  old-yolo11m-3-worstcase-d18source-640:
+    family: yolo
+    display_name: "[OLD] YOLO11m Worst-Case (D18 source) 640"
+    checkpoint: checkpoints/yolo11m/old-3-worstcase-d18source-640/best.pt
+    resolution: 640
+  old-yolo26n-1-nanobaseline-384:
+    family: yolo
+    display_name: "[OLD] YOLO26n Nano Baseline 384"
+    checkpoint: checkpoints/yolo26n/old-1-nanobaseline-384/best.pt
+    resolution: 384
+  old-yolo26n-2-nanoworstcase-384:
+    family: yolo
+    display_name: "[OLD] YOLO26n Nano Worst-Case 384"
+    checkpoint: checkpoints/yolo26n/old-2-nanoworstcase-384/best.pt
+    resolution: 384
+  old-rfdetr-nano-1-baseline-384:
+    family: rfdetr
+    rfdetr_class: nano
+    display_name: "[OLD] RF-DETR Nano Baseline 384"
+    checkpoint: checkpoints/rfdetr-nano/old-1-baseline-384/checkpoint_best_ema.pth
+    resolution: 384
+  old-rfdetr-nano-2-finetune-384:
+    family: rfdetr
+    rfdetr_class: nano
+    display_name: "[OLD] RF-DETR Nano Fine-Tuned 384"
+    checkpoint: checkpoints/rfdetr-nano/old-2-finetune-384/checkpoint_best_ema.pth
+    resolution: 384
+  old-rfdetr-small-1-baseline-640:
+    family: rfdetr
+    rfdetr_class: small
+    display_name: "[OLD] RF-DETR Small Baseline 640"
+    checkpoint: checkpoints/rfdetr-small/old-1-baseline-640/checkpoint_best_ema.pth
+    resolution: 640
+  old-rfdetr-small-2-standard-640:
+    family: rfdetr
+    rfdetr_class: small
+    display_name: "[OLD] RF-DETR Small Standard 640"
+    checkpoint: checkpoints/rfdetr-small/old-2-standard-640/checkpoint_best_ema.pth
+    resolution: 640
+  old-rfdetr-small-3-worstcase-384:
+    family: rfdetr
+    rfdetr_class: small
+    display_name: "[OLD] RF-DETR Small Worst-Case 384"
+    checkpoint: checkpoints/rfdetr-small/old-3-worstcase-384/checkpoint_best_ema.pth
+    resolution: 384

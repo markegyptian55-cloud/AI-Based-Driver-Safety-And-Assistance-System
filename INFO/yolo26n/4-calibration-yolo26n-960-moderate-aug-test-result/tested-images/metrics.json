@@ -1,0 +1,28 @@
+{
+  "model_key": "yolo26n-4-calibration",
+  "display_name": "YOLO26n Exp4 Calibration cls1.5",
+  "map50": 0.8233825967181142,
+  "precision": 0.789855339424305,
+  "recall": 0.7337310936246269,
+  "f1": 0.7606299129407654,
+  "ap_per_class": {
+    "closed_eye": 0.8848119025179425,
+    "open_eye": 0.8225250897921034,
+    "yawning": 0.7628107978442971
+  },
+  "map50_corrected": 0.8274775123483397,
+  "ap_per_class_corrected": {
+    "closed_eye": 0.8869103650694792,
+    "open_eye": 0.8327106375147812,
+    "yawning": 0.7628115344607583
+  },
+  "label_gap_stats": {
+    "eye_ignored_images": 1039,
+    "yawn_ignored_images": 699,
+    "yawn_blind_families": [
+      "closed_eye_corpus",
+      "images-"
+    ],
+    "total_images": 5589
+  }
+}

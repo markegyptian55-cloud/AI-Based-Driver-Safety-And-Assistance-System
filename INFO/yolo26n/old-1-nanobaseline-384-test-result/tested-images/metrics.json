@@ -1,0 +1,28 @@
+{
+  "model_key": "old-yolo26n-1-nanobaseline-384",
+  "display_name": "[OLD] YOLO26n Nano Baseline 384",
+  "map50": 0.6813036274907747,
+  "precision": 0.7288524554659213,
+  "recall": 0.6304524126585758,
+  "f1": 0.6745813334235451,
+  "ap_per_class": {
+    "closed_eye": 0.8547712256228763,
+    "open_eye": 0.6938107252297139,
+    "yawning": 0.4953289316197336
+  },
+  "map50_corrected": 0.6880334831905811,
+  "ap_per_class_corrected": {
+    "closed_eye": 0.8640057346422811,
+    "open_eye": 0.7047638189958139,
+    "yawning": 0.495330895933648
+  },
+  "label_gap_stats": {
+    "eye_ignored_images": 1039,
+    "yawn_ignored_images": 699,
+    "yawn_blind_families": [
+      "closed_eye_corpus",
+      "images-"
+    ],
+    "total_images": 5589
+  }
+}

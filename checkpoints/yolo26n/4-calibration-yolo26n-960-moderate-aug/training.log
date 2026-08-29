@@ -1,0 +1,171 @@
+2026-08-13 14:03:35 [INFO] ================================================================================
+2026-08-13 14:03:35 [INFO]  YOLO TRAINING RUNNER -- DRIVER DROWSINESS DETECTOR
+2026-08-13 14:03:35 [INFO] ================================================================================
+2026-08-13 14:03:35 [INFO]   Weights            : checkpoints/yolo26n/2-finetune-yolo26n-960-moderate-aug/best.pt
+2026-08-13 14:03:35 [INFO]   Dataset            : data/Dataset-Main/data.yaml
+2026-08-13 14:03:35 [INFO]   Output             : C:\ssd projects\nano big\checkpoints\yolo26n/4-calibration-yolo26n-960-moderate-aug
+2026-08-13 14:03:35 [INFO]   Resolution / Epochs: 960x960 | 40 epochs | batch 32 | patience 12
+2026-08-13 14:03:35 [INFO]   Optimizer / LR     : AdamW | lr0=0.0010 lrf=0.0100 cos_lr=True | AMP=True
+2026-08-13 14:03:35 [INFO]   Augmentation       : mosaic=0.00 mixup=0.00 copy_paste=0.00 erasing=0.30 degrees=15.0
+2026-08-13 14:03:35 [INFO] ================================================================================
+2026-08-13 14:03:54 [INFO] Resolved optimizer: AdamW | lr=0.001000 momentum/beta1=(0.9, 0.999) weight_decay=0.0005
+2026-08-13 14:17:54 [INFO] Epoch 1/40 done
+  Train: Box=1.2820 Cls=2.2464 Dfl=0.0200
+  Val:   P=0.7712 R=0.6482 mAP50=0.7193 mAP50-95=0.3434
+  Best fitness so far: 0.3434
+2026-08-13 14:32:45 [INFO] Epoch 2/40 done
+  Train: Box=1.2476 Cls=2.1943 Dfl=0.0195
+  Val:   P=0.7768 R=0.8037 mAP50=0.8644 mAP50-95=0.4812
+  Best fitness so far: 0.4812
+2026-08-13 14:47:14 [INFO] Epoch 3/40 done
+  Train: Box=1.2093 Cls=2.1309 Dfl=0.0186
+  Val:   P=0.7572 R=0.8402 mAP50=0.8690 mAP50-95=0.4900
+  Best fitness so far: 0.4900
+2026-08-13 15:01:32 [INFO] Epoch 4/40 done
+  Train: Box=1.2183 Cls=2.1396 Dfl=0.0188
+  Val:   P=0.7767 R=0.7876 mAP50=0.8549 mAP50-95=0.4759
+  Best fitness so far: 0.4900
+2026-08-13 15:15:50 [INFO] Epoch 5/40 done
+  Train: Box=1.2162 Cls=2.1239 Dfl=0.0188
+  Val:   P=0.7615 R=0.8387 mAP50=0.8706 mAP50-95=0.4959
+  Best fitness so far: 0.4959
+2026-08-13 15:30:05 [INFO] Epoch 6/40 done
+  Train: Box=1.2135 Cls=2.1210 Dfl=0.0187
+  Val:   P=0.7664 R=0.8088 mAP50=0.8693 mAP50-95=0.4980
+  Best fitness so far: 0.4980
+2026-08-13 15:44:23 [INFO] Epoch 7/40 done
+  Train: Box=1.2120 Cls=2.1044 Dfl=0.0186
+  Val:   P=0.7624 R=0.8296 mAP50=0.8637 mAP50-95=0.5005
+  Best fitness so far: 0.5005
+2026-08-13 15:58:34 [INFO] Epoch 8/40 done
+  Train: Box=1.2128 Cls=2.0897 Dfl=0.0187
+  Val:   P=0.7794 R=0.8126 mAP50=0.8745 mAP50-95=0.5009
+  Best fitness so far: 0.5009
+2026-08-13 16:12:24 [INFO] Epoch 9/40 done
+  Train: Box=1.2125 Cls=2.0963 Dfl=0.0186
+  Val:   P=0.7731 R=0.8283 mAP50=0.8772 mAP50-95=0.4997
+  Best fitness so far: 0.5009
+2026-08-13 16:25:44 [INFO] Epoch 10/40 done
+  Train: Box=1.2121 Cls=2.0783 Dfl=0.0186
+  Val:   P=0.7787 R=0.8106 mAP50=0.8778 mAP50-95=0.4980
+  Best fitness so far: 0.5009
+2026-08-13 16:39:13 [INFO] Epoch 11/40 done
+  Train: Box=1.2036 Cls=2.0687 Dfl=0.0184
+  Val:   P=0.7865 R=0.8122 mAP50=0.8810 mAP50-95=0.5087
+  Best fitness so far: 0.5087
+2026-08-13 16:53:03 [INFO] Epoch 12/40 done
+  Train: Box=1.1934 Cls=2.0701 Dfl=0.0182
+  Val:   P=0.7711 R=0.8285 mAP50=0.8791 mAP50-95=0.5029
+  Best fitness so far: 0.5087
+2026-08-13 17:07:37 [INFO] Epoch 13/40 done
+  Train: Box=1.1872 Cls=2.0428 Dfl=0.0181
+  Val:   P=0.7808 R=0.8323 mAP50=0.8858 mAP50-95=0.5105
+  Best fitness so far: 0.5105
+2026-08-13 17:22:17 [INFO] Epoch 14/40 done
+  Train: Box=1.1817 Cls=2.0322 Dfl=0.0180
+  Val:   P=0.7744 R=0.8293 mAP50=0.8769 mAP50-95=0.5109
+  Best fitness so far: 0.5109
+2026-08-13 17:36:35 [INFO] Epoch 15/40 done
+  Train: Box=1.1761 Cls=2.0154 Dfl=0.0179
+  Val:   P=0.7740 R=0.8373 mAP50=0.8815 mAP50-95=0.5148
+  Best fitness so far: 0.5148
+2026-08-13 17:50:52 [INFO] Epoch 16/40 done
+  Train: Box=1.1733 Cls=2.0142 Dfl=0.0179
+  Val:   P=0.7805 R=0.8294 mAP50=0.8810 mAP50-95=0.5154
+  Best fitness so far: 0.5154
+2026-08-13 18:05:09 [INFO] Epoch 17/40 done
+  Train: Box=1.1711 Cls=1.9979 Dfl=0.0178
+  Val:   P=0.7896 R=0.8128 mAP50=0.8784 mAP50-95=0.5170
+  Best fitness so far: 0.5170
+2026-08-13 18:19:22 [INFO] Epoch 18/40 done
+  Train: Box=1.1615 Cls=1.9746 Dfl=0.0175
+  Val:   P=0.7813 R=0.8278 mAP50=0.8842 mAP50-95=0.5182
+  Best fitness so far: 0.5182
+2026-08-13 18:33:33 [INFO] Epoch 19/40 done
+  Train: Box=1.1517 Cls=1.9679 Dfl=0.0173
+  Val:   P=0.7906 R=0.8182 mAP50=0.8842 mAP50-95=0.5191
+  Best fitness so far: 0.5191
+2026-08-13 18:47:57 [INFO] Epoch 20/40 done
+  Train: Box=1.1469 Cls=1.9606 Dfl=0.0173
+  Val:   P=0.7916 R=0.8261 mAP50=0.8863 mAP50-95=0.5200
+  Best fitness so far: 0.5200
+2026-08-13 19:02:23 [INFO] Epoch 21/40 done
+  Train: Box=1.1339 Cls=1.9463 Dfl=0.0170
+  Val:   P=0.7949 R=0.8219 mAP50=0.8877 mAP50-95=0.5222
+  Best fitness so far: 0.5222
+2026-08-13 19:16:56 [INFO] Epoch 22/40 done
+  Train: Box=1.1289 Cls=1.9287 Dfl=0.0168
+  Val:   P=0.7977 R=0.8167 mAP50=0.8857 mAP50-95=0.5227
+  Best fitness so far: 0.5227
+2026-08-13 19:31:30 [INFO] Epoch 23/40 done
+  Train: Box=1.1226 Cls=1.9046 Dfl=0.0168
+  Val:   P=0.7945 R=0.8213 mAP50=0.8861 mAP50-95=0.5241
+  Best fitness so far: 0.5241
+2026-08-13 19:46:11 [INFO] Epoch 24/40 done
+  Train: Box=1.1147 Cls=1.9067 Dfl=0.0166
+  Val:   P=0.7942 R=0.8207 mAP50=0.8862 mAP50-95=0.5241
+  Best fitness so far: 0.5241
+2026-08-13 20:00:53 [INFO] Epoch 25/40 done
+  Train: Box=1.1097 Cls=1.8990 Dfl=0.0165
+  Val:   P=0.7988 R=0.8151 mAP50=0.8868 mAP50-95=0.5232
+  Best fitness so far: 0.5241
+2026-08-13 20:14:20 [INFO] Epoch 26/40 done
+  Train: Box=1.1002 Cls=1.8770 Dfl=0.0163
+  Val:   P=0.7993 R=0.8129 mAP50=0.8879 mAP50-95=0.5245
+  Best fitness so far: 0.5245
+2026-08-13 20:28:38 [INFO] Epoch 27/40 done
+  Train: Box=1.0960 Cls=1.8571 Dfl=0.0162
+  Val:   P=0.7988 R=0.8159 mAP50=0.8885 mAP50-95=0.5246
+  Best fitness so far: 0.5246
+2026-08-13 20:42:55 [INFO] Epoch 28/40 done
+  Train: Box=1.0921 Cls=1.8506 Dfl=0.0161
+  Val:   P=0.8018 R=0.8141 mAP50=0.8889 mAP50-95=0.5250
+  Best fitness so far: 0.5250
+2026-08-13 20:57:11 [INFO] Epoch 29/40 done
+  Train: Box=1.0823 Cls=1.8418 Dfl=0.0160
+  Val:   P=0.7975 R=0.8177 mAP50=0.8892 mAP50-95=0.5249
+  Best fitness so far: 0.5250
+2026-08-13 21:11:25 [INFO] Epoch 30/40 done
+  Train: Box=1.0799 Cls=1.8364 Dfl=0.0159
+  Val:   P=0.7984 R=0.8161 mAP50=0.8889 mAP50-95=0.5245
+  Best fitness so far: 0.5250
+2026-08-13 21:26:01 [INFO] Epoch 31/40 done
+  Train: Box=1.0775 Cls=1.8275 Dfl=0.0158
+  Val:   P=0.7912 R=0.8248 mAP50=0.8882 mAP50-95=0.5244
+  Best fitness so far: 0.5250
+2026-08-13 21:40:15 [INFO] Epoch 32/40 done
+  Train: Box=1.0689 Cls=1.8294 Dfl=0.0156
+  Val:   P=0.7913 R=0.8235 mAP50=0.8884 mAP50-95=0.5250
+  Best fitness so far: 0.5250
+2026-08-13 21:54:28 [INFO] Epoch 33/40 done
+  Train: Box=1.0669 Cls=1.8123 Dfl=0.0156
+  Val:   P=0.7885 R=0.8287 mAP50=0.8880 mAP50-95=0.5248
+  Best fitness so far: 0.5250
+2026-08-13 22:08:43 [INFO] Epoch 34/40 done
+  Train: Box=1.0631 Cls=1.8044 Dfl=0.0156
+  Val:   P=0.7878 R=0.8294 mAP50=0.8878 mAP50-95=0.5247
+  Best fitness so far: 0.5250
+2026-08-13 22:22:56 [INFO] Epoch 35/40 done
+  Train: Box=1.0605 Cls=1.8107 Dfl=0.0155
+  Val:   P=0.7835 R=0.8316 mAP50=0.8878 mAP50-95=0.5246
+  Best fitness so far: 0.5250
+2026-08-13 22:37:09 [INFO] Epoch 36/40 done
+  Train: Box=1.0602 Cls=1.8070 Dfl=0.0155
+  Val:   P=0.7841 R=0.8307 mAP50=0.8863 mAP50-95=0.5245
+  Best fitness so far: 0.5250
+2026-08-13 22:51:22 [INFO] Epoch 37/40 done
+  Train: Box=1.0558 Cls=1.8055 Dfl=0.0154
+  Val:   P=0.7870 R=0.8310 mAP50=0.8879 mAP50-95=0.5249
+  Best fitness so far: 0.5250
+2026-08-13 23:05:35 [INFO] Epoch 38/40 done
+  Train: Box=1.0546 Cls=1.8012 Dfl=0.0153
+  Val:   P=0.7868 R=0.8302 mAP50=0.8867 mAP50-95=0.5246
+  Best fitness so far: 0.5250
+2026-08-13 23:19:49 [INFO] Epoch 39/40 done
+  Train: Box=1.0513 Cls=1.8007 Dfl=0.0153
+  Val:   P=0.7864 R=0.8307 mAP50=0.8869 mAP50-95=0.5249
+  Best fitness so far: 0.5250
+2026-08-13 23:34:01 [INFO] Epoch 40/40 done
+  Train: Box=1.0499 Cls=1.7936 Dfl=0.0154
+  Val:   P=0.7868 R=0.8286 mAP50=0.8863 mAP50-95=0.5249
+  Best fitness so far: 0.5250

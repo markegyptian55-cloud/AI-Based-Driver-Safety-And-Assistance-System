@@ -1,0 +1,750 @@
+{
+  "measured_at": "2026-08-22 19:24:46",
+  "device": {
+    "python": "3.11.15",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "torch": "2.6.0+cu124",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA RTX 2000 Ada Generation",
+    "gpu_vram_gb": 17.18,
+    "cuda_version": "12.4"
+  },
+  "warmup": 10,
+  "iters": 50,
+  "batch_size": 1,
+  "scope": "forward pass only, synthetic input, excludes pre/post-processing",
+  "models": [
+    {
+      "model_key": "yolo26n-1-baseline",
+      "display_name": "YOLO26n Exp1 Baseline",
+      "family": "yolo",
+      "imgsz": 960,
+      "checkpoint": "checkpoints/yolo26n/1-baseline-yolo26n-960-mild-aug/best.pt",
+      "file_size_bytes": 15631059,
+      "parameters": 2504970,
+      "parameters_millions": 2.505,
+      "torch_cuda": {
+        "mean_ms": 11.351,
+        "median_ms": 11.034,
+        "p95_ms": 13.972,
+        "min_ms": 9.47,
+        "max_ms": 14.699,
+        "stdev_ms": 1.509,
+        "fps": 90.63,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 84.48,
+        "median_ms": 84.859,
+        "p95_ms": 86.447,
+        "min_ms": 80.637,
+        "max_ms": 86.72,
+        "stdev_ms": 1.597,
+        "fps": 11.78,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "yolo26n-2-finetune",
+      "display_name": "YOLO26n Exp2 AdamW Fine-tune",
+      "family": "yolo",
+      "imgsz": 960,
+      "checkpoint": "checkpoints/yolo26n/2-finetune-yolo26n-960-moderate-aug/best.pt",
+      "file_size_bytes": 5453438,
+      "parameters": 2504970,
+      "parameters_millions": 2.505,
+      "torch_cuda": {
+        "mean_ms": 11.249,
+        "median_ms": 10.69,
+        "p95_ms": 14.628,
+        "min_ms": 9.419,
+        "max_ms": 16.245,
+        "stdev_ms": 1.884,
+        "fps": 93.55,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 88.682,
+        "median_ms": 83.667,
+        "p95_ms": 89.506,
+        "min_ms": 81.796,
+        "max_ms": 274.094,
+        "stdev_ms": 27.512,
+        "fps": 11.95,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "yolo26n-3-fresh-640",
+      "display_name": "YOLO26n Exp3 Fresh Worst-Case 640",
+      "family": "yolo",
+      "imgsz": 640,
+      "checkpoint": "checkpoints/yolo26n/3-fresh-yolo26n-640-worst-aug/best.pt",
+      "file_size_bytes": 5394238,
+      "parameters": 2504970,
+      "parameters_millions": 2.505,
+      "torch_cuda": {
+        "mean_ms": 21.298,
+        "median_ms": 21.261,
+        "p95_ms": 22.772,
+        "min_ms": 20.085,
+        "max_ms": 23.669,
+        "stdev_ms": 0.87,
+        "fps": 47.04,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 185.578,
+        "median_ms": 169.186,
+        "p95_ms": 308.68,
+        "min_ms": 105.461,
+        "max_ms": 318.388,
+        "stdev_ms": 57.868,
+        "fps": 5.91,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "onnx": {
+        "file": "checkpoints\\yolo26n\\3-fresh-yolo26n-640-worst-aug\\best.onnx",
+        "file_size_bytes": 9806772,
+        "CPUExecutionProvider": {
+          "mean_ms": 98.995,
+          "median_ms": 100.309,
+          "p95_ms": 115.379,
+          "min_ms": 74.719,
+          "max_ms": 125.825,
+          "stdev_ms": 11.101,
+          "fps": 9.97,
+          "iterations": 50,
+          "warmup": 10
+        }
+      }
+    },
+    {
+      "model_key": "yolo26n-4-calibration",
+      "display_name": "YOLO26n Exp4 Calibration cls1.5",
+      "family": "yolo",
+      "imgsz": 960,
+      "checkpoint": "checkpoints/yolo26n/4-calibration-yolo26n-960-moderate-aug/best.pt",
+      "file_size_bytes": 5452222,
+      "parameters": 2504970,
+      "parameters_millions": 2.505,
+      "torch_cuda": {
+        "mean_ms": 22.429,
+        "median_ms": 21.575,
+        "p95_ms": 27.001,
+        "min_ms": 19.865,
+        "max_ms": 36.448,
+        "stdev_ms": 2.656,
+        "fps": 46.35,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 317.421,
+        "median_ms": 401.284,
+        "p95_ms": 519.402,
+        "min_ms": 81.112,
+        "max_ms": 524.582,
+        "stdev_ms": 179.382,
+        "fps": 2.49,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "onnx": {
+        "file": "checkpoints\\yolo26n\\4-calibration-yolo26n-960-moderate-aug\\best.onnx",
+        "file_size_bytes": 10016803,
+        "CPUExecutionProvider": {
+          "mean_ms": 22.655,
+          "median_ms": 22.527,
+          "p95_ms": 24.028,
+          "min_ms": 21.268,
+          "max_ms": 24.191,
+          "stdev_ms": 0.702,
+          "fps": 44.39,
+          "iterations": 50,
+          "warmup": 10
+        }
+      }
+    },
+    {
+      "model_key": "yolo26n-5-cls3",
+      "display_name": "YOLO26n Exp5 cls3.0",
+      "family": "yolo",
+      "imgsz": 960,
+      "checkpoint": "checkpoints/yolo26n/5-cls3-yolo26n-960-moderate-aug/best.pt",
+      "file_size_bytes": 5451390,
+      "parameters": 2504970,
+      "parameters_millions": 2.505,
+      "torch_cuda": {
+        "mean_ms": 10.874,
+        "median_ms": 10.183,
+        "p95_ms": 13.976,
+        "min_ms": 9.392,
+        "max_ms": 18.469,
+        "stdev_ms": 1.849,
+        "fps": 98.2,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 88.688,
+        "median_ms": 88.01,
+        "p95_ms": 97.142,
+        "min_ms": 84.594,
+        "max_ms": 105.911,
+        "stdev_ms": 3.66,
+        "fps": 11.36,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "yolo11n-1-capacity",
+      "display_name": "YOLO11n D16 Capacity Test",
+      "family": "yolo",
+      "imgsz": 960,
+      "checkpoint": "checkpoints/yolo11n/1-capacity-yolo11n-960-moderate-aug/best.pt",
+      "file_size_bytes": 21339668,
+      "parameters": 2590425,
+      "parameters_millions": 2.59,
+      "torch_cuda": {
+        "mean_ms": 7.374,
+        "median_ms": 6.982,
+        "p95_ms": 9.941,
+        "min_ms": 6.254,
+        "max_ms": 10.603,
+        "stdev_ms": 1.05,
+        "fps": 143.23,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 69.634,
+        "median_ms": 69.44,
+        "p95_ms": 71.429,
+        "min_ms": 67.426,
+        "max_ms": 74.033,
+        "stdev_ms": 1.21,
+        "fps": 14.4,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "yolo11m-1-warmstart",
+      "display_name": "YOLO11m D18 Cross-Dataset Warm Start",
+      "family": "yolo",
+      "imgsz": 640,
+      "checkpoint": "checkpoints/yolo11m/1-yolo11m-warmstart-pilot-640/best.pt",
+      "file_size_bytes": 40512933,
+      "parameters": 20055321,
+      "parameters_millions": 20.055,
+      "torch_cuda": {
+        "mean_ms": 11.437,
+        "median_ms": 11.26,
+        "p95_ms": 13.424,
+        "min_ms": 10.325,
+        "max_ms": 14.996,
+        "stdev_ms": 1.094,
+        "fps": 88.81,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 152.607,
+        "median_ms": 151.67,
+        "p95_ms": 156.465,
+        "min_ms": 149.884,
+        "max_ms": 161.912,
+        "stdev_ms": 2.241,
+        "fps": 6.59,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "yolo26s-1-capacity",
+      "display_name": "YOLO26s Capacity 960",
+      "family": "yolo",
+      "imgsz": 960,
+      "checkpoint": "checkpoints/yolo26s/1-capacity-yolo26s-960-moderate-aug/best.pt",
+      "file_size_bytes": 80444277,
+      "parameters": 9950186,
+      "parameters_millions": 9.95,
+      "torch_cuda": {
+        "mean_ms": 12.468,
+        "median_ms": 12.269,
+        "p95_ms": 13.79,
+        "min_ms": 12.106,
+        "max_ms": 14.928,
+        "stdev_ms": 0.559,
+        "fps": 81.51,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 163.397,
+        "median_ms": 162.532,
+        "p95_ms": 169.394,
+        "min_ms": 158.298,
+        "max_ms": 175.824,
+        "stdev_ms": 3.734,
+        "fps": 6.15,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "yolo26n-6-weakdevice-480",
+      "display_name": "YOLO26n Weak-Device 480 Worst-Case",
+      "family": "yolo",
+      "imgsz": 480,
+      "checkpoint": "checkpoints/yolo26n/6-weakdevice-480-worstcase-yolo26n/best.pt",
+      "file_size_bytes": 5361342,
+      "parameters": 2504970,
+      "parameters_millions": 2.505,
+      "torch_cuda": {
+        "mean_ms": 10.385,
+        "median_ms": 10.288,
+        "p95_ms": 11.377,
+        "min_ms": 9.695,
+        "max_ms": 12.148,
+        "stdev_ms": 0.507,
+        "fps": 97.2,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 49.611,
+        "median_ms": 49.752,
+        "p95_ms": 51.591,
+        "min_ms": 46.88,
+        "max_ms": 52.051,
+        "stdev_ms": 1.355,
+        "fps": 20.1,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "onnx": {
+        "file": "checkpoints\\yolo26n\\6-weakdevice-480-worstcase-yolo26n\\best.onnx",
+        "file_size_bytes": 9733196,
+        "CPUExecutionProvider": {
+          "mean_ms": 6.937,
+          "median_ms": 6.858,
+          "p95_ms": 7.69,
+          "min_ms": 6.131,
+          "max_ms": 8.059,
+          "stdev_ms": 0.448,
+          "fps": 145.81,
+          "iterations": 50,
+          "warmup": 10
+        }
+      }
+    },
+    {
+      "model_key": "old-yolo11n-1-baseline-384",
+      "display_name": "[OLD] YOLO11n Baseline 384",
+      "family": "yolo",
+      "imgsz": 384,
+      "checkpoint": "checkpoints/yolo11n/old-1-baseline-384/best.pt",
+      "file_size_bytes": 5473811,
+      "parameters": 2590425,
+      "parameters_millions": 2.59,
+      "torch_cuda": {
+        "mean_ms": 8.126,
+        "median_ms": 7.427,
+        "p95_ms": 10.673,
+        "min_ms": 6.961,
+        "max_ms": 10.872,
+        "stdev_ms": 1.371,
+        "fps": 134.64,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 30.779,
+        "median_ms": 30.798,
+        "p95_ms": 32.148,
+        "min_ms": 29.783,
+        "max_ms": 33.206,
+        "stdev_ms": 0.716,
+        "fps": 32.47,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "old-yolo11n-2-worstcase-dms-640",
+      "display_name": "[OLD] YOLO11n Worst-Case DMS 640",
+      "family": "yolo",
+      "imgsz": 640,
+      "checkpoint": "checkpoints/yolo11n/old-2-worstcase-dms-640/best.pt",
+      "file_size_bytes": 5473811,
+      "parameters": 2590425,
+      "parameters_millions": 2.59,
+      "torch_cuda": {
+        "mean_ms": 7.935,
+        "median_ms": 7.179,
+        "p95_ms": 12.01,
+        "min_ms": 6.624,
+        "max_ms": 21.462,
+        "stdev_ms": 2.643,
+        "fps": 139.29,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 46.89,
+        "median_ms": 46.586,
+        "p95_ms": 49.124,
+        "min_ms": 42.81,
+        "max_ms": 68.454,
+        "stdev_ms": 3.494,
+        "fps": 21.47,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "old-yolo11m-1-worstcase-384",
+      "display_name": "[OLD] YOLO11m Worst-Case 384",
+      "family": "yolo",
+      "imgsz": 384,
+      "checkpoint": "checkpoints/yolo11m/old-1-worstcase-384/best.pt",
+      "file_size_bytes": 40481893,
+      "parameters": 20055321,
+      "parameters_millions": 20.055,
+      "torch_cuda": {
+        "mean_ms": 9.705,
+        "median_ms": 9.433,
+        "p95_ms": 11.38,
+        "min_ms": 8.705,
+        "max_ms": 12.526,
+        "stdev_ms": 0.812,
+        "fps": 106.01,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 81.451,
+        "median_ms": 81.179,
+        "p95_ms": 83.659,
+        "min_ms": 80.034,
+        "max_ms": 87.744,
+        "stdev_ms": 1.189,
+        "fps": 12.32,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "old-yolo11m-2-trial2winner-640",
+      "display_name": "[OLD] YOLO11m Trial2 Winner 640",
+      "family": "yolo",
+      "imgsz": 640,
+      "checkpoint": "checkpoints/yolo11m/old-2-trial2winner-640/best.pt",
+      "file_size_bytes": 120829505,
+      "parameters": 20055321,
+      "parameters_millions": 20.055,
+      "torch_cuda": {
+        "mean_ms": 10.702,
+        "median_ms": 10.503,
+        "p95_ms": 11.386,
+        "min_ms": 10.332,
+        "max_ms": 13.848,
+        "stdev_ms": 0.568,
+        "fps": 95.21,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 155.771,
+        "median_ms": 154.849,
+        "p95_ms": 162.544,
+        "min_ms": 150.019,
+        "max_ms": 163.56,
+        "stdev_ms": 3.449,
+        "fps": 6.46,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "onnx": {
+        "file": "checkpoints\\yolo11m\\old-2-trial2winner-640\\best.onnx",
+        "file_size_bytes": 80434545,
+        "CPUExecutionProvider": {
+          "mean_ms": 73.873,
+          "median_ms": 73.443,
+          "p95_ms": 77.308,
+          "min_ms": 70.63,
+          "max_ms": 86.739,
+          "stdev_ms": 2.41,
+          "fps": 13.62,
+          "iterations": 50,
+          "warmup": 10
+        }
+      }
+    },
+    {
+      "model_key": "old-yolo11m-3-worstcase-d18source-640",
+      "display_name": "[OLD] YOLO11m Worst-Case (D18 source) 640",
+      "family": "yolo",
+      "imgsz": 640,
+      "checkpoint": "checkpoints/yolo11m/old-3-worstcase-d18source-640/best.pt",
+      "file_size_bytes": 40516133,
+      "parameters": 20055321,
+      "parameters_millions": 20.055,
+      "torch_cuda": {
+        "mean_ms": 10.629,
+        "median_ms": 10.539,
+        "p95_ms": 11.412,
+        "min_ms": 10.35,
+        "max_ms": 11.426,
+        "stdev_ms": 0.307,
+        "fps": 94.89,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 155.372,
+        "median_ms": 154.788,
+        "p95_ms": 158.919,
+        "min_ms": 151.973,
+        "max_ms": 171.817,
+        "stdev_ms": 3.113,
+        "fps": 6.46,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "old-yolo26n-1-nanobaseline-384",
+      "display_name": "[OLD] YOLO26n Nano Baseline 384",
+      "family": "yolo",
+      "imgsz": 384,
+      "checkpoint": "checkpoints/yolo26n/old-1-nanobaseline-384/best.pt",
+      "file_size_bytes": 5352382,
+      "parameters": 2504970,
+      "parameters_millions": 2.505,
+      "torch_cuda": {
+        "mean_ms": 11.403,
+        "median_ms": 11.188,
+        "p95_ms": 13.106,
+        "min_ms": 10.37,
+        "max_ms": 13.758,
+        "stdev_ms": 0.753,
+        "fps": 89.39,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 38.708,
+        "median_ms": 38.576,
+        "p95_ms": 40.457,
+        "min_ms": 37.085,
+        "max_ms": 42.484,
+        "stdev_ms": 1.028,
+        "fps": 25.92,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "old-yolo26n-2-nanoworstcase-384",
+      "display_name": "[OLD] YOLO26n Nano Worst-Case 384",
+      "family": "yolo",
+      "imgsz": 384,
+      "checkpoint": "checkpoints/yolo26n/old-2-nanoworstcase-384/best.pt",
+      "file_size_bytes": 5350014,
+      "parameters": 2504970,
+      "parameters_millions": 2.505,
+      "torch_cuda": {
+        "mean_ms": 11.682,
+        "median_ms": 10.952,
+        "p95_ms": 14.755,
+        "min_ms": 9.898,
+        "max_ms": 17.791,
+        "stdev_ms": 1.771,
+        "fps": 91.31,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 40.504,
+        "median_ms": 40.522,
+        "p95_ms": 42.926,
+        "min_ms": 37.861,
+        "max_ms": 44.585,
+        "stdev_ms": 1.366,
+        "fps": 24.68,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "old-rfdetr-nano-1-baseline-384",
+      "display_name": "[OLD] RF-DETR Nano Baseline 384",
+      "family": "rfdetr",
+      "imgsz": 384,
+      "checkpoint": "checkpoints/rfdetr-nano/old-1-baseline-384/checkpoint_best_ema.pth",
+      "file_size_bytes": 120822075,
+      "parameters": 30154272,
+      "parameters_millions": 30.154,
+      "torch_cuda": {
+        "mean_ms": 14.088,
+        "median_ms": 13.896,
+        "p95_ms": 17.728,
+        "min_ms": 10.324,
+        "max_ms": 28.25,
+        "stdev_ms": 2.9,
+        "fps": 71.96,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 81.251,
+        "median_ms": 81.33,
+        "p95_ms": 82.5,
+        "min_ms": 79.137,
+        "max_ms": 82.76,
+        "stdev_ms": 0.791,
+        "fps": 12.3,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "old-rfdetr-nano-2-finetune-384",
+      "display_name": "[OLD] RF-DETR Nano Fine-Tuned 384",
+      "family": "rfdetr",
+      "imgsz": 384,
+      "checkpoint": "checkpoints/rfdetr-nano/old-2-finetune-384/checkpoint_best_ema.pth",
+      "file_size_bytes": 120822971,
+      "parameters": 30154272,
+      "parameters_millions": 30.154,
+      "torch_cuda": {
+        "mean_ms": 12.221,
+        "median_ms": 11.293,
+        "p95_ms": 15.412,
+        "min_ms": 10.24,
+        "max_ms": 23.688,
+        "stdev_ms": 2.489,
+        "fps": 88.55,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 79.84,
+        "median_ms": 81.303,
+        "p95_ms": 85.174,
+        "min_ms": 69.027,
+        "max_ms": 88.075,
+        "stdev_ms": 4.028,
+        "fps": 12.3,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "old-rfdetr-small-1-baseline-640",
+      "display_name": "[OLD] RF-DETR Small Baseline 640",
+      "family": "rfdetr",
+      "imgsz": 640,
+      "checkpoint": "checkpoints/rfdetr-small/old-1-baseline-640/checkpoint_best_ema.pth",
+      "file_size_bytes": 128292439,
+      "parameters": 32019328,
+      "parameters_millions": 32.019,
+      "torch_cuda": {
+        "mean_ms": 19.036,
+        "median_ms": 18.734,
+        "p95_ms": 21.332,
+        "min_ms": 17.789,
+        "max_ms": 22.27,
+        "stdev_ms": 1.042,
+        "fps": 53.38,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 171.319,
+        "median_ms": 170.975,
+        "p95_ms": 174.286,
+        "min_ms": 168.184,
+        "max_ms": 185.692,
+        "stdev_ms": 2.747,
+        "fps": 5.85,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "old-rfdetr-small-2-standard-640",
+      "display_name": "[OLD] RF-DETR Small Standard 640",
+      "family": "rfdetr",
+      "imgsz": 640,
+      "checkpoint": "checkpoints/rfdetr-small/old-2-standard-640/checkpoint_best_ema.pth",
+      "file_size_bytes": 128291863,
+      "parameters": 32019328,
+      "parameters_millions": 32.019,
+      "torch_cuda": {
+        "mean_ms": 19.213,
+        "median_ms": 18.695,
+        "p95_ms": 21.804,
+        "min_ms": 17.821,
+        "max_ms": 22.642,
+        "stdev_ms": 1.242,
+        "fps": 53.49,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 171.222,
+        "median_ms": 170.529,
+        "p95_ms": 177.332,
+        "min_ms": 167.293,
+        "max_ms": 185.443,
+        "stdev_ms": 3.137,
+        "fps": 5.86,
+        "iterations": 50,
+        "warmup": 10
+      }
+    },
+    {
+      "model_key": "old-rfdetr-small-3-worstcase-384",
+      "display_name": "[OLD] RF-DETR Small Worst-Case 384",
+      "family": "rfdetr",
+      "imgsz": 384,
+      "checkpoint": "checkpoints/rfdetr-small/old-3-worstcase-384/checkpoint_best_ema.pth",
+      "file_size_bytes": 126719511,
+      "parameters": 31626112,
+      "parameters_millions": 31.626,
+      "torch_cuda": {
+        "mean_ms": 14.565,
+        "median_ms": 14.179,
+        "p95_ms": 18.447,
+        "min_ms": 11.271,
+        "max_ms": 20.305,
+        "stdev_ms": 2.206,
+        "fps": 70.53,
+        "iterations": 50,
+        "warmup": 10
+      },
+      "torch_cpu": {
+        "mean_ms": 87.672,
+        "median_ms": 87.631,
+        "p95_ms": 89.977,
+        "min_ms": 83.875,
+        "max_ms": 90.595,
+        "stdev_ms": 1.378,
+        "fps": 11.41,
+        "iterations": 50,
+        "warmup": 10
+      }
+    }
+  ]
+}

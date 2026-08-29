@@ -1,0 +1,41 @@
+{
+  "key": "old-yolo11n-2-worstcase-dms-640",
+  "display_name": "[Old] YOLO11n Worst-Case DMS 640",
+  "family": "yolo",
+  "resolution": 640,
+  "size_mb": 5.22,
+  "metrics": {
+    "map50": 0.7198026582201575,
+    "map50_corrected": 0.7277299290393008,
+    "precision": 0.7451220878483142,
+    "recall": 0.6709661297859589,
+    "f1": 0.7055672287958705,
+    "ap_per_class": {
+      "closed_eye": 0.8692262370334649,
+      "open_eye": 0.798751321135575,
+      "yawning": 0.4914304164914327
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.8801186290112452,
+      "open_eye": 0.8116365288139076,
+      "yawning": 0.4914346292927498
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": null,
+    "imgsz": 640,
+    "batch": null,
+    "optimizer": null,
+    "lr0": null,
+    "cls": null,
+    "box": null,
+    "dfl": null,
+    "hours": null
+  },
+  "notes": {
+    "en": "[Old project] The DMS-purpose checkpoint this project's own D18 experiment was warm-started from. Real accuracy measured on THIS project's test split.",
+    "ar": "[مشروع قديم] نقطة التفتيش التي بدأ منها تجربة D18 لهذا المشروع. الدقة قُيست على مجموعة اختبار هذا المشروع."
+  }
+}

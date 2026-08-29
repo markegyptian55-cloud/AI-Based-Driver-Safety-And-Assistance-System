@@ -1,0 +1,54 @@
+============================================================================================
+ MISSED-DETECTION DIAGNOSIS -- YOLO26n Exp2 AdamW Fine-tune
+============================================================================================
+
+Images evaluated : 5438
+Operating point  : conf >= 0.35, IoU >= 0.5
+
+Class             GT  MISSED      BELOW_CONF     POOR_BOX  WRONG_CLASS        BLIND
+--------------------------------------------------------------------------------------------
+closed_eye      2910     605       509   84%     74   12%      8    1%     14    2%
+open_eye        2002     545       523   96%      9    2%      7    1%      6    1%
+yawning         2333     573       505   88%     45    8%      0    0%     23    4%
+--------------------------------------------------------------------------------------------
+TOTAL           7245    1723      1537   89%    128    7%     15    1%     43    2%
+
+INTERPRETATION
+--------------------------------------------------------------------------------------------
+  Model saw it, scored it too low   :  1537  (89.2%)  -> operating-point decision
+  Found it, drew the box differently:   128  (7.4%)  -> annotation geometry / IoU threshold
+  Detected as the wrong class       :    15  (0.9%)  -> class confusion
+  Genuinely did not see it          :    43  (2.5%)  -> only this needs more/better data
+
+BOX-GEOMETRY CHECK (POOR_BOX cases: predicted area / ground-truth area)
+--------------------------------------------------------------------------------------------
+  A ratio far from 1.0 means the model and the annotator disagree on how big
+  the object is -- the signature of BOOK.md D4, not of a model that cannot see.
+
+  closed_eye   n=   74   median ratio=  2.00   p25= 0.54 p75= 2.20   median IoU=0.449
+  open_eye     n=    9   median ratio=  1.57   p25= 1.27 p75= 1.97   median IoU=0.447
+  yawning      n=   45   median ratio=  0.48   p25= 0.46 p75= 0.50   median IoU=0.472
+
+BELOW-THRESHOLD CONFIDENCES (how close were they?)
+--------------------------------------------------------------------------------------------
+  closed_eye   n=  509   median conf=0.126   share above 0.20: 30%
+  open_eye     n=  523   median conf=0.138   share above 0.20: 28%
+  yawning      n=  505   median conf=0.290   share above 0.20: 81%
+
+CLASS CONFUSION (ground truth -> what was predicted there)
+--------------------------------------------------------------------------------------------
+  closed_eye   -> open_eye         8
+  open_eye     -> closed_eye       7
+
+YAWNING MISSES BY SOURCE CORPUS (does one corpus own the box failures?)
+--------------------------------------------------------------------------------------------
+family            yawn GT  POOR_BOX  % of GT  BELOW_CONF  BLIND  median pred/GT area
+bare_numeric          955        43     4.5%         266     23                 0.48
+yawn_new              392         2     0.5%           3      0                 1.99
+other_small            88         0     0.0%           0      0                    -
+dd_v1                 536         0     0.0%         234      0                    -
+img                    76         0     0.0%           0      0                    -
+istockphoto           103         0     0.0%           2      0                    -
+Yimg                  183         0     0.0%           0      0                    -
+
+============================================================================================

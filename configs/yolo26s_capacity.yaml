@@ -1,0 +1,130 @@
+# Experiment 6 -- YOLO26s capacity test. BOOK.md Ch.3 D15.
+# Launched 2026-08-14, autonomous (user away, no fixed return time given).
+#
+# WHY: D8-D13 exhausted the cheap avenues available to yolo26n -- three
+# dataset-defect hypotheses tested and rejected (D10: convention conflict
+# falsified twice, zero cross-class conflicts/duplicates in 68,292 boxes, D2
+# pseudo-label premise false), three loss-balance points tried (D11/D12: cls
+# 0.5/1.5/3.0, lever peaked near 1.5 and turned over, net yield only
+# +0.4pt real test mAP50 for ~18 GPU-hours). Five yolo26n checkpoints now
+# measured on test, span 79.55%-82.75%, well short of the 93% target. The
+# next untried lever per the overnight closing analysis is model capacity:
+# yolo26n (nano) may simply not have enough parameters to separate the
+# harder cases (yawning AP 76-77% vs its own hard ceiling of 91.53%, D8).
+# yolo26s was explicitly pre-authorized by the user for this project when
+# justified by evidence (relaxing the nano-only scope), and that evidence bar
+# is now met.
+#
+# THE RECIPE -- every value here is this project's best *measured* finding
+# to date, not a guess:
+#   - AdamW, not auto/MuSGD: Exp1's from-scratch run under MuSGD showed
+#     instability at epoch 58-73 (BOOK.md Ch.3 SS3.1); AdamW was adopted from
+#     Exp2 onward and never regressed.
+#   - cls 1.5, not 0.5: D11 measured +0.96pt val / +0.42pt test over Exp2's
+#     0.5 with no dataset change. D12 showed 3.0 turns the lever over, so 1.5
+#     is the measured peak, not an extrapolation.
+#   - box 7.5 / dfl 1.5: untouched Ultralytics defaults; D8 showed box
+#     geometry is not the bottleneck (only 15.3% of misses), so no evidence
+#     ever justified moving these.
+#   - moderate augmentation (this exact block): the level used in every
+#     experiment ranked above Exp1's mild-aug baseline and Exp3's worst-case
+#     aug on real test mAP50 (BOOK.md SS3.5 comparison table).
+#   - imgsz 960: Exp3 tested 640 and scored worst-on-test of the first three
+#     experiments (81.02%) despite being a fresh run; 960 has never lost a
+#     head-to-head in this project.
+#
+# WHAT'S ACTUALLY NEW: model capacity only. Fresh COCO-pretrained yolo26s.pt,
+# single-stage full training (not baseline-then-finetune like yolo26n's
+# Exp1->Exp2 -- there is no prior yolo26s checkpoint to fine-tune from, and
+# the recipe above is already the best known starting point rather than an
+# untested guess that would need a cheap first pass).
+#
+# batch: first tried -1 (AutoBatch), which picked 5 at its conservative 60%
+# VRAM target -- confirmed live afterward to be badly oversized-down: actual
+# usage was 4.66G/16G (29%) and GPU util sat at 71%, meaning the run was
+# dataloader-bound, not memory-bound, at workers=2 (this project's
+# yolo26n-tuned default, never revisited for a bigger/slower-per-step model).
+# 7,926 steps/epoch at batch=5 measured at ~0.34s/step -> ~45min/epoch ->
+# ~97h (4 days) for 130 epochs, far outside every prior experiment's window
+# (Exp1 20.4h, Exp2 11.7h combined ~32h for a comparable epoch count). Killed
+# after ~2min (epoch 1, batch ~220/7926) before more time was sunk. Fixed
+# batch=12 (headroom confirmed: batch=8 measured 14.08G/16G in the AutoBatch
+# probe table, well below the observed real 4.66G/16G at batch=5, so 12 has
+# real margin) and workers=8 (28 logical cores available, was 2) to remove
+# the dataloader bottleneck instead of touching any modeling hyperparameter.
+#
+# epochs 130 / patience 25: sized to comfortably cover Exp1+Exp2's combined
+# from-scratch-to-converged budget (77+50=127 epochs) in one stage, with
+# room to stop early if it converges faster. Whether the fixed batch+workers
+# change closes enough of the 4-day gap to be a reasonable unattended budget
+# is re-measured (not assumed) after a few epochs on the relaunch -- see
+# BOOK.md D15 addendum.
+#
+# JUDGED ON VAL. Test gets no further touches this round (D14 already flagged
+# test as touched twice / five models deep -- reserve it).
+#
+# Run: python src/train.py --config configs/yolo26s_capacity.yaml
+
+weights: yolo26s.pt          # fresh COCO-pretrained, auto-downloaded
+data: data/Dataset-Main/data.yaml     # FROZEN, unchanged
+name: capacity-yolo26s-960-moderate-aug
+
+box: 7.5
+cls: 1.5             # Exp4's measured peak, not Ultralytics' 0.5 default
+dfl: 1.5
+
+imgsz: 960
+epochs: 50            # fine-tune budget, not full from-scratch convergence -- user call, trades
+                      # some convergence headroom for a ~20h run instead of ~52h
+patience: 15
+batch: 12             # fixed -- AutoBatch's batch=5 was dataloader-bound, not memory-bound
+workers: 2            # was 8, then 4 -- BOTH crash-looped (Windows multiprocessing DataLoader,
+                      # error 1455 shared-memory/pagefile exhaustion): workers=8 within ~2min,
+                      # workers=4 after ~4h/9 epochs. Mechanism (ultralytics/data/build.py):
+                      # prefetch_factor=4 (line 355, double PyTorch's default) x pin_memory,
+                      # and InfiniteDataLoader builds its worker iterator ONCE and never
+                      # recycles it (lines 67-98) -- so in-flight page-locked images are
+                      # workers*4*batch and grow over the whole process lifetime, which is why
+                      # a lower worker count only delays the wall instead of removing it.
+                      # 2 keeps 96 images in flight vs the 192 that died at workers=4, while
+                      # still overlapping load with compute (workers=0 leaves the run
+                      # dataloader-bound in a single process at 960px).
+                      #
+                      # NOTE, D15's fifth failure: workers is NOT what killed the 2026-08-16
+                      # resume. Ultralytics' resume (engine/trainer.py:886-904) lets a 13-key
+                      # allow-list -- batch included -- be overridden by whatever the caller
+                      # passes, and train.py passed its argparse default, so the run silently
+                      # resumed at batch 32 instead of 12. Validation runs at batch*2
+                      # (trainer.py:277), so that meant ~batch 64 at 960px against a card where
+                      # batch 12 already measured 9.5G/16G. Windows/WDDM spills the overflow
+                      # into system RAM rather than raising OOM -- hence a 4h26m epoch instead
+                      # of an error. train.py now forwards only explicitly-set overrides on
+                      # resume, so this cannot recur silently. Resume with:
+                      #   python src/train.py --config configs/yolo26s_capacity.yaml --weights <run>/weights/last.pt
+
+optimizer: AdamW
+lr0: 0.001
+lrf: 0.01
+momentum: 0.9
+warmup_epochs: 3.0    # fresh weights, full from-scratch warmup (not a fine-tune)
+cos_lr: true
+amp: true
+
+# Augmentation identical to Exp2/4/5's moderate-aug level.
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+flipud: 0.0
+fliplr: 0.5
+degrees: 15.0
+shear: 4.0
+perspective: 0.0005
+translate: 0.15
+scale: 0.6
+hsv_h: 0.02
+hsv_s: 0.7
+hsv_v: 0.5
+erasing: 0.30
+auto_augment: randaugment

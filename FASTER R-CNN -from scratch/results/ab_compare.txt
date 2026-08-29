@@ -1,0 +1,21 @@
+
+============ BEFORE vs AFTER  (test set) ============
+  before : checkpoints/tuned/best.pth (epoch 50)
+  after  : checkpoints/tuned_fixed/best.pth (epoch 63)
+
+  mAP@0.5         : 0.7427 -> 0.7784  (+0.0357)
+  mAP@0.5:0.95    : 0.3460 -> 0.3690  (+0.0230)
+  precision       : 0.7102 -> 0.7130  (+0.0028)
+  recall          : 0.8260 -> 0.8602  (+0.0342)
+  f1              : 0.7637 -> 0.7797  (+0.0159)
+  mean_iou        : 0.7478 -> 0.7510  (+0.0032)
+  AP per class:
+    closed_eye    : 0.7315 -> 0.7748  (+0.0432)
+    open_eye      : 0.6757 -> 0.7209  (+0.0452)
+    yawn          : 0.8210 -> 0.8395  (+0.0186)
+
+  fp_total        :   2744 ->   2819  (+75)
+  fp_phantom      :   2074 ->   2191  (+117)
+  fp_overlap      :    670 ->    628  (-42)
+  fn              :   1416 ->   1138  (-278)
+  tp              :   6724 ->   7002  (+278)

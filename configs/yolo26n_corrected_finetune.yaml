@@ -1,0 +1,75 @@
+# Experiment 4 -- YOLO26n calibration experiment. BOOK.md Ch.3 SS3.10.
+# Prepared 2026-08-13 after the rapid audit found NO safe dataset fix.
+#
+# WHY THIS AND NOT A DATASET FIX:
+# The audit (D10) tested three candidate dataset defects and rejected all three
+# -- the yawning convention conflict (falsified twice), demonstrably-wrong boxes
+# (zero cross-class conflicts and zero duplicates exist across 68,292 boxes),
+# and D2 eye pseudo-label completion (premise false; only 28 usable detections
+# across 4,225 images). By every measure available the annotation is internally
+# consistent, so the ~82.7% ceiling is not a data-quality problem.
+#
+# WHAT IT IS: calibration. 89.2% of val misses are correct detections at
+# IoU >= 0.5 rejected for scoring below threshold, against a val AP ceiling of
+# 97.56%. The model finds the objects and is not confident about them. Median
+# confidence of correct-but-rejected detections: closed_eye 0.126,
+# open_eye 0.138, yawning 0.290.
+#
+# THE ONE VARIABLE: cls loss weight 0.5 -> 1.5.
+# `cls` is the classification-confidence term and is the smallest weight in the
+# loss (box 7.5 / cls 0.5 / dfl 1.5). BOOK.md SS2.5 records it as "Ultralytics
+# default, not tuned" -- it has never been touched in this project. Raising it
+# puts direct pressure on the term that produces the confidence scores, without
+# touching box regression (which D8 showed is not the problem: only 7.4% of val
+# misses are box-geometry failures).
+#
+# Everything else is byte-identical to Experiment 2, including the dataset,
+# so any val movement is attributable to the cls weight alone.
+#
+# HONEST STATUS: this is a hypothesis with a mechanism, not a prediction. Four
+# hypotheses were tested and rejected today (D1's magnitude, the yawning
+# convention, wrong boxes, D2's premise). No expected gain is claimed.
+#
+# Run with: python src/train.py --config configs/yolo26n_corrected_finetune.yaml
+# Judged on VAL. The test split gets exactly one evaluation, at the very end.
+
+weights: checkpoints/yolo26n/2-finetune-yolo26n-960-moderate-aug/best.pt
+data: data/Dataset-Main/data.yaml     # UNCHANGED -- no dataset correction was justified
+name: calibration-yolo26n-960-moderate-aug
+
+cls: 1.5            # <-- THE EXPERIMENTAL VARIABLE (was 0.5)
+box: 7.5            # unchanged
+dfl: 1.5            # unchanged
+
+imgsz: 960          # unchanged from Exp2
+epochs: 40          # a calibration nudge from a converged checkpoint, not a
+                     # fresh convergence run
+patience: 12
+batch: 32
+
+optimizer: AdamW    # unchanged
+lr0: 0.001          # unchanged
+lrf: 0.01
+momentum: 0.9
+warmup_epochs: 3.0
+cos_lr: true
+amp: true
+
+# Augmentation identical to Exp2 -- changing it would confound the loss-weight test.
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+flipud: 0.0
+fliplr: 0.5
+degrees: 15.0
+shear: 4.0
+perspective: 0.0005
+translate: 0.15
+scale: 0.6
+hsv_h: 0.02
+hsv_s: 0.7
+hsv_v: 0.5
+erasing: 0.30
+auto_augment: randaugment

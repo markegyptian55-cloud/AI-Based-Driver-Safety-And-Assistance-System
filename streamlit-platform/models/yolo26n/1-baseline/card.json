@@ -1,0 +1,41 @@
+{
+  "key": "yolo26n-1-baseline",
+  "display_name": "YOLO26n - Exp1 Baseline",
+  "family": "yolo",
+  "resolution": 960,
+  "size_mb": 14.91,
+  "metrics": {
+    "map50": 0.795482700867666,
+    "map50_corrected": 0.797574994957223,
+    "precision": 0.753331385812804,
+    "recall": 0.7233792812172793,
+    "f1": 0.7378996054004597,
+    "ap_per_class": {
+      "closed_eye": 0.8470476978861736,
+      "open_eye": 0.8078766897660978,
+      "yawning": 0.7315237149507268
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.8479530485632655,
+      "open_eye": 0.8132480861077667,
+      "yawning": 0.7315238502006369
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": 150,
+    "imgsz": 960,
+    "batch": 32,
+    "optimizer": "auto",
+    "lr0": 0.01,
+    "cls": 0.5,
+    "box": 7.5,
+    "dfl": 1.5,
+    "hours": null
+  },
+  "notes": {
+    "en": "First training run. Fresh COCO weights, mild augmentation, MuSGD optimizer. Ranked best on validation but worst on the real test split -- the finding that started this project's evaluation discipline.",
+    "ar": "أول تدريب. أوزان COCO جديدة، تعزيز خفيف. الأفضل على التحقق ولكن الأسوأ على الاختبار الحقيقي."
+  }
+}

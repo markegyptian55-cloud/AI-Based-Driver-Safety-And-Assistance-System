@@ -1,0 +1,28 @@
+{
+  "model_key": "yolo26n-1-baseline",
+  "display_name": "YOLO26n Exp1 Baseline",
+  "map50": 0.795482700867666,
+  "precision": 0.753331385812804,
+  "recall": 0.7233792812172793,
+  "f1": 0.7378996054004597,
+  "ap_per_class": {
+    "closed_eye": 0.8470476978861736,
+    "open_eye": 0.8078766897660978,
+    "yawning": 0.7315237149507268
+  },
+  "map50_corrected": 0.797574994957223,
+  "ap_per_class_corrected": {
+    "closed_eye": 0.8479530485632655,
+    "open_eye": 0.8132480861077667,
+    "yawning": 0.7315238502006369
+  },
+  "label_gap_stats": {
+    "eye_ignored_images": 1039,
+    "yawn_ignored_images": 699,
+    "yawn_blind_families": [
+      "closed_eye_corpus",
+      "images-"
+    ],
+    "total_images": 5589
+  }
+}

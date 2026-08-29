@@ -1,0 +1,72 @@
+# PREPARED, NOT RUN. Weak-device fine-tune of the best yolo26n checkpoint
+# (Exp4, D11), at imgsz=480, with WORST-CASE augmentation intensity.
+#
+# NOTE on "worst-case aug" values: configs/yolo26n_worst_case_aug.yaml is
+# misleadingly named -- its own header states it is the MODERATED,
+# evidence-tuned recipe (Experiment 2), not worst-case; its values are
+# identical to the moderate-aug block used everywhere else in this project.
+# The values below are read from checkpoints/yolo26n/3-fresh-yolo26n-640-worst-aug/
+# args.yaml -- the one run in this project actually trained under that label.
+# mosaic/mixup/cutmix/copy_paste stay OFF regardless -- that is a separate,
+# structural rejection (compositing conflicts with this dataset's source-aware
+# label handling), not part of the moderate-vs-worst-case axis.
+#
+# cls/box/dfl kept at Exp4's own values (1.5/7.5/1.5), NOT Exp3's original
+# 0.5 -- D11/D12 already closed the loss-weight question separately; this
+# experiment's only variable vs. the previously-prepared 480 fine-tune is
+# augmentation intensity.
+#
+# RISK, updated after raising batch 32->64, user-authorized, workers kept at 4
+# as explicitly requested (not this project's recommendation): workers=4 x
+# batch=64 = 1024 images in-flight (workers * prefetch_factor(4) * batch) --
+# 2.7x the workers=8/batch=12 configuration that crash-looped this machine's
+# Windows DataLoader in ~2 minutes (BOOK.md D15), and 2x the batch=32 version
+# of this same config that was already above that line. Prior 480/batch=32
+# attempt DID complete epoch 1 in 230s with no crash symptoms before being
+# stopped manually (not evidence of safety at this higher batch -- the
+# historical crash-loop failures took hours to manifest, not seconds).
+# workers=2 remains this project's only setting verified safe across every
+# batch size tried so far, including today's batch=32.
+#
+# Run manually: python src/train.py --config configs/yolo26n_weakdevice_480_worstcase.yaml
+
+weights: "checkpoints/yolo26n/4-calibration-yolo26n-960-moderate-aug/best.pt"
+data: data/Dataset-Main/data.yaml     # FROZEN, unchanged
+name: weakdevice-480-worstcase-yolo26n
+
+imgsz: 480
+epochs: 25
+patience: 15
+batch: 64
+workers: 4
+
+optimizer: AdamW
+lr0: 0.001
+lrf: 0.01
+momentum: 0.9
+warmup_epochs: 1.0   # fine-tune from an already-converged checkpoint
+cos_lr: true
+amp: true
+
+box: 7.5
+cls: 1.5             # kept from Exp4's lineage -- D11/D12's measured peak, not reopened
+dfl: 1.5
+
+# WORST-CASE intensity, verified from checkpoints/yolo26n/3-fresh-yolo26n-640-worst-aug/args.yaml
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+flipud: 0.0
+fliplr: 0.5
+degrees: 25.0
+shear: 8.0
+perspective: 0.0008
+translate: 0.25
+scale: 0.7
+hsv_h: 0.03
+hsv_s: 0.8
+hsv_v: 0.6
+erasing: 0.40
+auto_augment: randaugment

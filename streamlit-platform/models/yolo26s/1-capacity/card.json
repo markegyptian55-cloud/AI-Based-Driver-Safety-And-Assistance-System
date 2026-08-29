@@ -1,0 +1,41 @@
+{
+  "key": "yolo26s-1-capacity",
+  "display_name": "YOLO26s - Exp6 Capacity",
+  "family": "yolo",
+  "resolution": 960,
+  "size_mb": 76.72,
+  "metrics": {
+    "map50": 0.8116591251720559,
+    "map50_corrected": 0.8160219507051462,
+    "precision": 0.8185177346912648,
+    "recall": 0.6407456064331742,
+    "f1": 0.7112012693590097,
+    "ap_per_class": {
+      "closed_eye": 0.8239473561180751,
+      "open_eye": 0.7376142354170947,
+      "yawning": 0.8734157839809976
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.8284687282395905,
+      "open_eye": 0.7461807394198179,
+      "yawning": 0.8734163844560301
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": 50,
+    "imgsz": 960,
+    "batch": 12,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "cls": 1.5,
+    "box": 7.5,
+    "dfl": 1.5,
+    "hours": null
+  },
+  "notes": {
+    "en": "Larger yolo26s backbone, testing whether model capacity is the bottleneck. Uses the best recipe found on yolo26n (AdamW, cls=1.5, 960px, moderate aug).",
+    "ar": "نموذج yolo26s الأكبر، لاختبار ما إذا كانت سعة النموذج هي العائق. يستخدم أفضل وصفة وجدت على yolo26n."
+  }
+}

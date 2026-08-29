@@ -1,0 +1,24 @@
+{
+  "tag": "after",
+  "checkpoint": "checkpoints/tuned_fixed/best.pth",
+  "split": "test",
+  "epoch": 63,
+  "num_images": 5705,
+  "mAP@0.5": 0.7784017389331922,
+  "mAP@0.5:0.95": 0.3690035829627064,
+  "precision": 0.7129620201608071,
+  "recall": 0.8601965601964545,
+  "f1": 0.7796893263791884,
+  "mean_iou": 0.7510123624780525,
+  "AP_per_class": {
+    "closed_eye": 0.7747899578370044,
+    "open_eye": 0.7209006532967623,
+    "yawn": 0.8395146056658098
+  },
+  "tp": 7002,
+  "fp_total": 2819,
+  "fp_phantom": 2191,
+  "fp_overlap": 628,
+  "fn": 1138,
+  "precision_if_phantoms_real": 0.9176933158583331
+}

@@ -1,0 +1,21 @@
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo11n_capacity.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo11n_dms_warmstart_320.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo11n_dms_warmstart_640.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_baseline.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_cls3.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_corrected_finetune.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_exp3_fresh_worst_case.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_exp4_fresh_worst_case_480.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_finetune_from_best.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_weakdevice_480_worstcase.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26n_worst_case_aug.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\configs\yolo26s_capacity.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\BOOK\Book-AI-Based_Driver_Safety_and_Assistance_System.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE BANAR\Banar 2026.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE TEAM\BASUNY\basuny NAME AND LINKED .txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE TEAM\ali\ali NAME AND LINKED .txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE TEAM\bahncy\bahncy NAME AND LINKED .txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE TEAM\kreem\kreem NAME AND LINKED .txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\THE TEAM\michel\michel NAME AND LINKED .txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\AGENTS.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\BUILD_PROMPT.md

@@ -1,0 +1,52 @@
+# Experiment 4 -- identical to Experiment 3 (configs/yolo26n_exp3_fresh_worst_case.yaml)
+# except imgsz. Prepared while Experiment 2 is still running -- conditionally
+# auto-launched by the watch mechanism if Experiment 3 finishes before 05:00,
+# same session/plan as Experiment 3's auto-launch
+# (C:\Users\student\.claude\plans\robust-drifting-tome.md).
+#
+# Run with: python src/train.py --config configs/yolo26n_exp4_fresh_worst_case_480.yaml
+# Output: checkpoints/yolo26n/<N>-fresh-worst-case-480/
+
+weights: yolo26n.pt
+data: data/Dataset-Main/data.yaml
+name: fresh-yolo26n-480-worst-aug
+imgsz: 480             # the only change from Experiment 3 (was 640) -- user
+                       # request, "more small." Further resolution
+                       # reduction risks the small open_eye class's recall
+                       # more than 640 did; that tradeoff is the point of
+                       # running this as its own comparison point.
+epochs: 100
+patience: 20
+batch: 32
+
+optimizer: AdamW
+lr0: 0.001
+lrf: 0.01
+momentum: 0.9
+warmup_epochs: 3.0
+cos_lr: true
+amp: true
+
+box: 7.5
+cls: 0.5
+dfl: 1.5
+
+mosaic: 0.0
+close_mosaic: 10
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+
+flipud: 0.0
+fliplr: 0.5
+
+degrees: 25.0
+shear: 8.0
+perspective: 0.0008
+translate: 0.25
+scale: 0.7
+hsv_h: 0.03
+hsv_s: 0.8
+hsv_v: 0.6
+erasing: 0.4
+auto_augment: randaugment

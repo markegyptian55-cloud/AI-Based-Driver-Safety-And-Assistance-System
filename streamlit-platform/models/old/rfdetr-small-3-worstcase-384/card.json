@@ -1,0 +1,42 @@
+{
+  "key": "old-rfdetr-small-3-worstcase-384",
+  "display_name": "[Old] RF-DETR Small Worst-Case 384",
+  "family": "rfdetr",
+  "resolution": 384,
+  "size_mb": 120.85,
+  "metrics": {
+    "map50": 0.7266312372951736,
+    "map50_corrected": 0.7354858541903719,
+    "precision": 0.6076224722845761,
+    "recall": 0.8139407683237238,
+    "f1": 0.6948068822972285,
+    "ap_per_class": {
+      "closed_eye": 0.9081925610658295,
+      "open_eye": 0.7602017116868524,
+      "yawning": 0.5114994391328389
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.9210470955370674,
+      "open_eye": 0.7737248337004314,
+      "yawning": 0.511685633333617
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": null,
+    "imgsz": 384,
+    "batch": null,
+    "optimizer": null,
+    "lr0": null,
+    "cls": null,
+    "box": null,
+    "dfl": null,
+    "hours": null
+  },
+  "notes": {
+    "en": "[Old project] RF-DETR Small worst-case fine-tune. Real accuracy measured on THIS project's test split.",
+    "ar": "[مشروع قديم] RF-DETR Small بأقصى تعزيز. الدقة قُيست على مجموعة اختبار هذا المشروع."
+  },
+  "rfdetr_class": "small"
+}

@@ -1,0 +1,96 @@
+{
+  "total_images": 50654,
+  "total_boxes": 68292,
+  "exact_duplicate_copies": 4157,
+  "visual_clusters": 34492,
+  "sources": {
+    "other_small": {
+      "images": 27071,
+      "boxes": 36104,
+      "closed_eye": 10313,
+      "open_eye": 17842,
+      "yawning": 7949,
+      "median_box_area": 0.0885987,
+      "p10_box_area": 0.0030468500000000003,
+      "p90_box_area": 0.6276667303125,
+      "avg_boxes_per_img": 1.33
+    },
+    "eye_patch_corpus": {
+      "images": 6215,
+      "boxes": 11806,
+      "closed_eye": 11785,
+      "open_eye": 21,
+      "yawning": 0,
+      "median_box_area": 0.028175135546999998,
+      "p10_box_area": 0.0166504390625,
+      "p90_box_area": 0.058652343749999995,
+      "avg_boxes_per_img": 1.9
+    },
+    "dd_v1": {
+      "images": 9052,
+      "boxes": 10663,
+      "closed_eye": 11,
+      "open_eye": 3456,
+      "yawning": 7196,
+      "median_box_area": 0.02131340625,
+      "p10_box_area": 0.0036928687500000007,
+      "p90_box_area": 0.2025384421876002,
+      "avg_boxes_per_img": 1.18
+    },
+    "img": {
+      "images": 690,
+      "boxes": 855,
+      "closed_eye": 157,
+      "open_eye": 189,
+      "yawning": 509,
+      "median_box_area": 0.06275390624999999,
+      "p10_box_area": 0.00335935,
+      "p90_box_area": 0.1476211175,
+      "avg_boxes_per_img": 1.24
+    },
+    "istockphoto": {
+      "images": 901,
+      "boxes": 2141,
+      "closed_eye": 1140,
+      "open_eye": 88,
+      "yawning": 913,
+      "median_box_area": 0.0011718750000000002,
+      "p10_box_area": 0.000207502344,
+      "p90_box_area": 0.054998288086000005,
+      "avg_boxes_per_img": 2.38
+    },
+    "session_video": {
+      "images": 1655,
+      "boxes": 1655,
+      "closed_eye": 1265,
+      "open_eye": 390,
+      "yawning": 0,
+      "median_box_area": 0.4286917,
+      "p10_box_area": 0.201196609375,
+      "p90_box_area": 0.884375,
+      "avg_boxes_per_img": 1.0
+    },
+    "yawn_new": {
+      "images": 4041,
+      "boxes": 4039,
+      "closed_eye": 0,
+      "open_eye": 0,
+      "yawning": 4039,
+      "median_box_area": 0.771875,
+      "p10_box_area": 0.25119921875,
+      "p90_box_area": 1.0,
+      "avg_boxes_per_img": 1.0
+    },
+    "Yimg": {
+      "images": 1029,
+      "boxes": 1029,
+      "closed_eye": 0,
+      "open_eye": 0,
+      "yawning": 1029,
+      "median_box_area": 0.08991679375,
+      "p10_box_area": 0.0544505595312,
+      "p90_box_area": 0.15729479999999998,
+      "avg_boxes_per_img": 1.0
+    }
+  }
+}

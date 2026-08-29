@@ -1,0 +1,41 @@
+{
+  "key": "old-yolo11m-2-trial2winner-640",
+  "display_name": "[Old] YOLO11m Trial2 Winner 640",
+  "family": "yolo",
+  "resolution": 640,
+  "size_mb": 115.23,
+  "metrics": {
+    "map50": 0.7394194272123045,
+    "map50_corrected": 0.7460499211140575,
+    "precision": 0.7601423699130078,
+    "recall": 0.6789446375741481,
+    "f1": 0.715259299124401,
+    "ap_per_class": {
+      "closed_eye": 0.924902368725285,
+      "open_eye": 0.7919108404577129,
+      "yawning": 0.5014450724539157
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.9334874006784946,
+      "open_eye": 0.8032172112220269,
+      "yawning": 0.5014451514416514
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": null,
+    "imgsz": 640,
+    "batch": null,
+    "optimizer": null,
+    "lr0": null,
+    "cls": null,
+    "box": null,
+    "dfl": null,
+    "hours": null
+  },
+  "notes": {
+    "en": "[Old project] Old project's self-declared best overall model (SGD, the only SGD run in either project). Real accuracy measured on THIS project's test split.",
+    "ar": "[مشروع قديم] أفضل نموذج في المشروع القديم حسب تقييمه الذاتي. الدقة قُيست على مجموعة اختبار هذا المشروع."
+  }
+}

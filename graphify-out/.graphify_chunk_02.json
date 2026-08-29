@@ -1,0 +1,1324 @@
+{
+ "nodes": [
+  {
+   "id": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+   "label": "Label-Gap-Corrected Metrics",
+   "file_type": "rationale",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_partial_annotation_convention",
+   "label": "Partial-Annotation Convention (COCO iscrowd ignore)",
+   "file_type": "concept",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "label": "Shared Held-Out Test Split (5589 images / 7427 GT instances)",
+   "file_type": "concept",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_closed_eye",
+   "label": "closed_eye class",
+   "file_type": "concept",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_open_eye",
+   "label": "open_eye class",
+   "file_type": "concept",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_yawning",
+   "label": "yawning class",
+   "file_type": "concept",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_merged_label_space",
+   "label": "Merged Eye-State + Yawning Label Space",
+   "file_type": "concept",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_operating_confidence_035",
+   "label": "Operating Confidence 0.35 / IoU 0.5 Protocol",
+   "file_type": "concept",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_training_history_not_preserved",
+   "label": "Training History Not Preserved",
+   "file_type": "rationale",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-nano\\old-2-finetune-384-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_duplicate_chart_artifacts",
+   "label": "Byte-Identical Duplicate Chart Artifacts",
+   "file_type": "concept",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-nano\\old-2-finetune-384-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_rfdetr_nano_finetune384_no_training_history",
+   "label": "RF-DETR Nano Finetune 384 - No Training History",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-nano\\old-2-finetune-384-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "label": "[OLD] RF-DETR Small Baseline 640 - Evaluation Report",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_test_summary_rfdetr_small_baseline640_test_summary",
+   "label": "[OLD] RF-DETR Small Baseline 640 - Test Summary",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_1_baseline_640_test_result_training_curves_no_training_history_rfdetr_small_baseline640_no_training_history",
+   "label": "[OLD] RF-DETR Small Baseline 640 - No Training History",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+   "label": "[OLD] RF-DETR Small Standard 640 - Evaluation Report",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_test_summary_rfdetr_small_standard640_test_summary",
+   "label": "[OLD] RF-DETR Small Standard 640 - Test Summary",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_2_standard_640_test_result_training_curves_no_training_history_rfdetr_small_standard640_no_training_history",
+   "label": "[OLD] RF-DETR Small Standard 640 - No Training History",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation",
+   "label": "[OLD] RF-DETR Small Worst-Case 384 - Evaluation Report",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_test_summary_rfdetr_small_worstcase384_test_summary",
+   "label": "[OLD] RF-DETR Small Worst-Case 384 - Test Summary",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_rfdetr_small_old_3_worstcase_384_test_result_training_curves_no_training_history_rfdetr_small_worstcase384_no_training_history",
+   "label": "[OLD] RF-DETR Small Worst-Case 384 - No Training History",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_evaluation_report_yolo11m_warmstart640_evaluation",
+   "label": "YOLO11m D18 Cross-Dataset Warm Start - Evaluation Report",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\1-yolo11m-warmstart-pilot-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_test_summary_yolo11m_warmstart640_test_summary",
+   "label": "YOLO11m D18 Cross-Dataset Warm Start - Test Summary",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\1-yolo11m-warmstart-pilot-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_evaluation_report_yolo11m_worstcase384_evaluation",
+   "label": "[OLD] YOLO11m Worst-Case 384 - Evaluation Report",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-1-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_test_summary_yolo11m_worstcase384_test_summary",
+   "label": "[OLD] YOLO11m Worst-Case 384 - Test Summary",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-1-worstcase-384-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_evaluation_report_yolo11m_trial2winner640_evaluation",
+   "label": "[OLD] YOLO11m Trial2 Winner 640 - Evaluation Report",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_test_summary_yolo11m_trial2winner640_test_summary",
+   "label": "[OLD] YOLO11m Trial2 Winner 640 - Test Summary",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_yolo11m_old_2_trial2winner_640_test_result_training_curves_no_training_history_yolo11m_trial2winner640_no_training_history",
+   "label": "[OLD] YOLO11m Trial2 Winner 640 - No Training History",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_evaluation_report_yolo11m_worstcase_d18source640_evaluation",
+   "label": "[OLD] YOLO11m Worst-Case (D18 source) 640 - Evaluation Report",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-3-worstcase-d18source-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_test_summary_yolo11m_worstcase_d18source640_test_summary",
+   "label": "[OLD] YOLO11m Worst-Case (D18 source) 640 - Test Summary",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-3-worstcase-d18source-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_evaluation_report_yolo11n_capacity960_evaluation",
+   "label": "YOLO11n D16 Capacity Test - Evaluation Report",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11n\\1-capacity-yolo11n-960-moderate-aug-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  },
+  {
+   "id": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_test_summary_yolo11n_capacity960_test_summary",
+   "label": "YOLO11n D16 Capacity Test - Test Summary",
+   "file_type": "document",
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11n\\1-capacity-yolo11n-960-moderate-aug-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "source_url": null,
+   "captured_at": null,
+   "author": null,
+   "contributor": null
+  }
+ ],
+ "edges": [
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_partial_annotation_convention",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_merged_label_space",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+   "relation": "rationale_for",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_merged_label_space",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_closed_eye",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_merged_label_space",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_open_eye",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_merged_label_space",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_yawning",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_operating_confidence_035",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_duplicate_chart_artifacts",
+   "target": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_training_history_not_preserved",
+   "relation": "rationale_for",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-nano\\old-2-finetune-384-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_training_history_not_preserved",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.75,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-nano\\old-2-finetune-384-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_rfdetr_nano_finetune384_no_training_history",
+   "target": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_training_history_not_preserved",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-nano\\old-2-finetune-384-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_rfdetr_nano_finetune384_no_training_history",
+   "target": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_duplicate_chart_artifacts",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-nano\\old-2-finetune-384-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_operating_confidence_035",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_closed_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_open_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_yawning",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_test_summary_rfdetr_small_baseline640_test_summary",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "relation": "shares_data_with",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_test_summary_rfdetr_small_baseline640_test_summary",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_training_curves_no_training_history_rfdetr_small_baseline640_no_training_history",
+   "target": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_training_history_not_preserved",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_training_curves_no_training_history_rfdetr_small_baseline640_no_training_history",
+   "target": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_duplicate_chart_artifacts",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_training_curves_no_training_history_rfdetr_small_baseline640_no_training_history",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_operating_confidence_035",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_closed_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_open_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_yawning",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_test_summary_rfdetr_small_standard640_test_summary",
+   "target": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+   "relation": "shares_data_with",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_test_summary_rfdetr_small_standard640_test_summary",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_2_standard_640_test_result_training_curves_no_training_history_rfdetr_small_standard640_no_training_history",
+   "target": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_training_history_not_preserved",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_2_standard_640_test_result_training_curves_no_training_history_rfdetr_small_standard640_no_training_history",
+   "target": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_duplicate_chart_artifacts",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_2_standard_640_test_result_training_curves_no_training_history_rfdetr_small_standard640_no_training_history",
+   "target": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-2-standard-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_operating_confidence_035",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_closed_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_open_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_yawning",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_test_summary_rfdetr_small_worstcase384_test_summary",
+   "target": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation",
+   "relation": "shares_data_with",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_test_summary_rfdetr_small_worstcase384_test_summary",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_3_worstcase_384_test_result_training_curves_no_training_history_rfdetr_small_worstcase384_no_training_history",
+   "target": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_training_history_not_preserved",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_3_worstcase_384_test_result_training_curves_no_training_history_rfdetr_small_worstcase384_no_training_history",
+   "target": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_duplicate_chart_artifacts",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_3_worstcase_384_test_result_training_curves_no_training_history_rfdetr_small_worstcase384_no_training_history",
+   "target": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-3-worstcase-384-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_evaluation_report_yolo11m_warmstart640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\1-yolo11m-warmstart-pilot-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_evaluation_report_yolo11m_warmstart640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\1-yolo11m-warmstart-pilot-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_evaluation_report_yolo11m_warmstart640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_operating_confidence_035",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\1-yolo11m-warmstart-pilot-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_evaluation_report_yolo11m_warmstart640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_closed_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\1-yolo11m-warmstart-pilot-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_evaluation_report_yolo11m_warmstart640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_open_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\1-yolo11m-warmstart-pilot-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_evaluation_report_yolo11m_warmstart640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_yawning",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\1-yolo11m-warmstart-pilot-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_test_summary_yolo11m_warmstart640_test_summary",
+   "target": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_evaluation_report_yolo11m_warmstart640_evaluation",
+   "relation": "shares_data_with",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\1-yolo11m-warmstart-pilot-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_test_summary_yolo11m_warmstart640_test_summary",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\1-yolo11m-warmstart-pilot-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_evaluation_report_yolo11m_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-1-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_evaluation_report_yolo11m_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-1-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_evaluation_report_yolo11m_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_operating_confidence_035",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-1-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_evaluation_report_yolo11m_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_closed_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-1-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_evaluation_report_yolo11m_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_open_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-1-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_evaluation_report_yolo11m_worstcase384_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_yawning",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-1-worstcase-384-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_test_summary_yolo11m_worstcase384_test_summary",
+   "target": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_evaluation_report_yolo11m_worstcase384_evaluation",
+   "relation": "shares_data_with",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-1-worstcase-384-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_test_summary_yolo11m_worstcase384_test_summary",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-1-worstcase-384-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_evaluation_report_yolo11m_trial2winner640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_evaluation_report_yolo11m_trial2winner640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_evaluation_report_yolo11m_trial2winner640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_operating_confidence_035",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_evaluation_report_yolo11m_trial2winner640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_closed_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_evaluation_report_yolo11m_trial2winner640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_open_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_evaluation_report_yolo11m_trial2winner640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_yawning",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_test_summary_yolo11m_trial2winner640_test_summary",
+   "target": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_evaluation_report_yolo11m_trial2winner640_evaluation",
+   "relation": "shares_data_with",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_test_summary_yolo11m_trial2winner640_test_summary",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_2_trial2winner_640_test_result_training_curves_no_training_history_yolo11m_trial2winner640_no_training_history",
+   "target": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_training_history_not_preserved",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_2_trial2winner_640_test_result_training_curves_no_training_history_yolo11m_trial2winner640_no_training_history",
+   "target": "info_rfdetr_nano_old_2_finetune_384_test_result_training_curves_no_training_history_duplicate_chart_artifacts",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_2_trial2winner_640_test_result_training_curves_no_training_history_yolo11m_trial2winner640_no_training_history",
+   "target": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_evaluation_report_yolo11m_trial2winner640_evaluation",
+   "relation": "conceptually_related_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-2-trial2winner-640-test-result\\training-curves\\NO_TRAINING_HISTORY.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_evaluation_report_yolo11m_worstcase_d18source640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-3-worstcase-d18source-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_evaluation_report_yolo11m_worstcase_d18source640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-3-worstcase-d18source-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_evaluation_report_yolo11m_worstcase_d18source640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_operating_confidence_035",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-3-worstcase-d18source-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_evaluation_report_yolo11m_worstcase_d18source640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_closed_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-3-worstcase-d18source-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_evaluation_report_yolo11m_worstcase_d18source640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_open_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-3-worstcase-d18source-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_evaluation_report_yolo11m_worstcase_d18source640_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_yawning",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-3-worstcase-d18source-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_test_summary_yolo11m_worstcase_d18source640_test_summary",
+   "target": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_evaluation_report_yolo11m_worstcase_d18source640_evaluation",
+   "relation": "shares_data_with",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-3-worstcase-d18source-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_test_summary_yolo11m_worstcase_d18source640_test_summary",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11m\\old-3-worstcase-d18source-640-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_evaluation_report_yolo11n_capacity960_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11n\\1-capacity-yolo11n-960-moderate-aug-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_evaluation_report_yolo11n_capacity960_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+   "relation": "implements",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11n\\1-capacity-yolo11n-960-moderate-aug-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_evaluation_report_yolo11n_capacity960_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_operating_confidence_035",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11n\\1-capacity-yolo11n-960-moderate-aug-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_evaluation_report_yolo11n_capacity960_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_closed_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11n\\1-capacity-yolo11n-960-moderate-aug-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_evaluation_report_yolo11n_capacity960_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_open_eye",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11n\\1-capacity-yolo11n-960-moderate-aug-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_evaluation_report_yolo11n_capacity960_evaluation",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_yawning",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11n\\1-capacity-yolo11n-960-moderate-aug-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_test_summary_yolo11n_capacity960_test_summary",
+   "target": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_evaluation_report_yolo11n_capacity960_evaluation",
+   "relation": "shares_data_with",
+   "confidence": "INFERRED",
+   "confidence_score": 0.95,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11n\\1-capacity-yolo11n-960-moderate-aug-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_test_summary_yolo11n_capacity960_test_summary",
+   "target": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_shared_test_split",
+   "relation": "references",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\yolo11n\\1-capacity-yolo11n-960-moderate-aug-test-result\\tested-images\\test_summary.md",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_evaluation_report_yolo11m_warmstart640_evaluation",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_yolo11m_old_1_worstcase_384_test_result_tested_images_evaluation_report_yolo11m_worstcase384_evaluation",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_evaluation_report_yolo11m_trial2winner640_evaluation",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_evaluation_report_yolo11m_worstcase_d18source640_evaluation",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  },
+  {
+   "source": "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+   "target": "info_yolo11n_1_capacity_yolo11n_960_moderate_aug_test_result_tested_images_evaluation_report_yolo11n_capacity960_evaluation",
+   "relation": "semantically_similar_to",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt",
+   "source_location": null,
+   "weight": 1.0
+  }
+ ],
+ "hyperedges": [
+  {
+   "id": "rfdetr_small_run_family",
+   "label": "RF-DETR Small run family on shared test split",
+   "nodes": [
+    "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+    "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+    "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation"
+   ],
+   "relation": "participate_in",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt"
+  },
+  {
+   "id": "yolo11m_run_family",
+   "label": "YOLO11m run family on shared test split",
+   "nodes": [
+    "info_yolo11m_1_yolo11m_warmstart_pilot_640_test_result_tested_images_evaluation_report_yolo11m_warmstart640_evaluation",
+    "info_yolo11m_old_1_worstcase_384_test_result_tested_images_evaluation_report_yolo11m_worstcase384_evaluation",
+    "info_yolo11m_old_2_trial2winner_640_test_result_tested_images_evaluation_report_yolo11m_trial2winner640_evaluation",
+    "info_yolo11m_old_3_worstcase_d18source_640_test_result_tested_images_evaluation_report_yolo11m_worstcase_d18source640_evaluation"
+   ],
+   "relation": "participate_in",
+   "confidence": "INFERRED",
+   "confidence_score": 0.85,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt"
+  },
+  {
+   "id": "label_gap_correction_pipeline",
+   "label": "Label-gap correction applied across evaluated runs",
+   "nodes": [
+    "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_label_gap_corrected_metrics",
+    "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_partial_annotation_convention",
+    "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_merged_label_space",
+    "info_rfdetr_small_old_1_baseline_640_test_result_tested_images_evaluation_report_rfdetr_small_baseline640_evaluation",
+    "info_rfdetr_small_old_2_standard_640_test_result_tested_images_evaluation_report_rfdetr_small_standard640_evaluation",
+    "info_rfdetr_small_old_3_worstcase_384_test_result_tested_images_evaluation_report_rfdetr_small_worstcase384_evaluation"
+   ],
+   "relation": "form",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "source_file": "C:\\AI-Based Driver Safety and Assistance System(ADAS)\\INFO\\rfdetr-small\\old-1-baseline-640-test-result\\tested-images\\evaluation_report.txt"
+  }
+ ],
+ "input_tokens": 0,
+ "output_tokens": 0
+}

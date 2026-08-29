@@ -1,0 +1,41 @@
+{
+  "key": "old-yolo26n-1-nanobaseline-384",
+  "display_name": "[Old] YOLO26n Nano Baseline 384",
+  "family": "yolo",
+  "resolution": 384,
+  "size_mb": 5.1,
+  "metrics": {
+    "map50": 0.6813036274907747,
+    "map50_corrected": 0.6880334831905811,
+    "precision": 0.7288524554659213,
+    "recall": 0.6304524126585758,
+    "f1": 0.6745813334235451,
+    "ap_per_class": {
+      "closed_eye": 0.8547712256228763,
+      "open_eye": 0.6938107252297139,
+      "yawning": 0.4953289316197336
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.8640057346422811,
+      "open_eye": 0.7047638189958139,
+      "yawning": 0.495330895933648
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": null,
+    "imgsz": 384,
+    "batch": null,
+    "optimizer": null,
+    "lr0": null,
+    "cls": null,
+    "box": null,
+    "dfl": null,
+    "hours": null
+  },
+  "notes": {
+    "en": "[Old project] YOLO26n nano baseline, old project's dataset. Real accuracy measured on THIS project's test split.",
+    "ar": "[مشروع قديم] YOLO26n أساسي، بيانات المشروع القديم. الدقة قُيست على مجموعة اختبار هذا المشروع."
+  }
+}

@@ -1,0 +1,45 @@
+========================================================================================
+ MODEL EVALUATION REPORT — [OLD] RF-DETR Small Standard 640 (RFDETR)
+========================================================================================
+
+Test set images evaluated : 5589
+Total GT instances        : 7427
+IoU threshold             : 0.5
+Operating confidence      : 0.35 (confusion matrix / P-R-F1 below use this)
+
+mAP@50 (all classes)      : 72.09%
+Overall Precision         : 60.77%
+Overall Recall            : 79.57%
+Overall F1                : 68.77%
+
+--- Per-Class Metrics ---
+Class              AP@50   Precision    Recall        F1     TP     FP     FN
+closed_eye        91.15%      74.08%    90.44%    81.44%   2166    758    229
+open_eye          75.31%      58.08%    86.38%    69.45%   2010   1451    317
+yawning           49.83%      50.16%    61.89%    55.41%   1674   1663   1031
+
+========================================================================================
+ LABEL-GAP-CORRECTED METRICS (same detections, partial-annotation aware)
+========================================================================================
+
+This dataset merges a separate eye-state corpus and a separate yawning corpus
+into one label space without re-annotation (BOOK.md Ch. V), so many images carry
+objects that are present but were never annotated. Scoring a correct detection of
+such an object as a false positive understates real accuracy. Below, predictions of
+a class that was never annotated on an image are IGNORED (neither TP nor FP), the
+standard partially-annotated-dataset convention (COCO iscrowd). Ground truth is
+untouched, so recall and FN are identical to the raw numbers by construction.
+
+Eye predictions ignored on   : 1039 images (full-frame tier-A views carrying zero eye labels)
+Yawn predictions ignored on  : 699 images (corpora with zero yawning annotations anywhere: closed_eye_corpus, images-)
+
+mAP@50 RAW                : 72.09%
+mAP@50 CORRECTED          : 73.12%   (delta +1.03 pts)
+
+Class             AP raw   AP corr    delta    P corr   FP raw  FP corr
+closed_eye        91.15%    92.52%   +1.37     79.05%      758      574
+open_eye          75.31%    76.93%   +1.62     64.90%     1451     1087
+yawning           49.83%    49.92%   +0.09     50.16%     1663     1663
+
+Charts saved in: 10-visualizations/
+========================================================================================

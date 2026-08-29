@@ -1,0 +1,49 @@
+{
+  "checkpoint": "checkpoints/best.pth",
+  "num_test_images": 5705,
+  "iou_threshold": 0.5,
+  "precision": 0.7061855670102349,
+  "recall": 0.8246928746927733,
+  "f1": 0.7608523173086448,
+  "mean_iou": 0.7433569090618172,
+  "detection_accuracy": 0.6140126223359343,
+  "mAP@0.5": 0.7260724877854013,
+  "mAP@0.5:0.95": 0.32758741440854794,
+  "AP_per_class": {
+    "closed_eye": 0.7464887000391816,
+    "open_eye": 0.6469835908887449,
+    "yawn": 0.7847451724282779
+  },
+  "confusion_matrix": [
+    [
+      0,
+      784,
+      1251,
+      687
+    ],
+    [
+      710,
+      2941,
+      25,
+      0
+    ],
+    [
+      523,
+      40,
+      2274,
+      6
+    ],
+    [
+      123,
+      0,
+      8,
+      1490
+    ]
+  ],
+  "confusion_matrix_labels": [
+    "background",
+    "closed_eye",
+    "open_eye",
+    "yawn"
+  ]
+}

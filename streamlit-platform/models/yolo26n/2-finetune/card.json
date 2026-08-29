@@ -1,0 +1,41 @@
+{
+  "key": "yolo26n-2-finetune",
+  "display_name": "YOLO26n - Exp2 AdamW Fine-tune",
+  "family": "yolo",
+  "resolution": 960,
+  "size_mb": 5.2,
+  "metrics": {
+    "map50": 0.8232868469760555,
+    "map50_corrected": 0.8272675246620574,
+    "precision": 0.7963904801296459,
+    "recall": 0.7347810297087642,
+    "f1": 0.7641195705848919,
+    "ap_per_class": {
+      "closed_eye": 0.8913907577226661,
+      "open_eye": 0.8270491526812644,
+      "yawning": 0.7514206305242358
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.8932952231746153,
+      "open_eye": 0.8370865134028243,
+      "yawning": 0.7514208374087328
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": 50,
+    "imgsz": 960,
+    "batch": 32,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "cls": 0.5,
+    "box": 7.5,
+    "dfl": 1.5,
+    "hours": 11.72
+  },
+  "notes": {
+    "en": "Fine-tuned from Exp1 with AdamW and moderate augmentation. Was the best real-test model for most of the project's life.",
+    "ar": "ضبط دقيق من التجربة الأولى باستخدام AdamW وتعزيز متوسط. كان أفضل نموذج لمعظم فترة المشروع."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "model_key": "yolo26n-6-weakdevice-480",
+  "display_name": "YOLO26n Weak-Device 480 Worst-Case",
+  "map50": 0.8227853524599998,
+  "precision": 0.7930433212571613,
+  "recall": 0.7230953027854891,
+  "f1": 0.756117840904509,
+  "ap_per_class": {
+    "closed_eye": 0.8613187932636952,
+    "open_eye": 0.8195785864612587,
+    "yawning": 0.7874586776550454
+  },
+  "map50_corrected": 0.8272087621971883,
+  "ap_per_class_corrected": {
+    "closed_eye": 0.8638843424364644,
+    "open_eye": 0.8300209627694421,
+    "yawning": 0.7877209813856583
+  },
+  "label_gap_stats": {
+    "eye_ignored_images": 1039,
+    "yawn_ignored_images": 699,
+    "yawn_blind_families": [
+      "closed_eye_corpus",
+      "images-"
+    ],
+    "total_images": 5589
+  }
+}

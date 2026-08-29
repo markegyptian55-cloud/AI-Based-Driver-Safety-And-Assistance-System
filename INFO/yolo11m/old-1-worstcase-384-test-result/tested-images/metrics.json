@@ -1,0 +1,28 @@
+{
+  "model_key": "old-yolo11m-1-worstcase-384",
+  "display_name": "[OLD] YOLO11m Worst-Case 384",
+  "map50": 0.7229836554411199,
+  "precision": 0.7235176901318102,
+  "recall": 0.7118939136696049,
+  "f1": 0.7166980079158144,
+  "ap_per_class": {
+    "closed_eye": 0.9263614132138793,
+    "open_eye": 0.7416368599309434,
+    "yawning": 0.5009526931785373
+  },
+  "map50_corrected": 0.7289394352075647,
+  "ap_per_class_corrected": {
+    "closed_eye": 0.9336514707006489,
+    "open_eye": 0.7522135246135105,
+    "yawning": 0.5009533103085344
+  },
+  "label_gap_stats": {
+    "eye_ignored_images": 1039,
+    "yawn_ignored_images": 699,
+    "yawn_blind_families": [
+      "closed_eye_corpus",
+      "images-"
+    ],
+    "total_images": 5589
+  }
+}

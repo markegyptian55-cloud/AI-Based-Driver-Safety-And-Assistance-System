@@ -1,0 +1,41 @@
+{
+  "key": "yolo26n-6-weakdevice-480",
+  "display_name": "YOLO26n - Exp6 Weak-Device 480",
+  "family": "yolo",
+  "resolution": 480,
+  "size_mb": 5.11,
+  "metrics": {
+    "map50": 0.8227853524599998,
+    "map50_corrected": 0.8272087621971883,
+    "precision": 0.7930433212571613,
+    "recall": 0.7230953027854891,
+    "f1": 0.756117840904509,
+    "ap_per_class": {
+      "closed_eye": 0.8613187932636952,
+      "open_eye": 0.8195785864612587,
+      "yawning": 0.7874586776550454
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.8638843424364644,
+      "open_eye": 0.8300209627694421,
+      "yawning": 0.7877209813856583
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": 25,
+    "imgsz": 480,
+    "batch": 64,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "cls": 1.5,
+    "box": 7.5,
+    "dfl": 1.5,
+    "hours": 1.65
+  },
+  "notes": {
+    "en": "4th-generation fine-tune (fresh -> Exp1 -> Exp2 -> Exp4 -> this), imgsz dropped to 480 with worst-case augmentation for weak-device deployment. Matched the 960px parent's accuracy at half the resolution and the fastest measured FPS in the project.",
+    "ar": "الجيل الرابع من الضبط الدقيق، بدقة 480 مع أقصى تعزيز لأجهزة الويب الضعيفة. طابق دقة النموذج الأصلي بنصف الدقة وأسرع معدل إطارات في المشروع."
+  }
+}

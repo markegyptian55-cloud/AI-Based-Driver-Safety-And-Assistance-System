@@ -1,0 +1,59 @@
+SRC SCRIPTS - QUICK REFERENCE
+=============================
+What each script is for and its role. Full detail: INFO/BOOK.md Chapter 2.
+Folder/output conventions: AGENTS.md at the project root.
+
+train.py
+--------
+Fine-tunes YOLO26n or YOLO11n on the dataset. Run it with a config file
+(configs/yolo26n_baseline.yaml or configs/yolo11n_baseline.yaml) or ad hoc
+flags. Saves best.pt, last.pt, and run_config.json into
+checkpoints/<family>/<N>-<name>/, auto-numbered per model family.
+
+export.py
+---------
+Converts a trained best.pt to ONNX (or TensorRT .engine) for deployment.
+Saves the exported file next to the source checkpoint automatically.
+
+evaluate.py
+-----------
+Measures real detection accuracy of a trained model against the test image
+split (5,589 images, 11.03% of the dataset): mAP50, per-class precision/
+recall/F1, confusion matrix, PR curves. Writes charts + metrics.json to
+INFO/<family>/<N-name>-test-result/tested-images/.
+
+demo_video.py
+-------------
+Runs a trained model on one video (random pick from data/raw_videos/
+unless --video is given) and renders the drowsiness HUD onto the output.
+Writes to INFO/<family>/<N-name>-test-result/tested-video/.
+
+webcam_demo.py
+--------------
+Live webcam (or video file) demo with the same HUD, for manually watching
+a model run in real time. Prints FPS/latency to console. No file output.
+
+inference.py
+------------
+Shared engine used by everything above: unified model loader (YOLO +
+RF-DETR, PyTorch + ONNX, auto CPU/GPU device selection), the HUD renderer,
+and the fatigue/alert-level analyzer. Not run directly.
+
+compare_experiments.py
+----------------------
+Aggregates real results across every completed experiment (reads every
+checkpoints/**/run_config.json and INFO/**/tested-images/metrics.json)
+into comparison charts + a summary table, for judging experiments against
+each other. Says so and exits if nothing has been trained/evaluated yet -
+never fabricates numbers.
+
+plot_training_curves.py
+------------------------
+Plots real train/val loss and mAP curves per experiment straight from
+Ultralytics' own results.csv. Scans checkpoints/ automatically.
+
+test_pipeline.py
+-----------------
+Pytest suite checking the CODE works (model loading, renderer output,
+fatigue-score logic) - not model accuracy, that's evaluate.py's job above.
+Run with: pytest src/test_pipeline.py -v

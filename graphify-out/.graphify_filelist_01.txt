@@ -1,0 +1,21 @@
+C:\AI-Based Driver Safety and Assistance System(ADAS)\AGENTS.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\DEPLOYMENT.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\Project plan website.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\architecture\01_Project_Overview.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\architecture\02_System_Architecture.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\architecture\03_Backend_Architecture.md.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\requirements.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\results\ab_compare.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\results\auto_label\candidate_labels.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\results\comparison_metrics.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\FASTER R-CNN -from scratch\results\test_output.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\BOOK.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\_audit\audit_labels.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\_benchmark\latency_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\_comparison\comparison_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-nano\old-1-baseline-384-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-nano\old-1-baseline-384-test-result\tested-images\test_summary.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-nano\old-1-baseline-384-test-result\training-curves\NO_TRAINING_HISTORY.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-nano\old-2-finetune-384-test-result\tested-images\evaluation_report.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\INFO\rfdetr-nano\old-2-finetune-384-test-result\tested-images\test_summary.md

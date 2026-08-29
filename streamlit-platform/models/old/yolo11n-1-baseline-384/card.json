@@ -1,0 +1,41 @@
+{
+  "key": "old-yolo11n-1-baseline-384",
+  "display_name": "[Old] YOLO11n Baseline 384",
+  "family": "yolo",
+  "resolution": 384,
+  "size_mb": 5.22,
+  "metrics": {
+    "map50": 0.696362186956977,
+    "map50_corrected": 0.7031733788328755,
+    "precision": 0.7670549284412829,
+    "recall": 0.6292686002936198,
+    "f1": 0.6882502284511937,
+    "ap_per_class": {
+      "closed_eye": 0.8526000076633817,
+      "open_eye": 0.7426125344013763,
+      "yawning": 0.4938740188061731
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.8611076868311349,
+      "open_eye": 0.7545374589016904,
+      "yawning": 0.4938749907658013
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": null,
+    "imgsz": 384,
+    "batch": null,
+    "optimizer": null,
+    "lr0": null,
+    "cls": null,
+    "box": null,
+    "dfl": null,
+    "hours": null
+  },
+  "notes": {
+    "en": "[Old project] Fresh-COCO YOLO11n baseline, trained on the old project's own dataset. Real accuracy shown here is measured on THIS project's test split.",
+    "ar": "[مشروع قديم] نموذج YOLO11n أساسي، مدرب على بيانات المشروع القديم. الدقة المعروضة قُيست على مجموعة اختبار هذا المشروع."
+  }
+}

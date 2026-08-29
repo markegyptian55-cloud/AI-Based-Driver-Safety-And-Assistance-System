@@ -1,0 +1,20 @@
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\HANDOFF.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\PRODUCT.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\assets\scratch\ab_compare.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\dashboard\index.html
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Advancing Driver Assistance Systems and Drowsiness Detection.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Arava, M., & Sundaram, D. M. (2024). Integrating lightweight YOLOv5s and facial 3D keypoints for enhanced fatigued‑driving detection. PeerJ Computer Science, 10, e2447..pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Bayesian-Optimized CLAHE for Enhanced Drowsiness Detection inLow-Light Conditions Using Time-Distributed MobileNetV2-GRUArchitecture 20251220 (1).pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Chen, C., Liu, X., Zhou, M., Li, Z., Du, Z., & Lin, Y. (2025). Lightweight and Real‑Time Driver Fatigue Detection Based on MG‑YOLOv8 with Facial Multi‑Feature Fusion. Journal of Imaging, 11(11), 385..pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Go et al. (2025) Comprehensive Benchmark of YOLOv11n etc for Face Detection in Video-Based Driver Drowsiness.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Herath et al. (2025) Vision-Based Driver Drowsiness Monitoring - Comparative Analysis of YOLOv5-v11 Models.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Mujtaba et al. (2025) YawDD+ Frame-level Annotations for Accurate Yawn Prediction.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\decomantation files\researches & papers\Yusuf, L., Hamada, M., Hassan, M., & Kakudi, H. (2024). Enhanced Driver Drowsiness Detection Model Using Multi‑Level Features Fusion and a Long‑Short‑Term Recurrent Neural Network. Engineering Proceedings, 56(1), 338.pdf
+C:\AI-Based Driver Safety and Assistance System(ADAS)\graphify-out\converted\Book-AI-Based_Driver_Safety_and_Assistance_System_23bf8e33.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\graphify-out\converted\Project_Modification_Report_3c04bd46.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\src\SCRIPTS_OVERVIEW.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\streamlit-platform\README.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\streamlit-platform\backups\20260815-160816\SETTINGS_SNAPSHOT.md
+C:\AI-Based Driver Safety and Assistance System(ADAS)\streamlit-platform\backups\20260815-165322\registry.yaml
+C:\AI-Based Driver Safety and Assistance System(ADAS)\streamlit-platform\backups\LATEST.txt
+C:\AI-Based Driver Safety and Assistance System(ADAS)\streamlit-platform\models\registry.yaml

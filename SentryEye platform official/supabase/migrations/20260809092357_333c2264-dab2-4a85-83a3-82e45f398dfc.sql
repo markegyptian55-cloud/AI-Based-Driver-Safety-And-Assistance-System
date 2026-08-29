@@ -1,0 +1,2 @@
+ALTER TABLE public.sessions ADD COLUMN IF NOT EXISTS pipeline jsonb;
+COMMENT ON COLUMN public.sessions.pipeline IS 'Performance trace for the run: per-stage wall-clock timings, video conversion path, and model cache hit/miss details.';

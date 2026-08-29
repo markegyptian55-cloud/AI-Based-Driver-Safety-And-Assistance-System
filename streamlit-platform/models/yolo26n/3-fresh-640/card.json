@@ -1,0 +1,41 @@
+{
+  "key": "yolo26n-3-fresh-640",
+  "display_name": "YOLO26n - Exp3 Fresh 640",
+  "family": "yolo",
+  "resolution": 640,
+  "size_mb": 5.14,
+  "metrics": {
+    "map50": 0.8102079221215824,
+    "map50_corrected": 0.8145829316742136,
+    "precision": 0.7895054657349353,
+    "recall": 0.6984242230396767,
+    "f1": 0.7401036390661622,
+    "ap_per_class": {
+      "closed_eye": 0.8370635173472134,
+      "open_eye": 0.8059688320909163,
+      "yawning": 0.7875914169266176
+    },
+    "ap_per_class_corrected": {
+      "closed_eye": 0.8409448626084122,
+      "open_eye": 0.8150375085400987,
+      "yawning": 0.7877664238741301
+    },
+    "measured": true,
+    "metrics_source": "test-split"
+  },
+  "training": {
+    "epochs": 100,
+    "imgsz": 640,
+    "batch": 32,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "cls": 0.5,
+    "box": 7.5,
+    "dfl": 1.5,
+    "hours": 10.75
+  },
+  "notes": {
+    "en": "Fresh run at 640px with worst-case augmentation, testing robustness limits. Scored lowest of the 960px models -- evidence that 960 is the right resolution.",
+    "ar": "تدريب جديد بدقة 640 مع أقصى تعزيز. سجّل أدنى نتيجة — دليل على أن 960 هي الدقة الصحيحة."
+  }
+}
